@@ -186,7 +186,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
   try {
   	// DEFAULT MENU
       let dash = global.dashmenu
-  	let m1 = global.dmenut
+      let m1 = global.dmenut
       let m2 = global.dmenub
       let m3 = global.dmenuf
       let m4 = global.dmenub2
@@ -468,7 +468,13 @@ const listMessage = {
                 {
                     urlButton: {
                         displayText: `${namebot}`,
-                        url: 'wa.me/6282127104362'
+                        url: 'https://wa.me/6282127104362'
+                    }
+                },
+		{
+                    urlButton: {
+                        displayText: `${nameown}`,
+                        url: 'https://wa.me/6283873115706'
                     }
                 },
                 //{
