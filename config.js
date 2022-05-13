@@ -43,11 +43,11 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
 /*============== SOCIAL ==============*/
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
-global.sig = 'https://instagram.com/leonvx._'
+global.sig = 'https://www.instagram.com/yusuf.oct/'
 global.sgh = 'https://bl4ck-lion.github.io/index.php'
-global.sgc = 'https://chat.whatsapp.com/HHjPtKIjkzb1ud0QtrkbQH'
+global.sgc = 'https://chat.whatsapp.com/LaP7ztZGDoR1FmFnIRDlzX'
 global.sdc = 'https://discord.gg/WEJQjugTY7'
-global.snh = 'https://youtube.com/c/LeonGanz/'
+global.snh = 'https://www.youtube.com/channel/UCQsnejA6aiOFENs_oFoTwgw'
 
 /*============== PAYMENT ==============*/
 global.pdana = '085608625102'
@@ -117,7 +117,7 @@ global.APIKeys = { // APIKey Here
 
 /*============== WATERMARK ==============*/
 global.wm = '                「 Yusuf Oct 」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Yui - Chan ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
+global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Yusuf Oct ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
 global.wm3 = '⫹⫺ Yusuf Oct '
 global.botdate = `⫹⫺ 𝗗𝗮𝘁𝗲: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
 global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${wktuwib}`
@@ -135,7 +135,7 @@ global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=tr
 /*============== HENTAI ==============*/ 
 //OPTIONS
 global.optsnsfw = true // Untuk mematikan Dan Menyalakan Nsfw
-global.premnsfw = false // Nsfw Mode Premium?
+global.premnsfw = true // Nsfw Mode Premium?
 
 
 //Ini cuma simpenan owner kanna kok :v
