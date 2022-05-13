@@ -9,7 +9,7 @@ import fetch from 'node-fetch'
 const defaultMenu = {
   before: `
 %dash
-%m1 *USER*
+%m1 *U S E R*
 %m2 *Name:* %name
 %m2 *Tag:* %tag
 %m2 *Status:* %prems
@@ -21,7 +21,7 @@ const defaultMenu = {
 %m2 *Total Xp:* %totalexp
 %m3
 
-%m1 *HARI INI*
+%m1 *H A R I  I N I*
 %m2 *%ucpn*
 %m2 *Days:* %week %weton
 %m2 *Date:* %date
@@ -29,7 +29,7 @@ const defaultMenu = {
 %m2 *Time:* %wib
 %m3
 
-%m1 *INFO*
+%m1 *I N F O*
 %m2 *Bot Name:* %me
 %m2 *Mode:* %mode
 %m2 *Platform:* %platform
@@ -40,7 +40,7 @@ const defaultMenu = {
 %m2 *Database:* %rtotalreg dari %totalreg
 %m3
 
-%m1 *INFO CMD* 
+%m1 *I N F O  C M D* 
 %m4 *Ⓟ* = Premium
 %m4 *Ⓛ* = Limit
 %m3
