@@ -506,7 +506,7 @@ const listMessage = {
                         displayText: 'Menu',
                         id: '.menu'
                     }
-                },
+                }
             ]
         }
         await conn.sendMessage(m.chat, message)
