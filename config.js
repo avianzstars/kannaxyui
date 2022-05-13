@@ -61,7 +61,7 @@ global.psaweria = 'https://saweria.com/LeonGanz'
 global.nomorbot = '6282127104362'
 global.nomorown = '6283873115706'
 global.nomorpart = '6283873115706'
-global.namebot = 'Yusuf Oct BOT'
+global.namebot = 'Yusuf Oct [BOT]'
 global.nameown = 'Yusuf Oct'
 
 
@@ -189,7 +189,7 @@ global.lolm = 'Ⓛ'
 global.htjava = '⫹⫺' //hiasan Doang :v
 
 /*============== STICKER WM ==============*/
-global.stickpack = 'Yusuf Oct [BOT]'
+global.stickpack = 'Yusuf Oct'
 global.stickauth = `By Yusuf Oct`
 
 global.multiplier = 38 // The higher, The harder levelup
