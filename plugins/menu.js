@@ -207,42 +207,42 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
    {
 	title: `${htki} MAIN ${htka}`,
 	rows: [
-	    {title: `⚡ ${pmenus} SPEED BOT`, rowId: ".ping", description: "Menampilkan kecepatan respon BOT"},
-	    {title: `💌 ${pmenus} OWNER BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
-	    {title: `📔 ${pmenus} SCRIPT BOT`, rowId: ".sc", description: `Source Code ${namebot}`},
+	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "Menampilkan kecepatan respon BOT"},
+	    {title: `${pmenus} Owner BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
+	    {title: `${pmenus} Script BOT`, rowId: ".sc", description: `Source Code ${namebot}`},
 	]
     },{
 	title: `${htki} SUPPORT ${htka}`,
 	rows: [
-	    {title: `🔖 ${pmenus} SEWA`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
-	    {title: `🌟 ${pmenus} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
-	    {title: `💹 ${pmenus} DONASI`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
+	    {title: `${pmenus} Sewa BOT`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
+	    {title: `${pmenus} Beli Premium`, rowId: ".premium", description: "Menampilkan list harga premium"},
+	    {title: `${pmenus} Donasi`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
 	]
 	},{
 	title: `${htki} MENU ${htka}`,
 	rows: [
-	    {title: `💬 ${pmenus} All`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
-	    {title: `🌱 ${pmenus} Rpg`, rowId: ".? rpg", description: "Game Epic Rpg!"},
-	{title: `✨ ${pmenus} Exp`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
-	{title: `🎮 ${pmenus} Game`, rowId: ".? game", description: "Gamenya seru seru lho >-<"},
-	{title: `🧩 ${pmenus} Fun`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
-	{title: `🐚 ${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
-	{title: `📑 ${pmenus} Quotes`, rowId: ".? quotes", description: "Random Inspirasi"},
-	{title: `⛩️ ${pmenus} Anime`, rowId: ".? anime", description: "Kamu wibu ya bang?"},
-	{title: `🔞 ${pmenus} Nsfw`, rowId: ".? nsfw", description: "Tch, dasar sagne"},
-	{title: `🌟 ${pmenus} Premium`, rowId: ".? premium", description: "Only premium Users"},
-	{title: `🎭 ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
-	{title: `📖 ${pmenus} Al-Quran`, rowId: ".? nocategory", description: "Tobat yuk kak"},
-	{title: `🌎 ${pmenus} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
-	{title: `📩 ${pmenus} Downloaders`, rowId: ".? downloader", description: "Download sesuatu diBOT"},
-	{title: `🎨 ${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
-	{title: `✏️ ${pmenus} Nulis`, rowId: ".? nulis", description: "Nulis kok males kak?"},
-	{title: `🎧 ${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
-	{title: `🏢 ${pmenus} Group`, rowId: ".? admin", description: "Only Groups"},
-	{title: `🗂️ ${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
-	{title: `🛠️ ${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
-	{title: `ℹ️ ${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
-	{title: `👩‍💻 ${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"}
+	{title: `${pmenus} All`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
+	{title: `${pmenus} Rpg`, rowId: ".? rpg", description: "Game Epic Rpg!"},
+	{title: `${pmenus} Exp`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
+	{title: `${pmenus} Game`, rowId: ".? game", description: "Gamenya seru seru lho >-<"},
+	{title: `${pmenus} Fun`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
+	{title: `${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
+	{title: `${pmenus} Quotes`, rowId: ".? quotes", description: "Random Inspirasi"},
+	{title: `${pmenus} Anime`, rowId: ".? anime", description: "Kamu wibu ya bang?"},
+	{title: `${pmenus} Nsfw`, rowId: ".? nsfw", description: "Tch, dasar sagne"},
+	{title: `${pmenus} Premium`, rowId: ".? premium", description: "Only premium Users"},
+	{title: `${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
+	{title: `${pmenus} Al-Quran`, rowId: ".? nocategory", description: "Tobat yuk kak"},
+	{title: `${pmenus} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
+	{title: `${pmenus} Downloaders`, rowId: ".? downloader", description: "Download sesuatu diBOT"},
+	{title: `${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
+	{title: `${pmenus} Nulis`, rowId: ".? nulis", description: "Nulis kok males kak?"},
+	{title: `${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
+	{title: `${pmenus} Group`, rowId: ".? admin", description: "Only Groups"},
+	{title: `${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
+	{title: `${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
+	{title: `${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
+	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"}
 	]
   },
 ]
@@ -448,7 +448,7 @@ const listMessage = {
     //------------------ DOCUMENT
     let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
     let d2 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-    let d3  = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    let d3 = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     let d4 = 'application/pdf'
     let d5 = 'text/rtf'
     let td = `${pickRandom([d1,d2,d3,d4,d5])}`
@@ -466,31 +466,31 @@ const listMessage = {
             templateButtons: [
                 {
                     urlButton: {
-                        displayText: `🎀 ${namebot}`,
-                        url: 'https://yui-botz.herokuapp.com/'
+                        displayText: `${namebot}`,
+                        url: 'wa.me/6282127104362'
                     }
                 },
-                {
-                    urlButton: {
-                        displayText: '💌 Group Official',
-                        url: sgc
-                    }
-                },
+                //{
+                    //urlButton: {
+                        //displayText: 'Group Official',
+                        //url: sgc
+                    //}
+                //},
                 {
                     quickReplyButton: {
-                        displayText: '🌹 Owner',
+                        displayText: 'Owner',
                         id: '.owner'
                     }
                 },
                 {
                     quickReplyButton: {
-                        displayText: '🐾 Speed',
+                        displayText: 'Ping',
                         id: '.ping'
                     }
                 },
                 {
                     quickReplyButton: {
-                        displayText: '📮 Donasi',
+                        displayText: 'Donasi',
                         id: '.donasi'
                     }
                 },
