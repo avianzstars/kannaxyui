@@ -465,17 +465,6 @@ const listMessage = {
             caption: text,
             footer: titlebot,
             templateButtons: [
-               const listMessage = {
-                   text: tek,
-                   //footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
-                   footer: titlebot,
-                   title: `${htki} *LIST MENU* ${htka}`,
-                   buttonText: `KLIK INI`,
-                   sections
-                     }
-                     if (teks == '404') {
-  	             return conn.sendMessage(m.chat, listMessage)
-                },
                 {
                     urlButton: {
                         displayText: `${namebot}`,
