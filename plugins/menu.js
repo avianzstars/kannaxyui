@@ -9,7 +9,7 @@ import fetch from 'node-fetch'
 const defaultMenu = {
   before: `
 %dash
-%m1 *U S E R*
+%m1 *USER*
 %m2 *Name:* %name
 %m2 *Tag:* %tag
 %m2 *Status:* %prems
@@ -21,7 +21,7 @@ const defaultMenu = {
 %m2 *Total Xp:* %totalexp
 %m3
 
-%m1 *T O D A Y*
+%m1 *HARI INI*
 %m2 *%ucpn*
 %m2 *Days:* %week %weton
 %m2 *Date:* %date
@@ -29,7 +29,7 @@ const defaultMenu = {
 %m2 *Time:* %wib
 %m3
 
-%m1 *I N F O*
+%m1 *INFO*
 %m2 *Bot Name:* %me
 %m2 *Mode:* %mode
 %m2 *Platform:* %platform
@@ -40,7 +40,7 @@ const defaultMenu = {
 %m2 *Database:* %rtotalreg dari %totalreg
 %m3
 
-%m1 *I N F O  C M D* 
+%m1 *INFO CMD* 
 %m4 *Ⓟ* = Premium
 %m4 *Ⓛ* = Limit
 %m3
@@ -276,7 +276,7 @@ const listMessage = {
     let wibs = moment.tz('Asia/Jakarta').format('ss')
     let wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
     let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
-    let wktuwib = `*${wibh}:${wibm}:${wibs}*`
+    let wktuwib = `${wibh}:${wibm}:${wibs}`
  
  let mode = global.opts['self'] ? 'Private' : 'Publik'
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
@@ -458,7 +458,7 @@ const listMessage = {
     const message = {
             document: { url: thumb },
             jpegThumbnail: await (await fetch(thumb)).buffer(),
-            fileName: '*WAKTU:* ' + wktuwib,
+            fileName: 'WAKTU: ' + wktuwib,
             mimetype: d2,
             fileLength: fsizedoc,
             pageCount: fpagedoc,
@@ -485,8 +485,8 @@ const listMessage = {
                 //},
                 {
                     quickReplyButton: {
-                        displayText: 'Owner',
-                        id: '.owner'
+                        displayText: 'Inv',
+                        id: '.inv'
                     }
                 },
                 {
