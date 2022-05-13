@@ -23,7 +23,7 @@ import moment from 'moment-timezone'
 let wibh = moment.tz('Asia/Jakarta').format('HH')
     let wibm = moment.tz('Asia/Jakarta').format('mm')
     let wibs = moment.tz('Asia/Jakarta').format('ss')
-    let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
+    let wktuwib = `${wibh} : ${wibm} : ${wibs}`
     
     let d = new Date(new Date + 3600000)
     let locale = 'id'
@@ -120,7 +120,7 @@ global.wm = '                「 Yusuf Oct 」' //Main Watermark
 global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Yusuf Oct ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
 global.wm3 = '⫹⫺ Yusuf Oct '
 global.botdate = `⫹⫺ 𝗗𝗮𝘁𝗲: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
-global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${wktuwib}`
+global.bottime = `TIME : ${wktuwib}`
 global.titlebot = `⫹⫺ WhatsApp Bot | By Yusuf Oct`
 global.author = '                「 Yusuf Oct  あ⁩ 」'
 
