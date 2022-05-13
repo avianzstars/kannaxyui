@@ -276,7 +276,7 @@ const listMessage = {
     let wibs = moment.tz('Asia/Jakarta').format('ss')
     let wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
     let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
-    let wktuwib = `${wibh}:${wibm}:${wibs}`
+    let wktuwib = `*${wibh}:${wibm}:${wibs}*`
  
  let mode = global.opts['self'] ? 'Private' : 'Publik'
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
@@ -458,7 +458,7 @@ const listMessage = {
     const message = {
             document: { url: thumb },
             jpegThumbnail: await (await fetch(thumb)).buffer(),
-            fileName: 'WAKTU: ' + wktuwib,
+            fileName: '*WAKTU:* ' + wktuwib,
             mimetype: d2,
             fileLength: fsizedoc,
             pageCount: fpagedoc,
@@ -497,8 +497,8 @@ const listMessage = {
                 },
                 {
                     quickReplyButton: {
-                        displayText: 'Donasi',
-                        id: '.donasi'
+                        displayText: 'Menu',
+                        id: '.menu'
                     }
                 },
             ]
