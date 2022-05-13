@@ -259,7 +259,8 @@ ${clockStringP(usrs.premiumTime - new Date())}` : ''}
 `
 const listMessage = {
   text: tek,
-  footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
+  //footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
+  footer: titlebot,
   title: `${htki} *LIST MENU* ${htka}`,
   buttonText: `KLIK INI`,
   sections
@@ -275,7 +276,7 @@ const listMessage = {
     let wibs = moment.tz('Asia/Jakarta').format('ss')
     let wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
     let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
-    let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
+    let wktuwib = `${wibh} : ${wibm} : ${wibs}`
  
  let mode = global.opts['self'] ? 'Private' : 'Publik'
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
@@ -464,6 +465,17 @@ const listMessage = {
             caption: text,
             footer: titlebot,
             templateButtons: [
+               const listMessage = {
+                   text: tek,
+                   //footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
+                   footer: titlebot,
+                   title: `${htki} *LIST MENU* ${htka}`,
+                   buttonText: `KLIK INI`,
+                   sections
+                     }
+                     if (teks == '404') {
+  	             return conn.sendMessage(m.chat, listMessage)
+                },
                 {
                     urlButton: {
                         displayText: `${namebot}`,
@@ -543,16 +555,16 @@ function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
   let res = "Selamat DiniHari ☀️"
   if (time >= 4) {
-    res = "Good Morning 🌄"
+    res = "Good Morning"
   }
   if (time >= 10) {
-    res = "Good Afternoon ☀️"
+    res = "Good Afternoon"
   }
   if (time >= 15) {
-    res = "Good Afternoon 🌇"
+    res = "Good Afternoon"
   }
   if (time >= 18) {
-    res = "Good Night 🌙"
+    res = "Good Night"
   }
   return res
 }
