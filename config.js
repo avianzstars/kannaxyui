@@ -163,7 +163,7 @@ global.drtf = 'text/rtf'
 global.thumbdoc = 'https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg'
 
 /*=========== FAKE SIZE ===========*/
-global.fsizedoc = '1000000' // default 10TB
+global.fsizedoc = '1000000000' // default 10TB
 global.fpagedoc = '62'
 
 /*=========== HIASAN ===========*/
