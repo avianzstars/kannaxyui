@@ -174,7 +174,7 @@ global.dmenub2 = '┃' //body for info cmd on Default menu
 global.dmenuf = '╰─●' //footer
 
 // COMMAND MENU
-global.dashmenu = '➦'
+global.dashmenu = '➦DASHBOARD'
 global.cmenut = '╭─●' //top
 global.cmenuh = '●' //header
 global.cmenub = '┃⬤' //body
