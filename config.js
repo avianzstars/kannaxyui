@@ -179,10 +179,10 @@ global.cmenut = '╭─●' //top
 global.cmenuh = '●' //header
 global.cmenub = '┃●' //body
 global.cmenuf = '╰─●\n' //footer
-global.cmenua = '\n➥' //after
+global.cmenua = '➥' //after
 global.pmenus = '●' //pembatas menu selector
 
-global.htki = '─●' //hiasan title kiri
+global.htki = '●' //hiasan title kiri
 global.htka = '●' //hiasan title kanan
 global.lopr = 'Ⓟ'
 global.lolm = 'Ⓛ'
