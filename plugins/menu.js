@@ -458,7 +458,7 @@ const listMessage = {
     const message = {
             document: { url: thumb },
             jpegThumbnail: await (await fetch(thumb)).buffer(),
-            fileName: 'TIME : ' + wktuwib,
+            fileName: 'WAKTU: ' + wktuwib,
             mimetype: d2,
             fileLength: fsizedoc,
             pageCount: fpagedoc,
