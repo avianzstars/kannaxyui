@@ -261,7 +261,7 @@ const listMessage = {
   text: tek,
   footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
   title: `${htki} *LIST MENU* ${htka}`,
-  buttonText: `CLICK HERE ⎙`,
+  buttonText: `KLIK INI`,
   sections
 }
   if (teks == '404') {
@@ -457,8 +457,8 @@ const listMessage = {
     const message = {
             document: { url: thumb },
             jpegThumbnail: await (await fetch(thumb)).buffer(),
-            fileName: '𝗧 𝗜 𝗠 𝗘 : ' + wktuwib,
-            mimetype: td,
+            fileName: 'TIME : ' + wktuwib,
+            mimetype: d2,
             fileLength: fsizedoc,
             pageCount: fpagedoc,
             caption: text,
