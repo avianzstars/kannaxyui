@@ -121,7 +121,7 @@ global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Yusuf Oct ˘ฅ ꒱ ‧₊˚꒷�
 global.wm3 = '⫹⫺ Yusuf Oct '
 global.botdate = `⫹⫺ 𝗗𝗮𝘁𝗲: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
 global.bottime = `TIME : ${wktuwib}`
-global.titlebot = `⫹⫺ WhatsApp Bot | By Yusuf Oct`
+global.titlebot = `2022 © Yusuf Oct`
 global.author = '                「 Yusuf Oct  あ⁩ 」'
 
 
@@ -174,7 +174,7 @@ global.dmenub2 = '┃' //body for info cmd on Default menu
 global.dmenuf = '╰─●' //footer
 
 // COMMAND MENU
-global.dashmenu = '➦ *DASHBOARD*'
+global.dashmenu = '➦ *DASHBOARD*\n'
 global.cmenut = '╭─●' //top
 global.cmenuh = '●' //header
 global.cmenub = '┃●' //body
