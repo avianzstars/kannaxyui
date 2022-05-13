@@ -23,7 +23,7 @@ import moment from 'moment-timezone'
 let wibh = moment.tz('Asia/Jakarta').format('HH')
     let wibm = moment.tz('Asia/Jakarta').format('mm')
     let wibs = moment.tz('Asia/Jakarta').format('ss')
-    let wktuwib = `${wibh} : ${wibm} : ${wibs}`
+    let wktuwib = `${wibh}:${wibm}:${wibs}`
     
     let d = new Date(new Date + 3600000)
     let locale = 'id'
@@ -61,7 +61,7 @@ global.psaweria = 'https://saweria.com/LeonGanz'
 global.nomorbot = '6282127104362'
 global.nomorown = '6283873115706'
 global.nomorpart = '6283873115706'
-global.namebot = 'Yusuf Oct'
+global.namebot = 'Yusuf Oct BOT'
 global.nameown = 'Yusuf Oct'
 
 
@@ -116,13 +116,13 @@ global.APIKeys = { // APIKey Here
 
 
 /*============== WATERMARK ==============*/
-global.wm = '                「 Yusuf Oct 」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Yusuf Oct ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ Yusuf Oct '
-global.botdate = `⫹⫺ 𝗗𝗮𝘁𝗲: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
-global.bottime = `TIME : ${wktuwib}`
+global.wm = '2022 © Yusuf Oct' //Main Watermark
+global.wm2 = '2022 © Yusuf Oct'
+global.wm3 = '2022 © Yusuf Oct'
+global.botdate = `● *Tanggal*: ${week} ${date}\n● *Waktu*: ${wktuwib}`
+global.bottime = `*WAKTU*: ${wktuwib}`
 global.titlebot = `2022 © Yusuf Oct`
-global.author = '                「 Yusuf Oct  あ⁩ 」'
+global.author = 'Yusuf Oct'
 
 
 /*============== LOGO ==============*/
@@ -189,8 +189,8 @@ global.lolm = 'Ⓛ'
 global.htjava = '⫹⫺' //hiasan Doang :v
 
 /*============== STICKER WM ==============*/
-global.stickpack = 'Yusuf Oct'
-global.stickauth = `BY Yusuf Oct`
+global.stickpack = 'Yusuf Oct BOT'
+global.stickauth = `By Yusuf Oct`
 
 global.multiplier = 38 // The higher, The harder levelup
 
