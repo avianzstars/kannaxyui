@@ -501,12 +501,6 @@ const listMessage = {
                         id: '.donasi'
                     }
                 },
-		{
-                    quickReplyButton: {
-                        displayText: 'Menu',
-                        id: '.menu'
-                    }
-                },
             ]
         }
         await conn.sendMessage(m.chat, message)
