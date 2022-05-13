@@ -168,22 +168,22 @@ global.fpagedoc = '2022'
 
 /*=========== HIASAN ===========*/
 // DEFAULT MENU
-global.dmenut = '❏═┅═━–〈' //top
-global.dmenub = '┊•' //body
-global.dmenub2 = '┊' //body for info cmd on Default menu
-global.dmenuf = '┗––––––––––✦' //footer
+global.dmenut = '╭─●' //top
+global.dmenub = '┃⬤' //body
+global.dmenub2 = '┃' //body for info cmd on Default menu
+global.dmenuf = '╰─●' //footer
 
 // COMMAND MENU
-global.dashmenu = '┅═┅═❏ *DASHBOARD* ❏═┅═┅'
-global.cmenut = '❏––––––『' //top
-global.cmenuh = '』––––––' //header
-global.cmenub = '┊✦ ' //body
-global.cmenuf = '┗━═┅═━––––––๑\n' //footer
-global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     ' //after
-global.pmenus = '✦' //pembatas menu selector
+global.dashmenu = '➦'
+global.cmenut = '╭─●' //top
+global.cmenuh = '●' //header
+global.cmenub = '┃⬤' //body
+global.cmenuf = '╰─●\n' //footer
+global.cmenua = '\n➥' //after
+global.pmenus = '●' //pembatas menu selector
 
-global.htki = '––––––『' //hiasan title kiri
-global.htka = '』––––––' //hiasan title kanan
+global.htki = '─●' //hiasan title kiri
+global.htka = '●' //hiasan title kanan
 global.lopr = 'Ⓟ'
 global.lolm = 'Ⓛ'
 global.htjava = '⫹⫺' //hiasan Doang :v
