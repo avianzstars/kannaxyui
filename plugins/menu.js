@@ -14,11 +14,7 @@ const defaultMenu = {
 %m2 *Tag:* %tag
 %m2 *Status:* %prems
 %m2 *Limit:* %limit
-%m2 *Money:* %money
 %m2 *Role:* %role
-%m2 *Level:* %level [ %xp4levelup Xp For Levelup]
-%m2 *Xp:* %exp / %maxexp
-%m2 *Total Xp:* %totalexp
 %m3
 
 %m1 *H A R I  I N I*
@@ -26,7 +22,7 @@ const defaultMenu = {
 %m2 *Days:* %week %weton
 %m2 *Date:* %date
 %m2 *Islamic Date:* %dateIslamic
-%m2 *Time:* %wib
+%m2 *Waktu:* %wib
 %m3
 
 %m1 *I N F O*
@@ -43,8 +39,7 @@ const defaultMenu = {
 %m1 *I N F O  C M D* 
 %m4 *Ⓟ* = Premium
 %m4 *Ⓛ* = Limit
-%m3
-%readmore
+%m3 %readmore
 `.trimStart(),
   header: '%cc *%category* %c1',
   body: '%c2 %cmd %isPremium %islimit',
@@ -431,21 +426,6 @@ const listMessage = {
   
     const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
     
-    //------------------< MENU >----------------
-    
-    //------------------ SIMPLE
-    /*conn.reply(m.chat, text, fkon, { contextInfo: { mentionedJid: [m.sender],
-        externalAdReply: {
-            title: `${htjava} ${namebot}`,
-            body: titlebot,
-            description: titlebot,
-            mediaType: 2,
-          thumbnail: await(await fetch(thumb)).buffer(),
-         mediaUrl: sig
-        }
-     }
-    })*/
-    
     //------------------ DOCUMENT
     let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
     let d2 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
@@ -471,12 +451,6 @@ const listMessage = {
                         url: sig
                     }
                 },
-                //{
-                    //urlButton: {
-                        //displayText: 'Grup',
-                        //url: sgc
-                    //}
-                //},
                 {
                     quickReplyButton: {
                         displayText: 'Owner',
@@ -489,12 +463,6 @@ const listMessage = {
                         id: '.ping'
                     }
                 },
-                //{
-                    //quickReplyButton: {
-                        //displayText: '📮 Donasi',
-                        //id: '.donasi'
-                    //}
-                //},
             ]
         }
         await conn.sendMessage(m.chat, message)
