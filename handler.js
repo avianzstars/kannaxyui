@@ -752,8 +752,8 @@ global.dfail = (type, m, conn) => {
     let msgg = {
     	unreg: 'Anda belum terdaftar didalam Database BOT'
 }[type]
-if (msgg) return conn.sendHydrated(m.chat, msgg, [
-      ['Daftar', '/daftar'],
+if (msgg) return conn.sendHydrated(m.chat, msgg, global.wm, null, global.sig, 'Yusuf Oct', [
+      ['▣ VERIFY ▣', '/daftar'],
       [null,null],
       [null, null]
     ], m)
