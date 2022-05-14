@@ -726,9 +726,7 @@ export async function deleteUpdate(message) {
         let chat = global.db.data.chats[msg.chat] || {}
         if (chat.delete)
             return
-        await this.reply(msg.chat, `
-Terdeteksi @${participant.split`@`[0]} telah menghapus pesan
-`.trim(), msg, {
+        await this.reply(msg.chat, `Terdeteksi @${participant.split`@`[0]} telah menghapus pesan`.trim(), msg, {
             mentions: [participant]
         })
         this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
