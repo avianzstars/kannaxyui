@@ -455,7 +455,7 @@ const listMessage = {
     let td = `${pickRandom([d1,d2,d3,d4,d5])}`
     
     //-------DOC TEMPLATE
-    const message = (m, {
+    const message = {
             document: { url: thumb },
             jpegThumbnail: await (await fetch(thumb)).buffer(),
             fileName: 'WAKTU: ' + wktuwib,
@@ -495,7 +495,7 @@ const listMessage = {
                         //id: '.donasi'
                     //}
                 //},
-            ], m)
+            ]
         }
         await conn.sendMessage(m.chat, message)
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
