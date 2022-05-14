@@ -309,13 +309,13 @@ export async function handler(chatUpdate) {
             } else
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
-                    welcome: false,
-                    detect: false,
-                    sWelcome: '',
-                    sBye: '',
+                    welcome: true,
+                    detect: true,
+                    sWelcome: 'true',
+                    sBye: 'true',
                     sPromote: '',
                     sDemote: '',
-                    delete: true,
+                    delete: false,
                     antiLink: false,
                     viewonce: false,
                     antiToxic: true,
@@ -525,11 +525,11 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    this.reply(m.chat, `[❗] Limit anda habis, silahkan beli melalui *${usedPrefix}buy limit*`, m)
+                    this.reply(m.chat, `[!] Limit anda habis, silahkan beli melalui *${usedPrefix}buy limit*`, m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
-                    this.reply(m.chat, `[💬] Diperlukan level ${plugin.level} untuk menggunakan perintah ini\n*Level mu:* ${_user.level} 📊`, m)
+                    this.reply(m.chat, `[!] Diperlukan level ${plugin.level} untuk menggunakan perintah ini\n*Level mu:* ${_user.level} 📊`, m)
                     continue // If the level has not been reached
                 }
                 let extra = {
@@ -585,7 +585,7 @@ export async function handler(chatUpdate) {
                         }
                     }
                     if (m.limit)
-                        m.reply(+m.limit + ' Limit terpakai ✔️')
+                        m.reply(+m.limit + ' Limit terpakai')
                 }
                 break
             }
@@ -726,11 +726,7 @@ export async function deleteUpdate(message) {
         let chat = global.db.data.chats[msg.chat] || {}
         if (chat.delete)
             return
-        await this.reply(msg.chat, `
-Terdeteksi @${participant.split`@`[0]} telah menghapus pesan
-Untuk mematikan fitur ini, ketik
-*.enable delete*
-`.trim(), msg, {
+        await this.reply(msg.chat, `Terdeteksi @${participant.split`@`[0]} telah menghapus pesan`.trim(), msg, {
             mentions: [participant]
         })
         this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
@@ -741,25 +737,22 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '[ ❗ ] Only Developer',
-        owner: '[ ❗ ] Only Owner',
-        mods: '[ ❗ ] Only Moderator',
-        premium: '[ ❗ ] Only Premium Users',
-        group: '[ ❗ ] Only Group Chat',
-        private: '[ ❗ ] Only Private Chat',
-        admin: '[ ❗ ] Only Admin Group',
-        botAdmin: '[ ❗ ] Only Bot Admin',
-        restrict: '[ ❗ ] This Fitur Disable'
+        rowner: '[!] Only Developer',
+        owner: '[!] Only Owner',
+        mods: '[!] Only Moderator',
+        premium: '[!] Only Premium Users',
+        group: '[!] Only Group Chat',
+        private: '[!] Only Private Chat',
+        admin: '[!] Only Admin Group',
+        botAdmin: '[!] Only Bot Admin',
+        restrict: '[!] This Fitur Disable'
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo: { externalAdReply: {title: global.wm, body: '404 Access denied ✘', sourceUrl: global.snh, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
     
     let msgg = {
     	unreg: '\nAnda belum terdaftar didalam Database BOT'
 }[type]
-if (msgg) return conn.sendButton(m.chat, msgg, null, [
-                ['tebakgambar', '/tebakgambar']
-            ], m)
-}
+if (msgg) return conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
