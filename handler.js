@@ -756,9 +756,10 @@ global.dfail = (type, m, conn) => {
     let msgg = {
     	unreg: '\nAnda belum terdaftar didalam Database BOT'
 }[type]
-if (msgg) return conn.sendButton(m.chat, msgg, [
-      ['Daftar', '/daftar'] ], m)
-    }
+if (msgg) return conn.sendButton(m.chat, msgg, null, [
+                ['tebakgambar', '/tebakgambar']
+            ], m)
+}
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
