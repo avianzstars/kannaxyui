@@ -1,21 +1,22 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	
 	// ‼️ NOTE: Link script Jangan diubah, dihapus atau diganti
-let text = `❏ *📮 Script Multi Device*
-│• *Script :* 
-│↳ youtube.com/c/LeonGanz
-│• *Node_Modules:*
-│↳ www.mediafire.com/file/q8ogv16wd5j7iju/node.tar.gz/file
-│• *Base :* 
-│↳ github.com/DikaArdnt/Hisoka-Morou
-┗──────────═┅═──────────
+let text = `#m1 *S C R I P T  M D*
+#m2 *Script :* 
+#m2 youtube.com/c/LeonGanz
+#m2 *Node_Modules:*
+#m2 www.mediafire.com/file/q8ogv16wd5j7iju/node.tar.gz/file
+#m2 *Base :* 
+#m2 github.com/DikaArdnt/Hisoka-Morou
+#m3
 
-❏ *📮 Script Non MD*
-│• *Script :* 
-│↳ youtube.com/c/LeonGanz
-│• *Base :* 
-│↳ github.com/melcanz/melcanz-bot
-┗──────────═┅═──────────
+#m1*📮 Script Non MD*
+#m2 *Script :* 
+#m2 youtube.com/c/LeonGanz
+#m2 *Base :* 
+#m2 github.com/melcanz/melcanz-bot
+#m3
+
 📍 *N o t e :* 
 • Jangan lupa minta izin owner sebelum menggunakan scriptnya kak!
 • Jangan Lupa kasih star, follow & kasih credit
@@ -25,9 +26,7 @@ let text = `❏ *📮 Script Multi Device*
 `
 const templateButtons = [
     {index: 1, urlButton: {displayText: 'My Github', url: sgh}},
-    {index: 2, urlButton: {displayText: 'Group Official', url: sgc}},
-    {index: 3, quickReplyButton: {displayText: 'Owner', id: '.owner'}},
-    {index: 4, quickReplyButton: {displayText: 'Donasi', id: '.donasi'}},
+    {index: 2, quickReplyButton: {displayText: 'Owner', id: '.owner'}},
 ]
 let tm = {
 text: text,
