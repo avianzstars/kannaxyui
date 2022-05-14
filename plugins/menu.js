@@ -483,24 +483,24 @@ const listMessage = {
                         //url: sgc
                     //}
                 //},
-                {
-                    quickReplyButton: {
-                        displayText: 'Inv',
-                        id: '.inv'
-                    }
-                },
-                {
-                    quickReplyButton: {
-                        displayText: 'Ping',
-                        id: '.ping'
-                    }
-                },
-                {
-                    quickReplyButton: {
-                        displayText: 'Menu',
-                        id: '.menu'
-                    }
-                },
+                //{
+                    //quickReplyButton: {
+                        //displayText: 'Inv',
+                        //id: '.inv'
+                    //}
+                //},
+                //{
+                    //quickReplyButton: {
+                        //displayText: 'Ping',
+                        //id: '.ping'
+                    //}
+                //},
+                //{
+                    //quickReplyButton: {
+                        //displayText: 'Menu',
+                        //id: '.menu'
+                    //}
+                //},
             ]
         }
         await conn.sendMessage(m.chat, message)
