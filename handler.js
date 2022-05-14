@@ -754,9 +754,13 @@ global.dfail = (type, m, conn) => {
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo: { externalAdReply: {title: global.wm, body: '404 Access denied ✘', sourceUrl: global.snh, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
     
     let msgg = {
-    	unreg: 'Anda belum terdaftar didalam Database BOT'
+    	unreg: '\nAnda belum terdaftar didalam Database BOT'
 }[type]
-if (msgg) return conn.sendButton(m.chat, msgg, [['daftar', '/daftar']], m)
+if (msgg) return conn.sendHydrated(m.chat, msgg, global.wm, null, global.sig, 'Yusuf Oct', `${m.sender.split`@`[0]}`, 'USER', [
+      ['Daftar', '/daftar'],
+      [null,null],
+      [null, null]
+    ], m)
 }
 
 let file = global.__filename(import.meta.url, true)
