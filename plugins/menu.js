@@ -455,7 +455,7 @@ const listMessage = {
     let td = `${pickRandom([d1,d2,d3,d4,d5])}`
     
     //-------DOC TEMPLATE
-    const message = {
+    const message = (m, {
             document: { url: thumb },
             jpegThumbnail: await (await fetch(thumb)).buffer(),
             fileName: 'WAKTU: ' + wktuwib,
@@ -464,46 +464,12 @@ const listMessage = {
             pageCount: fpagedoc,
             caption: text,
             footer: titlebot,
-            templateButtons: [
-                {
-                    urlButton: {
-                        displayText: `${namebot}`,
-                        url: 'https://wa.me/6282127104362'
-                    }
-                },
-		{
-                    urlButton: {
-                        displayText: `${nameown}`,
-                        url: 'https://wa.me/6283873115706'
-                    }
-                },
-                //{
-                    //urlButton: {
-                        //displayText: 'Group Official',
-                        //url: sgc
-                    //}
-                //},
-                //{
-                    //quickReplyButton: {
-                        //displayText: 'Inv',
-                        //id: '.inv'
-                    //}
-                //},
-                //{
-                    //quickReplyButton: {
-                        //displayText: 'Ping',
-                        //id: '.ping'
-                    //}
-                //},
-                //{
-                    //quickReplyButton: {
-                        //displayText: 'Menu',
-                        //id: '.menu'
-                    //}
-                //},
-            ]
-        }
-        await conn.sendMessage(m.chat, message)
+            },
+	    conn.sendButton(m.chat, message, global.wm, null, [['Owner', '/owner']], m)}
+	    ]
+	 }
+           
+        //await conn.sendMessage(m.chat, message)
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
         
     //------------------- BUTTON VID
