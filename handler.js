@@ -756,11 +756,7 @@ global.dfail = (type, m, conn) => {
     let msgg = {
     	unreg: 'Anda belum terdaftar didalam Database BOT'
 }[type]
-if (msgg) return conn.sendHydrated(m.chat, msgg, global.wm, null, global.sgc, 'Join My Group Official', `${m.sender.split`@`[0]}`, 'USER', [
-      ['Daftar', '/daftar'],
-      [null,null],
-      [null, null]
-    ], m)
+if (msgg) return conn.sendButton(m.chat, msgg, [['daftar', '/daftar']], m)
 }
 
 let file = global.__filename(import.meta.url, true)
