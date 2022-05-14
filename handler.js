@@ -750,7 +750,7 @@ global.dfail = (type, m, conn) => {
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo: { externalAdReply: {title: global.wm, body: '404 Access denied ✘', sourceUrl: global.snh, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
     
     let msgg = {
-    	unreg: '\nAnda belum terdaftar didalam Database BOT'
+    	unreg: 'Anda belum terdaftar didalam Database BOT'
 }[type]
 if (msgg) return conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
 
