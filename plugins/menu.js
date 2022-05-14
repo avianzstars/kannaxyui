@@ -464,10 +464,10 @@ const listMessage = {
             pageCount: fpagedoc,
             caption: text,
             footer: titlebot,
-        templateButtons: [
+            templateButtons: [
                 {
                     urlButton: {
-                        displayText: `🎀 ${namebot}`,
+                        displayText: `${namebot}`,
                         url: sig
                     }
                 },
@@ -495,7 +495,7 @@ const listMessage = {
                         //id: '.donasi'
                     //}
                 //},
-            ]
+            ], m)
         }
         await conn.sendMessage(m.chat, message)
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
