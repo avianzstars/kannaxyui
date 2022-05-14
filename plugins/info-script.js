@@ -1,21 +1,21 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	
 	// ‼️ NOTE: Link script Jangan diubah, dihapus atau diganti
-let text = `%m1 *S C R I P T  M D*
-%m2 *Script :* 
-%m2 youtube.com/c/LeonGanz
-%m2 *Node_Modules:*
-%m2 www.mediafire.com/file/q8ogv16wd5j7iju/node.tar.gz/file
-%m2 *Base :* 
-%m2 github.com/DikaArdnt/Hisoka-Morou
-%m3
+let text = `╭─● *S C R I P T  M D*
+┃● *Script :* 
+┃➥ youtube.com/c/LeonGanz
+┃● *Node_Modules:*
+┃➥ www.mediafire.com/file/q8ogv16wd5j7iju/node.tar.gz/file
+┃● *Base :* 
+┃➥ github.com/DikaArdnt/Hisoka-Morou
+╰─●
 
-%m1*📮 Script Non MD*
-%m2 *Script :* 
-%m2 youtube.com/c/LeonGanz
-%m2 *Base :* 
-%m2 github.com/melcanz/melcanz-bot
-%m3
+╭─●*S C R I P T  N O N  M D*
+┃● *Script :* 
+┃➥ youtube.com/c/LeonGanz
+┃● *Base :* 
+┃➥ github.com/melcanz/melcanz-bot
+╰─●
 
 📍 *N o t e :* 
 • Jangan lupa minta izin owner sebelum menggunakan scriptnya kak!
