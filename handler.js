@@ -585,7 +585,7 @@ export async function handler(chatUpdate) {
                         }
                     }
                     if (m.limit)
-                        m.reply(+m.limit + ' Limit terpakai')
+                        m.reply(+m.limit + ' Limit terpakai ✔️')
                 }
                 break
             }
@@ -726,7 +726,11 @@ export async function deleteUpdate(message) {
         let chat = global.db.data.chats[msg.chat] || {}
         if (chat.delete)
             return
-        await this.reply(msg.chat, `Terdeteksi @${participant.split`@`[0]} telah menghapus pesan`.trim(), msg, {
+        await this.reply(msg.chat, `
+Terdeteksi @${participant.split`@`[0]} telah menghapus pesan
+Untuk mematikan fitur ini, ketik
+*.enable delete*
+`.trim(), msg, {
             mentions: [participant]
         })
         this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
@@ -737,23 +741,23 @@ export async function deleteUpdate(message) {
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '[!] Only Developer',
-        owner: '[!] Only Owner',
-        mods: '[!] Only Moderator',
-        premium: '[!] Only Premium Users',
-        group: '[!] Only Group Chat',
-        private: '[!] Only Private Chat',
-        admin: '[!] Only Admin Group',
-        botAdmin: '[!] Only Bot Admin',
-        restrict: '[!] This Fitur Disable'
+        rowner: '[ ❗ ] Only Developer',
+        owner: '[ ❗ ] Only Owner',
+        mods: '[ ❗ ] Only Moderator',
+        premium: '[ ❗ ] Only Premium Users',
+        group: '[ ❗ ] Only Group Chat',
+        private: '[ ❗ ] Only Private Chat',
+        admin: '[ ❗ ] Only Admin Group',
+        botAdmin: '[ ❗ ] Only Bot Admin',
+        restrict: '[ ❗ ] This Fitur Disable'
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo: { externalAdReply: {title: global.wm, body: '404 Access denied ✘', sourceUrl: global.snh, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
     
     let msgg = {
-    	unreg: 'Anda belum terdaftar didalam Database BOT'
+    	unreg: 'Halo kak ! 👋\nAnda belum terdaftar didalam Database BOT 🗂️\n\nKlick Tombol dibawah Untuk Mendaftar Ke Database BOT !'
 }[type]
-if (msgg) return conn.sendHydrated(m.chat, msgg, global.wm, [
-      ['Daftar', '/daftar'],
+if (msgg) return conn.sendHydrated(m.chat, msgg, global.wm, null, global.sgc, '🌎 Join My Group Official', `${m.sender.split`@`[0]}`, '🌹 U S E R', [
+      ['▣ VERIFY ▣', '/daftar'],
       [null,null],
       [null, null]
     ], m)
