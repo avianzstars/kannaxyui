@@ -464,12 +464,40 @@ const listMessage = {
             pageCount: fpagedoc,
             caption: text,
             footer: titlebot,
-            },
-	    conn.sendButton(m.chat, message, global.wm, null, [['Owner', '/owner']], m)}
-	    ]
-	 }
-           
-        //await conn.sendMessage(m.chat, message)
+        templateButtons: [
+                {
+                    urlButton: {
+                        displayText: `🎀 ${namebot}`,
+                        url: sig
+                    }
+                },
+                //{
+                    //urlButton: {
+                        //displayText: 'Grup',
+                        //url: sgc
+                    //}
+                //},
+                {
+                    quickReplyButton: {
+                        displayText: 'Owner',
+                        id: '.owner'
+                    }
+                },
+                {
+                    quickReplyButton: {
+                        displayText: 'Ping',
+                        id: '.ping'
+                    }
+                },
+                //{
+                    //quickReplyButton: {
+                        //displayText: '📮 Donasi',
+                        //id: '.donasi'
+                    //}
+                //},
+            ]
+        }
+        await conn.sendMessage(m.chat, message)
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
         
     //------------------- BUTTON VID
