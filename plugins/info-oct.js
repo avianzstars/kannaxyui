@@ -3,7 +3,7 @@ let handler = async (m, { conn, args, command }) => {
 let oct = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
- await conn.sendButton(m.chat, `IG: yusuf.oct\n`, botdate + '\n\n' + wm, giflogo, [['Follow', '.oct']], m, {
+ await conn.sendButton(m.chat, `IG: yusuf.oct\n`, botdate + '\n\n' + wm, [['Follow', '.oct']], m, {
 contextInfo: { externalAdReply :{
                         mediaUrl: '',
                         mediaType: 2,
