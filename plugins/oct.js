@@ -1,14 +1,14 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
-let txt = `Yusuf Oct`
+let text = `Yusuf Oct`
 
-const tb = [
+const templateButtons = [
     {index: 1, urlButton: {displayText: 'Follow', url: sig}},
 ]
 
 let tm = {
-text: txt,
+text: text,
 footer: global.wm,
-templateButtons: tb }
+templateButtons: templateButtons }
 //image: {url: fla + 'Donasi'}
 }
 conn.sendMessage(m.chat, tm, m)
