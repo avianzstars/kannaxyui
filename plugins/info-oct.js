@@ -13,7 +13,7 @@ contextInfo: { externalAdReply :{
                         body: 'Total Cintaku Padamu',          
                         previewType: 0,
                         thumbnail: fs.readFileSync("./thumbnail.jpg"),
-                        sourceUrl: sig
+                        sourceUrl: sig,
 text: text,
 footer: global.wm,
 templateButtons: templateButtons,
