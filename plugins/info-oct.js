@@ -3,11 +3,11 @@ let handler = async (m, { conn, args, command }) => {
 let oct = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
- await conn.sendButton(m.chat, `IG: yusuf.oct\n`, botdate + '\n\n' + wm, [['Follow', '.oct']], m, {
+ await conn.sendButton(m.chat, `IG: yusuf.oct\n`, botdate + '\n' + wm, giflogo, [['Follow', url: sig]], m, {
 contextInfo: { externalAdReply :{
                         mediaUrl: '',
                         mediaType: 2,
-                        description: 'anu',
+                        description: namebot,
                         title: author,
                         body: 'Jangan lupa Follow',
                         previewType: 0,
