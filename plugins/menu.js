@@ -14,26 +14,6 @@ const defaultMenu = {
 %m2 *Tag:* %tag
 %m2 *Status:* %prems
 %m2 *Limit:* %limit
-%m2 *Role:* %role
-%m3
-
-%m1 *H A R I  I N I*
-%m2 *%ucpn*
-%m2 *Days:* %week %weton
-%m2 *Date:* %date
-%m2 *Islamic Date:* %dateIslamic
-%m2 *Waktu:* %wib
-%m3
-
-%m1 *I N F O*
-%m2 *Bot Name:* %me
-%m2 *Mode:* %mode
-%m2 *Platform:* %platform
-%m2 *Type:* Node.Js
-%m2 *Baileys:* Multi Device
-%m2 *Prefix:* [ *%_p* ]
-%m2 *Uptime:* %muptime
-%m2 *Database:* %rtotalreg dari %totalreg
 %m3
 
 %m1 *I N F O  C M D* 
@@ -52,6 +32,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
   let arrayMenu = ['all', 'anime', 'update', 'maker', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
+  'elite': 'Elite'
   'main': 'Main',
   'game': 'Game',
   'rpg': 'RPG Games',
@@ -79,7 +60,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
   'host': 'Host',
   'advanced': 'Advanced',
   'info': 'Info',
-  'nc': 'No Category',
 }
   if (teks == 'game') tags = {
     'game': 'Game'
@@ -176,8 +156,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
     'nsfw': 'Nsfw'
   }
   if (teks == 'nocategory') tags = {
-    'quran': 'Al-Quran',
-    'oct': 'Oct'
+    'quran': 'Al-Quran'
   }
   try {
   	// DEFAULT MENU
@@ -200,7 +179,12 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
       let tag = `@${m.sender.split('@')[0]}`
     
       const sections = [
-   {
+     {
+	title: `${htki} Elite ${htka}`,
+	rows: [
+	    {title: `${pmenus} Elite`, rowId: ".oct", description: "Khusus Elite"},
+	]
+    },{
 	title: `${htki} MAIN ${htka}`,
 	rows: [
 	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "Menampilkan kecepatan respon BOT"},
@@ -238,14 +222,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	{title: `${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
 	{title: `${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
 	{title: `${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
-	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"},
+	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"}
 	]
-  },{
-	title: `${htki} No Category ${htka}`,
-	rows: [
-	    {title: `${pmenus} Oct`, rowId: ".oct", description: "Test"}
-	]
-    },
+  },
 ]
 
 let usrs = db.data.users[m.sender]
@@ -449,7 +428,7 @@ const listMessage = {
             fileLength: fsizedoc,
             pageCount: fpagedoc,
             caption: text,
-            footer: titlebot,
+            footer: titlebot + '\n' + botdate,
             templateButtons: [
                 {
                     urlButton: {
