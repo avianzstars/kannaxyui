@@ -1,20 +1,16 @@
 import fs from 'fs'
 let handler = async (m, { conn, args, command }) => {
-let oct = Object.values(global.plugins).filter(
-    (v) => v.help && v.tags
-  ).length;
- await conn.sendButton(m.chat, `IG: yusuf.oct\n`, botdate + '\n' + wm, giflogo, [['Follow', url: sig]], m, {
-contextInfo: { externalAdReply :{
-                        mediaUrl: '',
-                        mediaType: 2,
-                        description: namebot,
-                        title: author,
-                        body: 'Jangan lupa Follow',
-                        previewType: 0,
-                        thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig
-                      }}
-})
+let text = `Yusuf`
+const templateButtons = [
+    {index: 1, urlButton: {displayText: 'Follow', url: sig}},
+]
+let tm = {
+text: text,
+footer: global.wm,
+templateButtons: templateButtons,
+//image: {url: fla + 'Donasi'}
+}
+conn.sendMessage(m.chat, tm, m)
 }
 
 
