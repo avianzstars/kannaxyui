@@ -1,9 +1,9 @@
 import fs from 'fs'
 let handler = async (m, { conn, args, command }) => {
 let text = `Yusuf`
-const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Follow', url: sig}},
-]
+//const templateButtons = [
+    //{index: 1, urlButton: {displayText: 'Follow', url: sig}}, ]
+
 let tm = {
 contextInfo: { externalAdReply :{
 mediaUrl: '',
@@ -16,9 +16,11 @@ thumbnail: fs.readFileSync("./thumbnail.jpg"),
 sourceUrl: sig,
 text: text,
 footer: global.wm,
-templateButtons: templateButtons
-}}
-conn.sendMessage(m.chat, tm, m)
+templateButtons: [
+    { urlButton: {displayText: 'Follow', url: sig}},
+]
+}
+conn.sendMessage(m.chat, tm, text, m)
 }
 
 
