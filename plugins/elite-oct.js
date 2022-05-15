@@ -14,8 +14,9 @@ await conn.sendHydrated(m.chat, text, author, pp, global.sig, 'Github', null, nu
       ['Donate', '/donasi'],
       ['Speed', '/ping'],
       ['Owner', '/owner']
-    ], m)
-  }
+    ], contextInfo: { externalAdReply: {title: author, body: 'Jangan lupa Follow', sourceUrl: sig, thumbnail: fs.readFileSync('./oct.jpg') }}
+})
+}
 
 let m1 = global.dmenut
 let m2 = global.dmenub
