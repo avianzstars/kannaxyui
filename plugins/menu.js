@@ -428,7 +428,7 @@ const listMessage = {
             fileLength: fsizedoc,
             pageCount: fpagedoc,
             caption: text,
-            footer: botdate + '\n' + wm ,
+            footer: botdate + '\n\n' + wm ,
             templateButtons: [
                 {
                     urlButton: {
