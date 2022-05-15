@@ -9,14 +9,13 @@ let text = `╭─● *Instagram*
 ┃➥ instagram.com/yusuf.oct
 ╰─●`
 
-const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
-await conn.sendHydrated(m.chat, text, author, pp, global.sig, 'Github', null, null, [
-      ['Donate', '/donasi'],
-      ['Speed', '/ping'],
-      ['Owner', '/owner']
-    ], contextInfo: { externalAdReply: {title: author, body: 'Jangan lupa Follow', sourceUrl: sig, thumbnail: fs.readFileSync('./oct.jpg') }}
-})
-}
+const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './banner.jpg')
+await conn.sendHydrated(m.chat, text, botdate + '\n\n' + wm, pp, sig, 'Follow', null, null, [
+      //['Donate', '/donasi'],
+      //['Speed', '/ping'],
+      //['Owner', '/owner']
+     ], m)
+  }
 
 let m1 = global.dmenut
 let m2 = global.dmenub
