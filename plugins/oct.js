@@ -15,7 +15,7 @@ conn.sendMessage(m.chat, tm, m)
 }
 
 handler.help = ['oct']
-handler.tags = ['oct']
+handler.tags = ['nc']
 handler.command = /^(oct)$/i
 
 export default handler
