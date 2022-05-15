@@ -2,14 +2,14 @@ let { MessageType } = (await import('@adiwajshing/baileys')).default
 import fetch from 'node-fetch'
 
 let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
-	if (global.optsnsfw == false) return m.reply('Fitur Ini dimatikan Oleh Owner!')
+	if (global.optsnsfw == false) return m.reply('Fitur Ini dimatikan Oleh Owner')
   let type = (args[0] || '').toLowerCase()
   let _type = (args[0] || '').toLowerCase()
 
 let res = 'https://hardianto.xyz/api/anime/random?nsfw='
 let api = '&apikey=hardianto'
-let tekk = '•·––––––––– NSFW –––––––––·•\nHuuuu... sange sama kartun'
-  let teks = `Silahkan Pilih Dibawah!\nAtau ketik ${usedPrefix}nsfw neko`
+let tekk = '● *N S F W* ●\nAntum birahi sama kartun'
+  let teks = `Silahkan dipilih Tuan`
 const sections = [
    {
 	title: '•·––––––––– NSFW –––––––––·•',
@@ -46,7 +46,7 @@ const listMessage = {
   text: teks,
   footer: null,
   title: `${htki} *NSFW* ${htka}`,
-  buttonText: "Click Here !",
+  buttonText: "Menu",
   sections
 }
 
