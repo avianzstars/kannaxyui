@@ -1,21 +1,23 @@
-let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
-let text = `Yusuf Oct`
-
-const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Follow', url: sig}},
-]
-
-let tm = {
-text: text,
-footer: global.wm,
-templateButtons: templateButtons }
-//image: {url: fla + 'Donasi'}
+import fs from 'fs'
+let handler = async (m, { conn, args, command }) => {
+let totalf = Object.values(global.plugins).filter(
+    (v) => v.help && v.tags
+  ).length;
+ await conn.sendButton(m.chat, `IG: yusuf.oct\n`, botdate + '\n\n' + wm, giflogo, [['Oct','oct']], m, {
+contextInfo: { externalAdReply :{
+                        mediaUrl: '',
+                        mediaType: 2,
+                        description: 'anu',
+                        title: bottime,
+                        body: 'Total Cintaku Padamu',          previewType: 0,
+                        thumbnail: fs.readFileSync("./thumbnail.jpg"),
+                        sourceUrl: sig
+                      }}
+})
 }
-conn.sendMessage(m.chat, tm, m)
-}
+
 
 handler.help = ['oct']
-handler.tags = ['nc']
-handler.command = /^(oct)$/i
-
+handler.tags = ['info']
+handler.command = ['0ct']
 export default handler
