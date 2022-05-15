@@ -6,19 +6,18 @@ const templateButtons = [
 ]
 let tm = {
 contextInfo: { externalAdReply :{
-                        mediaUrl: '',
-                        mediaType: 2,
-                        description: namebot,
-                        title: bottime,
-                        body: 'Total Cintaku Padamu',          
-                        previewType: 0,
-                        thumbnail: fs.readFileSync("./thumbnail.jpg"),
-                        sourceUrl: sig,
+mediaUrl: '',
+mediaType: 2,
+description: namebot,
+title: bottime,
+body: 'Total Cintaku Padamu',          
+previewType: 0,
+thumbnail: fs.readFileSync("./thumbnail.jpg"),
+sourceUrl: sig,
 text: text,
 footer: global.wm,
-templateButtons: templateButtons,
-image: {url: fla + 'Donasi'}
-}
+templateButtons: templateButtons
+}}
 conn.sendMessage(m.chat, tm, m)
 }
 
