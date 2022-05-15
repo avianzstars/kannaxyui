@@ -32,7 +32,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
   let arrayMenu = ['all', 'anime', 'update', 'maker', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-  'elite': 'Elite'
+  'elite': 'Elite',
   'main': 'Main',
   'game': 'Game',
   'rpg': 'RPG Games',
@@ -428,7 +428,7 @@ const listMessage = {
             fileLength: fsizedoc,
             pageCount: fpagedoc,
             caption: text,
-            footer: titlebot,
+            footer: titlebot + '\n' + botdate,
             templateButtons: [
                 {
                     urlButton: {
