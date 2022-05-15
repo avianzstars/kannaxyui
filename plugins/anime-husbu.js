@@ -5,10 +5,9 @@ let handler = async (m, { conn, usedPrefix }) => {
     if (!res.ok) throw await res.text()
     let json = await res.json()
     if (!json.url) throw 'Error!'
-    conn.sendFile(m.chat, json.url, 'husbu.jpg', Suami Kartun, m, false)
+    conn.sendButton(m.chat, 'Husbu kok kartun', author, json.url, [['Ganti Husbu', `${usedPrefix}husbu`]], m)
 }
 handler.help = ['husbu']
 handler.tags = ['anime']
 handler.command = /^(husbu)$/i
-//MADE IN ERPAN 1140 BERKOLABORASI DENGAN BTS
 export default handler
