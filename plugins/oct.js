@@ -1,8 +1,18 @@
-import fetch from 'node-fetch'
+let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
+let txt = `Yusuf Oct`
 
-conn.sendButton(m.chat, 'Hello world!', '@BochilGaming', null, [
-      ['Oct', '.oct'], ['Bye', 'bye']
-])
+const tb = [
+    {index: 1, urlButton: {displayText: 'Follow', url: sig}},
+]
+
+let tm = {
+text: txt,
+footer: global.wm,
+templateButtons: tb }
+//image: {url: fla + 'Donasi'}
+}
+conn.sendMessage(m.chat, tm, m)
+}
 
 handler.help = ['oct']
 handler.tags = ['oct']
