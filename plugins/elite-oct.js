@@ -9,7 +9,7 @@ let text = `╭─● *Instagram*
 ┃➥ instagram.com/yusuf.oct
 ╰─●`
 
-const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './banner.png')
+const pp = await conn.oct(conn.user.jid).catch(_ => './banner.png')
 await conn.sendHydrated(m.chat, text, botdate + '\n\n' + wm, pp, sig, 'Follow', null, null, [
       //['Donate', '/donasi'],
       //['Speed', '/ping'],
