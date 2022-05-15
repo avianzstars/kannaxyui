@@ -455,7 +455,13 @@ const listMessage = {
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
         
     //------------------- BUTTON VID
-    await conn.sendButton(m.chat, text, wm, 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4', [['Owner', '.oct']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: author, body: 'Jangan lupa Follow', sourceUrl: sig, thumbnail: fs.readFileSync('./banner.png') }}})
+    await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, 'https://scontent-sin6-2.cdninstagram.com/v/t50.16885-16/274860803_155936233479998_2528562067986984633_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjEyODAuaWd0di5iYXNlbGluZSIsInFlX2dyb3VwcyI6IltcImlnX3dlYl9kZWxpdmVyeV92dHNfb3RmXCJdIn0&_nc_ht=scontent-sin6-2.cdninstagram.com&_nc_cat=102&_nc_ohc=rs_nqbTjP-sAX9D12Rc&edm=ALQROFkBAAAA&vs=689988195335270_3320431000&_nc_vs=HBksFQAYJEdBTUxZaEFfMzgyNzBvMEFBTGt1NU03TlFSY2pidlZCQUFBRhUAAsgBABUAGCRHUDRkWUJEczN1Q3lhQ2dCQUs0RW9nSTlKdjRIYnZWQkFBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACamqeSopc7SPxUCKAJDMywXQCpEGJN0vGoYEmRhc2hfYmFzZWxpbmVfMV92MREAdewHAA%3D%3D&_nc_rid=2e3b4f8783&ccb=7-4&oe=62834044&oh=00_AT8GO8kigpIrRhanvRqhxI3OfaYuIT-sGeoe_VzfFujwCw&_nc_sid=30a2ef', [['Follow', '.oct']], m, {
+contextInfo: { externalAdReply :{
+                        description: stickauth,
+                        title: author,
+                        body: 'Jangan lupa Follow',
+                        thumbnail: fs.readFileSync("./oct.jpg"),
+                        sourceUrl: sig }}})
     
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
