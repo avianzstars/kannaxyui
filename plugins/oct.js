@@ -1,9 +1,8 @@
 import fetch from 'node-fetch'
 
-let oct = {
-    	oct: 'oct'
-}[type]
-if (msgg) return conn.sendButton(m.chat, oct, global.wm, null, [['Oct', '/oct']], m)}
+conn.sendButton(m.chat, 'Hello world!', '@BochilGaming', null, [
+      ['Oct', '.oct'], ['Bye', 'bye']
+])
 
 handler.help = ['oct']
 handler.tags = ['oct']
