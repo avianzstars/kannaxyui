@@ -10,7 +10,7 @@ let text = `╭─● *S C R I P T  M D*
 ┃➥ github.com/DikaArdnt/Hisoka-Morou
 ╰─●
 
-╭─●*S C R I P T  N O N  M D*
+╭─● *S C R I P T  N O N  M D*
 ┃● *Script :* 
 ┃➥ youtube.com/c/LeonGanz
 ┃● *Base :* 
