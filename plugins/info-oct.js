@@ -5,6 +5,15 @@ const templateButtons = [
     {index: 1, urlButton: {displayText: 'Follow', url: sig}},
 ]
 let tm = {
+contextInfo: { externalAdReply :{
+                        mediaUrl: '',
+                        mediaType: 2,
+                        description: namebot,
+                        title: bottime,
+                        body: 'Total Cintaku Padamu',          
+                        previewType: 0,
+                        thumbnail: fs.readFileSync("./thumbnail.jpg"),
+                        sourceUrl: sig
 text: text,
 footer: global.wm,
 templateButtons: templateButtons,
