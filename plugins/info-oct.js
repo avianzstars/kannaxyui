@@ -10,6 +10,6 @@ contextInfo: { externalAdReply: {title: author, body: 'Jangan lupa Follow', sour
 }
 
 handler.help = ['oct']
-handler.tags = ['elite']
+handler.tags = ['info']
 handler.command = ['oct']
 export default handler
