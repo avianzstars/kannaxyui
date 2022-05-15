@@ -428,7 +428,7 @@ const listMessage = {
             fileLength: fsizedoc,
             pageCount: fpagedoc,
             caption: text,
-            //footer: botdate + '\n' + wm,
+            footer: botdate + '\n' + wm ,
             templateButtons: [
                 {
                     urlButton: {
@@ -450,7 +450,7 @@ const listMessage = {
                 },
             ]
         }
-        await conn.sendMessage(m.chat, message,  botdate + '\n\n' + wm)
+        await conn.sendMessage(m.chat, message)
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
         
     //------------------- BUTTON VID
