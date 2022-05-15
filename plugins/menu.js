@@ -79,7 +79,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
   'host': 'Host',
   'advanced': 'Advanced',
   'info': 'Info',
-  '': 'No Category',
+  'nc': 'No Category',
 }
   if (teks == 'game') tags = {
     'game': 'Game'
@@ -176,7 +176,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
     'nsfw': 'Nsfw'
   }
   if (teks == 'nocategory') tags = {
-    'quran': 'Al-Quran'
+    'quran': 'Al-Quran',
+    'oct': 'Oct'
   }
   try {
   	// DEFAULT MENU
@@ -237,9 +238,14 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	{title: `${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
 	{title: `${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
 	{title: `${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
-	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"}
+	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"},
 	]
-  },
+  },{
+	title: `${htki} No Category ${htka}`,
+	rows: [
+	    {title: `${pmenus} Oct`, rowId: ".oct", description: "Test"}
+	]
+    },
 ]
 
 let usrs = db.data.users[m.sender]
