@@ -455,7 +455,7 @@ const listMessage = {
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
         
     //------------------- BUTTON VID
-    await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, null, [['Follow', '.oct']], m, {
+    await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, pp, [['Follow', '.oct']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: author,
