@@ -8,7 +8,7 @@ let tm = {
 text: text,
 footer: global.wm,
 templateButtons: templateButtons,
-//image: {url: fla + 'Donasi'}
+image: {url: fla + 'Donasi'}
 }
 conn.sendMessage(m.chat, tm, m)
 }
