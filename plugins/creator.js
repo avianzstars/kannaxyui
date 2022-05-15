@@ -22,14 +22,14 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 //------------ BIO
 let ppown = await conn.profilePictureUrl(nomorown + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1]) 
 let teksbio = `${htki} *BIODATA* ${htka}
-${htjava} *Nama :* Rama Agung Supriyadi
-${htjava} *Channel Youtube:* LeonGanz
-${htjava} *Umur:* 15 Tahun
-${htjava} *Kelas:* 1 SMA
-${htjava} *Status:* Pelajar
+${htjava} *Nama :* Yusuf Oct
+${htjava} *Channel Youtube:* Kepo
+${htjava} *Umur:* Rahasia
+${htjava} *Kelas:* Hmm...
+${htjava} *Status:* NOt responding
 
 ${htjava} *Ulang Tahun:* Private 🎭
-${htjava} *Alamat:* Indonesia, Jawa Timur, Lumajang
+${htjava} *Alamat:* Isekai
 ${htjava} *Skills:* 
 > JavaScript [89.7%]
 > Python [13.4%]
@@ -39,7 +39,7 @@ ${htjava} *Instagram:* ${sig}
 ${htjava} *Github:* ${sgh}
 •·––––––––––––––––––––––––––·•
 `
-  let teks = 'P - Pilih dibawah kak ! ⁄(⁄ ⁄•⁄-⁄•⁄ ⁄)⁄'
+  let teks = 'Pilih dibawah'
 const sections = [
    {
 	title: `${htjava} OWNER –––––––––·•`,
@@ -62,7 +62,7 @@ const listMessage = {
   text: teks,
   footer: null,
   title: `${htki} *OWNER* ${htka}`,
-  buttonText: "Click Here !",
+  buttonText: "Menu",
   sections
 }
 
@@ -74,7 +74,7 @@ const listMessage = {
           conn.reply(m.chat, teksnomor, m, { contextInfo: { mentionedJid: [nowner, nopart] }})
             break
             case 'bio':
-          conn.sendHydrated(m.chat, teksbio, wm, ppown, sig, "📷 Instagram", nomorown, '🌹 Nomor', [[null, null], [null, null],[null,null]], m)
+          conn.sendHydrated(m.chat, teksbio, wm, ppown, sig, "Instagram", nomorown, "Nomor", [[null, null], [null, null],[null,null]], m)
             break
             
           default:
