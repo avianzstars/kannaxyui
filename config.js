@@ -119,8 +119,8 @@ global.APIKeys = { // APIKey Here
 global.wm = '2022 © Yusuf Oct' //Main Watermark
 global.wm2 = '2022 © Yusuf Oct'
 global.wm3 = '2022 © Yusuf Oct'
-global.botdate = `● *Tanggal*: ${week} ${date}\n● *Waktu*: ${wktuwib}`
-global.bottime = `*WAKTU*: ${wktuwib}`
+global.botdate = `● Tanggal: ${week} ${date}\n● Waktu: ${wktuwib}`
+global.bottime = `Waktu: ${wktuwib}`
 global.titlebot = `2022 © Yusuf Oct`
 global.author = 'Yusuf Oct'
 
