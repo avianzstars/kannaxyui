@@ -11,7 +11,7 @@ let text = `╭─● *Instagram*
 
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
-await conn.sendHydrated(m.chat, text, botdate + '\n\n' + wm, inputPath, global.sig, 'Instagram', null, null, [['Follow', '.oct']], m, {
+await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, global.sig, 'Instagram', null, null, [['Follow', '.oct']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: author,
