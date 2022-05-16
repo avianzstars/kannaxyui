@@ -14,7 +14,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       if (!img) throw `balas gambar/video/stiker dengan perintah ${usedPrefix + command}`
       let out
       try {
-        stiker = await sticker(img, false, global.packname, global.author)
+        stiker = await sticker(img, false, global.stickpack, global.stickauth)
       } catch (e) {
         console.error(e)
       } finally {
