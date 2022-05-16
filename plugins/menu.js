@@ -455,13 +455,14 @@ const listMessage = {
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
         
     //------------------- BUTTON VID
-    await conn.sendhydrated(m.chat, text, botdate + '\n\n' + wm, pp, sig, "instagram", [['Follow', '.oct']], m, {
+    await conn.sendbutton(m.chat, text, botdate + '\n\n' + wm, pp, [['Follow', '.oct']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: author,
                         body: 'Jangan lupa Follow',
                         thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig }}})
+                        sourceUrl: sig,
+                        asLocation: true }}})
     
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
