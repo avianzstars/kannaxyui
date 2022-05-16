@@ -14,12 +14,9 @@ let text = `╭─● *Biodata*
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-await conn.sendHydrated(m.chat, text, botdate + '\n\n' + wm, inputPath, global.sgc, '🌎 Join My Group Official', global.sig, 'IG', `${m.sender.split`@`[0]}`, '🌹 U S E R', [
-      ['▣ VERIFY ▣', '/daftar'],
-      [null,null],
-      [null, null]
-    ], m)
-}
+await conn.sendHydrated(m.chat, text, botdate + '\n\n' + wm, null, global.sgc, '🌎 Join My Group Official', global.sig, 'IG', `${m.sender.split`@`[0]}`, '🌹 U S E R', [
+      ['▣ VERIFY ▣', '/daftar']
+    ], m)}
 
 let m1 = global.dmenut
 let m2 = global.dmenub
