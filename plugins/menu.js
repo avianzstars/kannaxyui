@@ -410,6 +410,7 @@ const listMessage = {
   let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
   
     const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './banner.png')
+    let inputPath = './banner.png'
     
     //------------------ DOCUMENT
     let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
@@ -455,7 +456,7 @@ const listMessage = {
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
         
     //------------------- BUTTON VID
-    await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, pp, [['Follow', '.oct']], m, {
+    await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [['Owner', '.oct']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: author,
