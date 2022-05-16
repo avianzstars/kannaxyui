@@ -456,13 +456,19 @@ const listMessage = {
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
         
     //------------------- BUTTON VID
-    await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [['Owner', '.oct']], m, {
-contextInfo: { externalAdReply :{
-                        description: stickauth,
-                        title: author,
-                        body: 'Jangan lupa Follow',
-                        thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig }}})
+    await conn.send3ButtonImg(m.chat, text, wm, null, 'Owner', '.nowner', 'Donasi', '.donasi', 'Rules', '.rules', ftoko, {
+    quoted: m,
+    contextInfo: {
+        externalAdReply: {
+            title: global.wm,
+            body: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`,
+            description: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`,
+            mediaType: 2,
+          thumbnail: inputPath,
+         mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`
+        }
+     }
+    })
     
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
