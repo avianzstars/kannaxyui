@@ -4,7 +4,7 @@ let oct = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
     
-let text = `╭─● *Instagram*
+let text = `╭─● *Owner*
 ┃● *Yusuf Oct*
 ┃➥ instagram.com/yusuf.oct
 ╰─●`
