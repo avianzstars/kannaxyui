@@ -180,25 +180,11 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
     
       const sections = [
      {
-	title: `${htki} Elite ${htka}`,
+	title: `${htki} ELITE ${htka}`,
 	rows: [
 	    {title: `${pmenus} Elite`, rowId: ".oct", description: "Khusus Elite"},
 	]
     },{
-	title: `${htki} MAIN ${htka}`,
-	rows: [
-	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "Menampilkan kecepatan respon BOT"},
-	    {title: `${pmenus} Owner BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
-	    {title: `${pmenus} Script BOT`, rowId: ".sc", description: `Source Code ${namebot}`},
-	]
-    },{
-	title: `${htki} SUPPORT ${htka}`,
-	rows: [
-	    {title: `${pmenus} Sewa BOT`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
-	    {title: `${pmenus} Beli Premium`, rowId: ".premium", description: "Menampilkan list harga premium"},
-	    {title: `${pmenus} Donasi`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
-	]
-	},{
 	title: `${htki} MENU ${htka}`,
 	rows: [
 	{title: `${pmenus} All`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
@@ -222,9 +208,23 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	{title: `${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
 	{title: `${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
 	{title: `${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
-	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"}
+	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"},
 	]
-  },
+  },{
+	title: `${htki} SUPPORT ${htka}`,
+	rows: [
+	{title: `${pmenus} Sewa BOT`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
+	{title: `${pmenus} Beli Premium`, rowId: ".premium", description: "Menampilkan list harga premium"},
+	{title: `${pmenus} Donasi`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
+	]
+   },{
+	title: `${htki} MAIN ${htka}`,
+	rows: [
+	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "Menampilkan kecepatan respon BOT"},
+	    {title: `${pmenus} Owner BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
+	    {title: `${pmenus} Script BOT`, rowId: ".sc", description: `Source Code ${namebot}`}
+	]
+    },
 ]
 
 let usrs = db.data.users[m.sender]
