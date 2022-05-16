@@ -14,18 +14,31 @@ let text = `╭─● *Biodata*
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Instagram', url: sig}},
-    {index: 2, urlButton: {displayText: 'WA Owner', url: 'https://wa.me/6283873115706/'}},
-]
-let tm = {
-text: text,
-footer: botdate + '\n\n' + wm,
-templateButtons: templateButtons,
-buffer: './banner.png'
-}
-conn.sendMessage(m.chat, tm, m)
-}
+const message = {
+            //document: { url: thumb },
+            jpegThumbnail: inputPath,
+            //fileName: '𝗧 𝗜 𝗠 𝗘 : ' + wktuwib,
+            //mimetype: td,
+            //fileLength: fsizedoc,
+            //pageCount: fpagedoc,
+            caption: text,
+            footer: titlebot,
+            templateButtons: [
+                {
+                    urlButton: {
+                        displayText: `Instagram`,
+                        url: sig
+                    }
+                },
+                {
+                    urlButton: {
+                        displayText: 'WA Owner',
+                        url: 'https://wa.me/6283873115706/'
+                    }
+                },
+            ]
+        }
+        await conn.sendMessage(m.chat, message)
 
 let m1 = global.dmenut
 let m2 = global.dmenub
