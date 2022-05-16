@@ -607,7 +607,7 @@ let ftt = `©️ Created By Letta - Sama`
   conn.relayWAMessage(res)*/
 
 //BUTTON FAKE YOUTUBE
-    /*conn.send3ButtonImg(m.chat, await (await fetch(fla + teks)).buffer(), '──────────[ *DASHBOARD* ]──────────' , text.trim(), 'Owner', '.nowner', 'Donasi', '.donasi', 'Rules', '.rules', ftrol, {
+    conn.send3ButtonImg(m.chat, await (await fetch(fla + teks)).buffer(), '──────────[ *DASHBOARD* ]──────────' , text.trim(), 'Owner', '.nowner', 'Donasi', '.donasi', 'Rules', '.rules', ftrol, {
     quoted: m,
     contextInfo: {
         externalAdReply: {
@@ -619,7 +619,7 @@ let ftt = `©️ Created By Letta - Sama`
          mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`
         }
      }
-    })*/
+    })
 
 // Kalau mau ada audio saat menggunakan menu...
   /*conn.sendFile(m.chat, bzz, 'wibu.m4a', null, m, true, {
