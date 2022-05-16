@@ -15,12 +15,6 @@ let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const message = {
-            //document: { url: thumb },
-            jpegThumbnail: inputPath,
-            //fileName: '𝗧 𝗜 𝗠 𝗘 : ' + wktuwib,
-            //mimetype: td,
-            //fileLength: fsizedoc,
-            //pageCount: fpagedoc,
             caption: text,
             footer: titlebot,
             templateButtons: [
@@ -38,7 +32,7 @@ const message = {
                 },
             ]
         }
-        await conn.sendMessage(m.chat, message)
+        await conn.sendMessage(m.chat, message, inputPath)
 
 let m1 = global.dmenut
 let m2 = global.dmenub
