@@ -461,8 +461,7 @@ contextInfo: { externalAdReply :{
                         title: author,
                         body: 'Jangan lupa Follow',
                         thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig,
-                        asLocation: true }}})
+                        sourceUrl: sig }}})
     
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
