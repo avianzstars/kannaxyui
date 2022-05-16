@@ -555,7 +555,7 @@ let ftt = `©️ Created By Letta - Sama`
     })
     
     // BUTTON PDF
-    /*await conn.sendMessage(m.chat, { "contentText": '──────────[ *DASHBOARD* ]──────────', "footerText": text,
+    await conn.sendMessage(m.chat, { "contentText": '──────────[ *DASHBOARD* ]──────────', "footerText": text,
 "buttons": [
 {buttonId: '.owner', buttonText: {displayText: 'OWNER'}, type: 1},
 {buttonId: '.donasi', buttonText: {displayText: 'DONASI'}, type: 1},
@@ -575,7 +575,7 @@ let ftt = `©️ Created By Letta - Sama`
             "mediaKeyTimestamp": "1634472176",
             "jpegThumbnail": await (await fetch('https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg')).buffer(),
   }}, 'buttonsMessage', { quoted: ftroli, contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 999, isForwarded: true, externalAdReply: { title: global.wm, body: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, description: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, mediaType: 2, thumbnail: await (await fetch(`${logos()}`)).buffer(), mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`}}})
-  */
+  
   
   //BUTTON IMAGE
 //  await conn.send2ButtonImg(m.chat, await (await fetch(`${logos()}`)).buffer(), '──────────[ *DASHBOARD* ]──────────', text, 'OWNER', '.owner', '\n\nSAYA PEDO DAN SAYA BANGGA ꒪꒳꒪', 'a', fkon, { contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 999, isForwarded: true}})
@@ -607,7 +607,7 @@ let ftt = `©️ Created By Letta - Sama`
   conn.relayWAMessage(res)*/
 
 //BUTTON FAKE YOUTUBE
-    conn.send3ButtonImg(m.chat, await (await fetch(fla + teks)).buffer(), '──────────[ *DASHBOARD* ]──────────' , text.trim(), 'Owner', '.nowner', 'Donasi', '.donasi', 'Rules', '.rules', ftrol, {
+    /*conn.send3ButtonImg(m.chat, await (await fetch(fla + teks)).buffer(), '──────────[ *DASHBOARD* ]──────────' , text.trim(), 'Owner', '.nowner', 'Donasi', '.donasi', 'Rules', '.rules', ftrol, {
     quoted: m,
     contextInfo: {
         externalAdReply: {
@@ -619,7 +619,7 @@ let ftt = `©️ Created By Letta - Sama`
          mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`
         }
      }
-    })
+    })*/
 
 // Kalau mau ada audio saat menggunakan menu...
   /*conn.sendFile(m.chat, bzz, 'wibu.m4a', null, m, true, {
