@@ -14,26 +14,12 @@ let text = `╭─● *Biodata*
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-const message = {
-            jpegThumbnail: inputPath,
-            caption: text,
-            footer: titlebot,
-            templateButtons: [
-                {
-                    urlButton: {
-                        displayText: `Instagram`,
-                        url: sig
-                    }
-                },
-                {
-                    urlButton: {
-                        displayText: 'WA Owner',
-                        url: 'https://wa.me/6283873115706/'
-                    }
-                },
-            ]
-        }
-        await conn.sendMessage(m.chat, message, ) }
+await conn.sendHydrated(m.chat, text, botdate + '\n\n' + wm, inputPath, global.sgc, '🌎 Join My Group Official', global.sig, 'IG', `${m.sender.split`@`[0]}`, '🌹 U S E R', [
+      ['▣ VERIFY ▣', '/daftar'],
+      [null,null],
+      [null, null]
+    ], m)
+}
 
 let m1 = global.dmenut
 let m2 = global.dmenub
