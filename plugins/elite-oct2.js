@@ -22,9 +22,8 @@ let tm = {
 text: text,
 footer: botdate + '\n\n' + wm,
 templateButtons: templateButtons,
-image: inputPath
 }
-conn.sendMessage(m.chat, tm, m)
+conn.sendMessage(m.chat, tm, pp, m)
 }
 
 let m1 = global.dmenut
