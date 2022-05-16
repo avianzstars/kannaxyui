@@ -21,9 +21,10 @@ const templateButtons = [
 let tm = {
 text: text,
 footer: botdate + '\n\n' + wm,
-templateButtons: templateButtons
+templateButtons: templateButtons,
+image: inputPath
 }
-conn.sendMessage(m.chat, tm, inputPath, m)
+conn.sendMessage(m.chat, tm, m)
 }
 
 let m1 = global.dmenut
