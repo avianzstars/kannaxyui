@@ -32,7 +32,7 @@ const message = {
                 },
             ]
         }
-        await conn.sendMessage(m.chat, message, inputPath)
+        await conn.sendMessage(m.chat, message, inputPath) }
 
 let m1 = global.dmenut
 let m2 = global.dmenub
