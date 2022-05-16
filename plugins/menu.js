@@ -456,7 +456,7 @@ const listMessage = {
 	//await conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
         
     //------------------- BUTTON VID
-    await conn.sendMessage(m.chat, text, wm, null, 'Owner', '.nowner', 'Donasi', '.donasi', 'Rules', '.rules', ftoko, {
+    await conn.sendMessage(m.chat, text, wm, inputPath, 'Owner', '.nowner', 'Donasi', '.donasi', 'Rules', '.rules', ftoko, {
     quoted: m,
     contextInfo: {
         externalAdReply: {
