@@ -13,11 +13,17 @@ let text = `╭─● *Biodata*
 
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
-await conn.sendHydrated(m.chat, text, botdate + '\n\n' + wm, inputPath, global.sig, 'Follow', 'wa.me/628387315706', 'WA Owner', [
-      //['▣ VERIFY ▣', '/daftar'],
-      //[null,null],
-      //[null, null]
-    ], m)
+
+const templateButtons = [
+    {index: 1, urlButton: {displayText: 'Instagram', url: sig}},
+    {index: 2, urlButton: {displayText: 'WA Owner', url: 'https://wa.me/6283873115706/'}},
+]
+let tm = {
+text: text,
+footer: botdate + '\n\n' + wm,
+templateButtons: templateButtons
+}
+conn.sendMessage(m.chat, tm, inputPath, m)
 }
 
 let m1 = global.dmenut
