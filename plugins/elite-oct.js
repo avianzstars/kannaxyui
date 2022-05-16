@@ -11,7 +11,7 @@ let text = `╭─● *Owner*
 
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
-await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [['Donasi', '.donasi']], m, {
+await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [['Donasi', '.donasi'], ['Biodata','.oct2']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: author,
