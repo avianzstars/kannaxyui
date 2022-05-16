@@ -451,7 +451,7 @@ const listMessage = {
                 },
             ]
         }
-   await conn.send3ButtonImg(m.chat, await (await fetch(fla + teks)).buffer(), '──────────[ *DASHBOARD* ]──────────' , text.trim(), 'Owner', '.nowner', 'Donasi', '.donasi', 'Rules', '.rules', ftrol, {
+   await conn.send3ButtonImg(m.chat, text, botdate + '\n\n' + wm, inputPath, 'Owner', '.nowner', 'Donasi', '.donasi', 'Rules', '.rules', ftrol, {
     quoted: m,
     contextInfo: {
         externalAdReply: {
