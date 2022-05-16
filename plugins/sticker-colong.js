@@ -18,6 +18,6 @@ try {
 }
 handler.help = ['stiker']
 handler.tags = ['sticker']
-handler.command = /^stiker$/i
+handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
 
 export default handler
