@@ -22,8 +22,9 @@ let tm = {
 text: text,
 footer: botdate + '\n\n' + wm,
 templateButtons: templateButtons,
+buffer: './banner.png'
 }
-conn.sendMessage(m.chat, tm, pp, m)
+conn.sendMessage(m.chat, tm, m)
 }
 
 let m1 = global.dmenut
