@@ -5,7 +5,14 @@ let handler = async (m, { conn, usedPrefix }) => {
     if (!res.ok) throw await res.text()
     let json = await res.json()
     if (!json.url) throw 'Error!'
-    conn.sendButton(m.chat, 'Husbu kok kartun', author, json.url, [['Ganti Husbu', `${usedPrefix}husbu`]], m)
+    //conn.sendButton(m.chat, 'Suami kok kartun', botdate + '\n\n' + wm, json.url, [['Ganti Suami', `${usedPrefix}husbu`]], m)
+    conn.sendButton(m.chat, 'Suami kok kartun', botdate + '\n\n' + wm, json.url, [['Ganti Suami', `${usedPrefix}husbu`]], m, {
+contextInfo: { externalAdReply :{
+                        description: stickauth,
+                        title: author,
+                        body: 'Jangan lupa Follow',
+                        thumbnail: fs.readFileSync("./oct.jpg"),
+                        sourceUrl: sig }}})
 }
 handler.help = ['husbu']
 handler.tags = ['anime']
