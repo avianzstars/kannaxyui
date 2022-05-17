@@ -535,7 +535,7 @@ const ftroli = {
     
     
     
-    await conn.sendMessage(m.chat, { "contentText": '──────────[ *DASHBOARD* ]──────────', "footerText": text,
+    await conn.sendMessage(m.chat, { "contentText": '──────────[ *DASHBOARD* ]──────────', "footerText": global.wm,
 "buttons": [
 {buttonId: '.owner', buttonText: {displayText: 'OWNER'}, type: 1},
 {buttonId: '.donasi', buttonText: {displayText: 'DONASI'}, type: 1},
