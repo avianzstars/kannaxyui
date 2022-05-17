@@ -390,11 +390,11 @@ const listMessage = {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
 	  
-let wm = global.botwm
+let wm = global.wm
     let datebot = global.botdate
     let logo = global.logo
-  let logo2 = fs.readFileSync('./src/logo2.jpg')
-  let logo3 = fs.readFileSync('./src/logo3.jpg')
+  let logo2 = fs.readFileSync('./oct.jpg')
+  let logo3 = fs.readFileSync('./oct.jpg')
   kannaImg = (await conn.prepareMessage('0@s.whatsapp.net', fs.readFileSync('./thumbnail.jpg'), MessageType.image, { thumbnail: Buffer.alloc(0) })).message.imageMessage
   sumberImg = await (await fetch(fla + teks + ' menu')).buffer()
   image = (await conn.prepareMessage('0@s.whatsapp.net', logo2, MessageType.image, { thumbnail: Buffer.alloc(0) })).message.imageMessage	  
