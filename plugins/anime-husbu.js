@@ -1,4 +1,5 @@
 import fetch from 'node-fetch'
+import fs from 'fs'
 
 let handler = async (m, { conn, usedPrefix }) => {
     let res = await fetch('https://recoders-area.caliph.repl.co/api/husbu?apikey=FreeApi')
