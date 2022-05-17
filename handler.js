@@ -735,6 +735,8 @@ export async function deleteUpdate(message) {
     }
 }
 
+let inputPath = './banner.png'
+
 global.dfail = (type, m, conn) => {
     let msg = {
         rowner: '[!] Only Developer',
@@ -748,11 +750,18 @@ global.dfail = (type, m, conn) => {
         restrict: '[!] This Fitur Disable'
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo: { externalAdReply: {title: global.wm, body: '404 Access denied ✘', sourceUrl: global.snh, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
-    
+ 
     let msgg = {
     	unreg: 'Anda belum terdaftar didalam Database BOT'
 }[type]
-if (msgg) return conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}
+/*if (msgg) return conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}*/
+   if (msgg) return conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [['Owner', '.oct']], m, {
+contextInfo: { externalAdReply :{
+                        description: stickauth,
+                        title: author,
+                        body: 'Di Follow kak',
+                        thumbnail: fs.readFileSync("./oct.jpg"),
+                        sourceUrl: sig }}})}
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
