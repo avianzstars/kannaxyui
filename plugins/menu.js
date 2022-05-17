@@ -484,7 +484,7 @@ contextInfo: { externalAdReply :{
             "directPath": "/v/t62.7118-24/35150115_287008086621545_8250021012380583765_n.enc?ccb=11-4&oh=6f0f730e5224c054969c276a6276a920&oe=61A21F46",
             "mediaKeyTimestamp": "1634472176",
             "jpegThumbnail": await (await fetch('https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg')).buffer(),
-  }}, 'buttonsMessage', { quoted: ftroli, contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 999, isForwarded: true, externalAdReply: { title: global.wm, body: testcuy, description: testcuy2, mediaType: 2, thumbnail: inputPath, mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`}}})
+  }}, 'buttonsMessage', { quoted: ftoko, contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 999, isForwarded: true, externalAdReply: { title: global.wm, body: global.wm, description: global.wm, mediaType: 2, thumbnail: fs.readFileSync("./oct.jpg"), mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`}}})
 
     
     
