@@ -528,14 +528,14 @@ const ftroli = {
                 },
             ]
         }
-        /*await conn.sendMessage(m.chat, message)*/
+       /*await conn.sendMessage(m.chat, message)*/
         
     //------------------- BUTTON VID
     //conn.sendButton(m.chat, text, wm, 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4', [['Ping', '.ping'],['Owner', '.owner'],['Donasi', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: sig, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
     
     
     
-    await conn.sendMessage(m.chat, { "contentText": '──────────[ *DASHBOARD* ]──────────', "footerText": global.wm,
+    await conn.sendMessage(m.chat, message, "footerText": global.wm,
 "buttons": [
 {buttonId: '.owner', buttonText: {displayText: 'OWNER'}, type: 1},
 {buttonId: '.donasi', buttonText: {displayText: 'DONASI'}, type: 1},
