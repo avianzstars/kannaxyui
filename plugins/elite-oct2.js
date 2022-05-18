@@ -21,7 +21,7 @@ contextInfo: { externalAdReply :{
                         thumbnail: fs.readFileSync("./oct.jpg"),
                         sourceUrl: sig }}}) }*/
 
-await conn.sendMessage(m.chat, text, botdate + '\n\n' + wm)
+await conn.sendMessage(m.chat, text, botdate + '\n\n' + wm)}
 
 handler.help = ['oct2']
 handler.tags = ['elite']
