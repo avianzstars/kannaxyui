@@ -13,13 +13,15 @@ let text = `╭─● *Biodata*
 
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
-await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [[null, null], [null, null]], m, {
+/*await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [[null, null], [null, null]], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: author,
                         body: 'Jangan lupa Follow',
                         thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig }}}) }
+                        sourceUrl: sig }}}) }*/
+
+await conn.sendMessage(m.chat, text, botdate + '\n\n' + wm)
 
 handler.help = ['oct2']
 handler.tags = ['elite']
