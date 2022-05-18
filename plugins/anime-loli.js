@@ -1,8 +1,16 @@
 import fetch from 'node-fetch'
+import fs from 'fs'
 
 let handler = async (m, { conn }) => {
 	let url = loli[Math.floor(Math.random() * loli.length)]
-	conn.sendButton(m.chat, 'DASAR PEDOFIL', wm, url, [['Lagi kak','.loli']],m)
+	//conn.sendButton(m.chat, 'DASAR PEDOFIL', wm, url, [['Lagi kak','.loli']],m)
+	conn.sendButton(m.chat, 'Dasar Pedofil', botdate + '\n\n' + wm, url, [['Mau lagi', `.loli`]], m, {
+contextInfo: { externalAdReply :{
+                        description: stickauth,
+                        title: author,
+                        body: 'Jangan lupa Follow',
+                        thumbnail: fs.readFileSync("./oct.jpg"),
+                        sourceUrl: sig }}})
 }
 handler.command = /^(loli)$/i
 handler.tags = ['anime']
