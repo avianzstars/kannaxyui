@@ -4,9 +4,28 @@ let oct = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
     
-let text = `╭─● *Owner*
+let text = `╭─● *Owner 1*
 ┃● *Yusuf Oct*
 ┃➥ instagram.com/yusuf.oct
+┠─● *Biodata*
+┃● *Nama*: Yusuf
+┃● *Tanggal lahir*: Loading...
+┃● *Umur*: 15 Tahun
+┃● *Kelas*: Loading...
+┃● *Alamat*: Isekai
+┃● *Status*: Not responding
+╰─●
+
+╭─● *Owner 2*
+┃● *Rama Agung Supriyadi*
+┃➥ instagram.com/leonvx._
+┠─● *Biodata*
+┃● *Nama*: Rama Agung Supriyadi
+┃● *Tanggal lahir*: Private
+┃● *Umur*: 15 Tahun
+┃● *Kelas*: 1 SMA
+┃● *Alamat*: Indonesia, Jawa Timur, Lumajang
+┃● *Status*: Pelajar
 ╰─●`
 
 let inputPath = './banner.png'
