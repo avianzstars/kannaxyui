@@ -14,7 +14,7 @@ let text = `╭─● *Biodata*
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-await conn.sendHydrated(m.chat, text, botdate + '\n\n' + wm, inputPath, global.sig, 'Instagram', 'https://wa.me/6283873115706/', 'Owner', [], m)}
+await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, global.sig, 'Instagram', 'https://wa.me/6283873115706/', 'Owner', [], m)}
 
 handler.help = ['oct2']
 handler.tags = ['elite']
