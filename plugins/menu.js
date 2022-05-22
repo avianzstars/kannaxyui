@@ -240,7 +240,7 @@ ${clockStringP(usrs.premiumTime - new Date())}` : ''}
 const listMessage = {
   text: tek,
   //footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
-  footer: titlebot,
+  footer: botdate + '\n\n' + wm,
   title: `${htki} *LIST MENU* ${htka}`,
   buttonText: `KLIK INI`,
   sections
