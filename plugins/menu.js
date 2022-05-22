@@ -187,41 +187,41 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
     },{
 	title: `${htki} MENU ${htka}`,
 	rows: [
-	{title: `${pmenus} All`, rowId: ".? all", description: "Menampilkan Semua command BOT"},
-	{title: `${pmenus} Rpg`, rowId: ".? rpg", description: "Game Epic Rpg!"},
-	{title: `${pmenus} Exp`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
-	{title: `${pmenus} Game`, rowId: ".? game", description: "Gamenya seru seru lho >-<"},
-	{title: `${pmenus} Fun`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
-	{title: `${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
-	{title: `${pmenus} Quotes`, rowId: ".? quotes", description: "Random Inspirasi"},
-	{title: `${pmenus} Anime`, rowId: ".? anime", description: "Kamu wibu ya bang?"},
-	{title: `${pmenus} Nsfw`, rowId: ".? nsfw", description: "Tch, dasar sagne"},
-	{title: `${pmenus} Premium`, rowId: ".? premium", description: "Only premium Users"},
-	{title: `${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Bicara dengan orang tidak dikenal"},
-	{title: `${pmenus} Al-Quran`, rowId: ".? nocategory", description: "Tobat yuk kak"},
-	{title: `${pmenus} Internet`, rowId: ".? internet", description: "Cari sesuatu diBOT"},
-	{title: `${pmenus} Downloaders`, rowId: ".? downloader", description: "Download sesuatu diBOT"},
-	{title: `${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker diBOT"},
-	{title: `${pmenus} Nulis`, rowId: ".? nulis", description: "Nulis kok males kak?"},
-	{title: `${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio dengan Filter"},
-	{title: `${pmenus} Group`, rowId: ".? admin", description: "Only Groups"},
-	{title: `${pmenus} Database`, rowId: ".? database", description: "Simpan sesuatu diBOT"},
-	{title: `${pmenus} Tools`, rowId: ".? tools", description: "Mungkin tools ini bisa membantu?"},
-	{title: `${pmenus} Info`, rowId: ".? info", description: "Info info BOT"},
-	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Owner Only!"},
+	{title: `${pmenus} All`, rowId: ".? all", description: "Semua Command BOT"},
+	{title: `${pmenus} Rpg`, rowId: ".? rpg", description: "Game RPG"},
+	{title: `${pmenus} Exp`, rowId: ".? xp", description: "Tingkatkan Pangkat"},
+	{title: `${pmenus} Game`, rowId: ".? game", description: "Menu Games BOT"},
+	{title: `${pmenus} Fun`, rowId: ".? fun", description: "Untuk Bersenang-Senang"},
+	{title: `${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tersesat"},
+	{title: `${pmenus} Quotes`, rowId: ".? quotes", description: "Cari Inspirasi"},
+	{title: `${pmenus} Anime`, rowId: ".? anime", description: "Dasar Wibu Broken Home"},
+	{title: `${pmenus} Nsfw`, rowId: ".? nsfw", description: "Saya S*nge"},
+	{title: `${pmenus} Premium`, rowId: ".? premium", description: "Khusus Pengguna Premium"},
+	{title: `${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Orang Misterius"},
+	{title: `${pmenus} Al-Quran`, rowId: ".? nocategory", description: "Bertobatlah Sebelum Terlambat"},
+	{title: `${pmenus} Internet`, rowId: ".? internet", description: "Cari Sesuatu"},
+	{title: `${pmenus} Downloaders`, rowId: ".? downloader", description: "Download Sesuatu"},
+	{title: `${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker"},
+	{title: `${pmenus} Nulis`, rowId: ".? nulis", description: "Tch, Dasar Pemalas"},
+	{title: `${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio Dengan Filter"},
+	{title: `${pmenus} Group`, rowId: ".? admin", description: "Khusus Grup"},
+	{title: `${pmenus} Database`, rowId: ".? database", description: "Simpan Sesuatu Di BOT"},
+	{title: `${pmenus} Tools`, rowId: ".? tools", description: "Peralatan BOT"},
+	{title: `${pmenus} Info`, rowId: ".? info", description: "Info Info BOT"},
+	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Khusus Owner BOT"},
 	]
   },{
 	title: `${htki} SUPPORT ${htka}`,
 	rows: [
-	{title: `${pmenus} Sewa BOT`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
-	{title: `${pmenus} Beli Premium`, rowId: ".premium", description: "Menampilkan list harga premium"},
-	{title: `${pmenus} Donasi`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
+	{title: `${pmenus} Sewa BOT`, rowId: ".sewa", description: "Menu Harga Sewa BOT"},
+	{title: `${pmenus} Beli Premium`, rowId: ".premium", description: "Jadilah Elite"},
+	{title: `${pmenus} Donasi`, rowId: ".donasi", description: 'Bersedekahlah Jika Mampu'},
 	]
    },{
 	title: `${htki} MAIN ${htka}`,
 	rows: [
-	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "Menampilkan kecepatan respon BOT"},
-	    {title: `${pmenus} Owner BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
+	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "Kecepatan Respon BOT"},
+	    {title: `${pmenus} Owner BOT`, rowId: ".owner", description: "Owner BOT"},
 	    {title: `${pmenus} Script BOT`, rowId: ".sc", description: `Source Code ${namebot}`}
 	]
     },
@@ -504,7 +504,7 @@ function clockStringP(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  let res = "Selamat DiniHari ☀️"
+  let res = "Selamat DiniHari"
   if (time >= 4) {
     res = "Good Morning"
   }
