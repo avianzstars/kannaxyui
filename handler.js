@@ -758,10 +758,10 @@ global.dfail = (type, m, conn) => {
    if (msgg) return conn.sendButton(m.chat, msgg, botdate + '\n\n' + wm, inputPath, [['Daftar', '.daftar']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
-                        title: author,
-                        body: 'Di Follow kak',
+                        title: namebot,
+                        body: stickauth,
                         thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig }}})}
+                        sourceUrl: 'https://wa.me/6283873115706' }}})}
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
