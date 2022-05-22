@@ -459,10 +459,10 @@ const listMessage = {
     await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [['Owner', '.oct']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
-                        title: author,
-                        body: 'Jangan lupa Follow',
+                        title: namebot,
+                        body: stickauth,
                         thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig }}})
+                        sourceUrl: 'https://wa.me/6283873115706' }}})
     
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
