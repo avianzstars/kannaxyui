@@ -58,16 +58,17 @@ global.ppulsa2 = '085608625102'
 global.psaweria = 'https://saweria.com/LeonGanz'
 
 /*============== NOMOR ==============*/
-global.nomorbot = '6282127104362'
+global.nomorbot = '6283830393361'
 global.nomorown = '6283873115706'
 global.nomorpart = '6283873115706'
-global.namebot = 'Yusuf Oct [BOT]'
-global.nameown = 'Yusuf Oct'
+global.namebot = 'Yusuf [BOT]'
+global.nameown = 'Yusuf'
 
 
 /*============== STAFF ==============*/
 global.owner = [
-  ['6283873115706', 'Yusuf Oct', true],
+  ['6283873115706', 'Yusuf', true],
+  ['6283830393361', 'Yusuf', true],
   ['6285608625102', 'Rama Agung', true],
   ['6282351319893', 'Muhimmah Putri', true],
   ['6283847909854', 'Zaky Rashif', true],
@@ -116,13 +117,13 @@ global.APIKeys = { // APIKey Here
 
 
 /*============== WATERMARK ==============*/
-global.wm = '2022 © Yusuf Oct' //Main Watermark
-global.wm2 = '2022 © Yusuf Oct'
-global.wm3 = '2022 © Yusuf Oct'
+global.wm = '2022 © Yusuf' //Main Watermark
+global.wm2 = '2022 © Yusuf'
+global.wm3 = '2022 © Yusuf'
 global.botdate = `● Tanggal: ${week} ${date}\n● Waktu: ${wktuwib}`
 global.bottime = `Waktu: ${wktuwib}`
-global.titlebot = `2022 © Yusuf Oct`
-global.author = 'Yusuf Oct'
+global.titlebot = `2022 © Yusuf`
+global.author = 'Yusuf'
 
 
 /*============== LOGO ==============*/
@@ -189,8 +190,8 @@ global.lolm = 'Ⓛ'
 global.htjava = '⫹⫺' //hiasan Doang :v
 
 /*============== STICKER WM ==============*/
-global.stickpack = 'Yusuf Oct'
-global.stickauth = `By Yusuf Oct`
+global.stickpack = 'Yusuf'
+global.stickauth = `By Yusuf`
 
 global.multiplier = 38 // The higher, The harder levelup
 
