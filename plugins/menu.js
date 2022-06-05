@@ -467,13 +467,13 @@ contextInfo: { externalAdReply :{
                         title: namebot,
                         body: stickauth,
                         thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: 'https://wa.me/6283873115706' }}})
+                        sourceUrl: 'https://wa.me/6283873115706' }}})*/
     
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
-}*/
+}
 handler.help = ['menu', 'help', '?']
 handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
