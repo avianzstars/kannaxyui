@@ -218,7 +218,7 @@ export async function handler(chatUpdate) {
                     atm: 0,
                     fullatm: 0,
                     health: 100,
-                    limit: 100,
+                    limit: 24,
                     potion: 10,
                     trash: 0,
                     wood: 0,
@@ -675,7 +675,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         //this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
     this.sendHydrated(id, text, wm + '\n\n' + botdate, pp, sgc, (action == 'add' ? '💌 WELCOME' : '🐾 BYE'), user.split`@`[0], '🌹 USER', [
       ['MENU 🎀', '/menu'],
-      ['\n\nSAYA PEDO DAN SAYA BANGGA (≧▽≦)', '...'],
+      ['*SAYA PEDO DAN SAYA BANGGA (≧▽≦)*', '...'],
       [null, null]
     ], null, false, { mentions: [user] })
                     }
