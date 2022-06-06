@@ -23,6 +23,7 @@ handler.command = /^(pengumuman|announce|hiddentag|hidetag)$/i
 handler.group = true
 handler.admin = true
 //handler.premium = true
+handler.limit = true
 
 export default handler
 
