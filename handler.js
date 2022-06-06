@@ -737,10 +737,6 @@ export async function deleteUpdate(message) {
 
 let inputPath = './banner.png'
 
-let ppuser = './src/avatar_contact.png'
-                    try {
-                        ppuser = await this.profilePictureUrl(user, 'image')
-
 global.dfail = (type, m, conn) => {
     let msg = {
         rowner: '[ ! ] Only Developer',
