@@ -759,7 +759,7 @@ global.dfail = (type, m, conn) => {
     	unreg: 'Anda belum terdaftar didalam Database BOT'
 }[type]
 /*if (msgg) return conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}*/
-   if (msgg) return conn.sendButton(m.chat, msgg, botdate + '\n\n' + wm, ppuser, [['Daftar', '.daftar']], m, {
+   if (msgg) return conn.sendButton(m.chat, msgg, botdate + '\n\n' + wm, inputPath, [['Daftar', '.daftar']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: namebot,
