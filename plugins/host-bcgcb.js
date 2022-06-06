@@ -14,7 +14,7 @@ conn.sendButton(id, '────━┅ *BROADCAST* ┅━────\n' + text
             body: titlebot,
             description: titlebot,
             mediaType: 2,
-          thumbnail: await(await fetch(thumb2)).buffer(),
+          thumbnail: fs.readFileSync("./oct.jpg"), //await(await fetch(thumb2)).buffer(),
          mediaUrl: sig
         }
      }
