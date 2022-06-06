@@ -24,6 +24,7 @@ handler.group = true
 handler.admin = true
 //handler.premium = true
 handler.limit = true
+handler export = limit
 
 export default handler
 
