@@ -751,15 +751,15 @@ global.dfail = (type, m, conn) => {
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo: { externalAdReply: {title: global.wm, body: '404 Access denied ✘', sourceUrl: global.snh, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
  
-let pp = './src/avatar_contact.png'
+let pp2 = './src/avatar_contact.png'
                     try {
-                        pp = await this.profilePictureUrl(user, 'image')
+                        pp2 = await this.profilePictureUrl(user, 'image')
 
     let msgg = {
     	unreg: 'Anda belum terdaftar didalam Database BOT'
 }[type]
 /*if (msgg) return conn.sendButton(m.chat, msgg, global.wm, null, [['Daftar', '/daftar']], m)}*/
-   if (msgg) return conn.sendButton(m.chat, msgg, botdate + '\n\n' + wm, pp, [['Daftar', '.daftar']], m, {
+   if (msgg) return conn.sendButton(m.chat, msgg, botdate + '\n\n' + wm, pp2, [['Daftar', '.daftar']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: namebot,
