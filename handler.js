@@ -751,6 +751,10 @@ global.dfail = (type, m, conn) => {
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo: { externalAdReply: {title: global.wm, body: '404 Access denied ✘', sourceUrl: global.snh, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
  
+let pp = './src/avatar_contact.png'
+                    try {
+                        pp = await this.profilePictureUrl(user, 'image')
+
     let msgg = {
     	unreg: 'Anda belum terdaftar didalam Database BOT'
 }[type]
