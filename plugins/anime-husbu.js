@@ -18,4 +18,5 @@ contextInfo: { externalAdReply :{
 handler.help = ['husbu']
 handler.tags = ['anime']
 handler.command = /^(husbu)$/i
+handler.limit = true
 export default handler
