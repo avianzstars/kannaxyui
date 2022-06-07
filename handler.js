@@ -675,7 +675,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         //this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
     this.sendHydrated(id, text, wm + '\n\n' + botdate, pp, sgc, (action == 'add' ? '💌 WELCOME' : '🐾 BYE'), user.split`@`[0], '🌹 USER', [
       ['MENU 🎀', '/menu'],
-      ['*SAYA PEDO DAN SAYA BANGGA (≧▽≦)*', '...'],
+      ['\n\n*SAYA PEDO DAN SAYA BANGGA (≧▽≦)*', '...'],
       [null, null]
     ], null, false, { mentions: [user] })
                     }
