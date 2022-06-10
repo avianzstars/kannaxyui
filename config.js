@@ -43,9 +43,9 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
 /*============== SOCIAL ==============*/
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
-global.sig = 'https://www.instagram.com/yusuf.oct/'
+global.sig = 'https://www.instagram.com/yusuf.expert/'
 global.sgh = 'https://bl4ck-lion.github.io/index.php'
-global.sgc = 'https://chat.whatsapp.com/LaP7ztZGDoR1FmFnIRDlzX'
+global.sgc = 'https://chat.whatsapp.com/KrKK959U9mO5zjOcDHj0Nc'
 global.sdc = 'https://discord.gg/WEJQjugTY7'
 global.snh = 'https://www.youtube.com/channel/UCQsnejA6aiOFENs_oFoTwgw'
 
