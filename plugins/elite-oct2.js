@@ -23,7 +23,16 @@ let text = `╭─● *Biodata*
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-await conn.sendMessage(m.chat, { "contentText": '──────────[ *DASHBOARD* ]──────────', "footerText": text,
+
+
+
+
+await Sendbutdocument(m.chat, text, "© Project Pemuda*", fs.readFileSync('./Project Pemuda.pdf'), {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./oct.jpg'), filename:`Project Pemuda.pdf`, pageCount: 9999999 }, [{buttonId:`!000`,buttonText:{displayText:'Hai‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎\n\nSemuanya aku mau Jujur Kalau aku itu Gay dan Lagi Pengen Sama Cowok berotot untuk jadi Pacarku, yang Berminat Bisa Chat aku yahh 😋'},type:1}], {quoted:fvid, contextInfo: { mentionedJid: [dtod,otod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${tampilUcapan} - ${pushname}\nDownload Script`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://youtu.be/x-O0WHkv3uc`}}})
+}
+
+
+
+/*await conn.sendMessage(m.chat, { "contentText": '──────────[ *DASHBOARD* ]──────────', "footerText": text,
 "buttons": [
 {buttonId: '.owner', buttonText: {displayText: 'OWNER'}, type: 1},
 {buttonId: '.donasi', buttonText: {displayText: 'DONASI'}, type: 1},
@@ -43,7 +52,7 @@ await conn.sendMessage(m.chat, { "contentText": '──────────[
             "mediaKeyTimestamp": "1634472176",
             "jpegThumbnail": await (await fetch('https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg')).buffer(),
   }}, 'buttonsMessage', { contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 999, isForwarded: true, externalAdReply: { title: global.wm, body: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, description: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, mediaType: 2, thumbnail: await (await fetch(`${thumb()}`)).buffer(), mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`}}})
-}
+}*/
 
 handler.help = ['oct2']
 handler.tags = ['elite']
