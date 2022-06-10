@@ -179,12 +179,12 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
       let tag = `@${m.sender.split('@')[0]}`
     
       const sections = [
-     {
+     /*{
 	title: `${htki} ELITE ${htka}`,
 	rows: [
 	    {title: `${pmenus} Elite`, rowId: ".oct", description: "Khusus Elite"},
 	]
-    },{
+    },*/{
 	title: `${htki} MENU ${htka}`,
 	rows: [
 	{title: `${pmenus} All`, rowId: ".? all", description: "Semua Command BOT"},
@@ -221,7 +221,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	title: `${htki} MAIN ${htka}`,
 	rows: [
 	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "Kecepatan Respon BOT"},
-	    {title: `${pmenus} Owner BOT`, rowId: ".owner", description: "Owner BOT"},
+	    {title: `${pmenus} Owner BOT`, rowId: ".oct", description: "Owner BOT"},
 	    {title: `${pmenus} Script BOT`, rowId: ".sc", description: `Source Code ${namebot}`}
 	]
     },
