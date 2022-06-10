@@ -739,15 +739,15 @@ let inputPath = './banner.png'
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '[ ! ] Only Developer',
-        owner: '[ ! ] Only Owner',
-        mods: '[ ! ] Only Moderator',
-        premium: '[ ! ] Only Premium Users',
-        group: '[ ! ] Only Group Chat',
-        private: '[ ! ] Only Private Chat',
-        admin: '[ ! ] Only Admin Group',
-        botAdmin: '[ ! ] Only Bot Admin',
-        restrict: '[ ! ] This Fitur Disable'
+        rowner: '*[ ! ] Khusus Developer*',
+        owner: '*[ ! ] Khusus Owner*',
+        mods: '*[ ! ] khusus Moderator*',
+        premium: '*[ ! ] Khusus Pengguna Premium*',
+        group: '*[ ! ] Khusus Chat Grup*',
+        private: '*[ ! ] Khusus Chat Pribadi*',
+        admin: '*[ ! ] Khusus Admin Grup*',
+        botAdmin: '*[ ! ] BOT Harus Admin*',
+        restrict: '*[ ! ] Fitur ini Dinonaktifkan*'
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { contextInfo: { externalAdReply: {title: global.wm, body: '404 Access denied ✘', sourceUrl: global.snh, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
  
