@@ -34,7 +34,7 @@ const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
     
 
 
-await Sendbutdocument(m.chat, text, "© Project Pemuda*", fs.readFileSync('./Project Pemuda.pdf'), {mimetype:d4, thumbnail:fs.readFileSync('./oct.jpg'), filename:`Project Pemuda.pdf`, pageCount: 9999999 }, [{buttonId:`!000`,buttonText:{displayText:'Hai‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎\n\nSemuanya aku mau Jujur Kalau aku itu Gay dan Lagi Pengen Sama Cowok berotot untuk jadi Pacarku, yang Berminat Bisa Chat aku yahh 😋'},type:1}], {quoted:fvid, contextInfo: { mentionedJid: [dtod,otod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${tampilUcapan} - ${pushname}\nDownload Script`,mediaType:"2",thumbnail:fs.readFileSync('./oct.jpg'),mediaUrl:`https://youtu.be/x-O0WHkv3uc`}}})
+await conn.Sendbutdocument(m.chat, text, botdate + '\n\n' + wm, fs.readFileSync('./Project Pemuda.pdf'), {mimetype:d4, thumbnail:fs.readFileSync('./oct.jpg'), filename:`Project Pemuda.pdf`, pageCount: 9999999 }, [{buttonId:`!000`,buttonText:{displayText:'Hai‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎\n\nSemuanya aku mau Jujur Kalau aku itu Gay dan Lagi Pengen Sama Cowok berotot untuk jadi Pacarku, yang Berminat Bisa Chat aku yahh 😋'},type:1}], {quoted:fvid, contextInfo: { mentionedJid: [dtod,otod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:"Halo",mediaType:"2",thumbnail:fs.readFileSync('./oct.jpg'),mediaUrl:`https://youtu.be/x-O0WHkv3uc`}}})
 }
 
 
