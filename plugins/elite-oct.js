@@ -7,10 +7,10 @@ let oct = Object.values(global.plugins).filter(
 let text = `╭─● *Owner*
 ┃● *Yusuf Oct*
 ┃➥ wa.me/6283873115706
-┃➥ instagram.com/yusuf.oct
+┃➥ instagram.com/yusuf.expert
 ╰─●
 
-*Catatan*: Jika ada yg error, gw males benerin.`
+*Catatan*: _Jika ada yg error, gw males benerin_.`
 
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
