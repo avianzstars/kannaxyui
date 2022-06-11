@@ -36,14 +36,14 @@ const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 let buttonMessage={
     'document':{'url':sgc},
-    'mimetype':d4,
+    'mimetype':"application/pdf",
     'fileName':global['wm'],
     'fileLength':fsizedoc,
     'pageCount':fpagedoc,
     'contextInfo':{'forwardingScore':100,'isForwarded':true,
     'externalAdReply':{
         'mediaUrl':global['sig'],
-        'mediaType':pdf,
+        'mediaType':2,
         'previewType':"tes",
         'title':global['titlebot'],
         'body':global['titlebot'],
@@ -61,13 +61,13 @@ let buttonMessage={
             'buttonId':'.ping',
             'buttonText':{
             'displayText':'Ping'},
-            'type':2},
+            'type':1},
             {
             'buttonId':'.donasi',
             'buttonText':{
             'displayText':'Donasi'},
-            'type':3}],
-            'headerType':4};
+            'type':1}],
+            'headerType':"Document"};
                 
 await conn.sendMessage(m.chat,buttonMessage,{'quoted':m,'mentionedJid':[m.sender]});
 
