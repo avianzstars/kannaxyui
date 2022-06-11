@@ -14,7 +14,7 @@ let text = `╭─● *Owner*
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-const buttonMessage = {
+const yusufMsg = {
     'document':{'url':sgc},
     'mimetype':'application/pdf',
     'fileName':'Yusuf Expert',
@@ -31,17 +31,19 @@ const buttonMessage = {
         'body':global['titlebot'],
         'thumbnail':fs.readFileSync("./banner.png"),
         'sourceUrl':sgc}},
-        'caption':text,
-        'footer':botdate + '\n\n' + wm,
+        'caption':'➦ *OWNER*',
+        'footer':text + '\n\n' + wm,
         'buttons':[
             {
             'buttonId':'.menu',
             'buttonText':{
             'displayText':'Menu'},
-            'type':1}],
+            'type':1
+            }
+                  ],
             'headerType':"Tes"};
                 
-await conn.sendMessage(m.chat,buttonMessage,{'quoted':m,'mentionedJid':[m.sender]});
+await conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
 }
 
 handler.help = ['oct2']
