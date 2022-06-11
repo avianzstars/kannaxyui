@@ -24,7 +24,7 @@ const yusufMsg={
         'forwardingScore':100,
         'isForwarded':true,
         'externalAdReply':{
-            'mediaUrl':sig,
+            'mediaUrl':sgc,
             'mediaType':2,
             'previewType':'Yusuf',
             'title':wm,
@@ -32,11 +32,15 @@ const yusufMsg={
             'thumbnail':fs.readFileSync("./banner.png"),
             'sourceUrl':sgc}},
             'caption':'*OWNER*',
-            'footer':text+'\n\n'+botdate,
+            'footer':text+'\n\n'+botdate+'\n\n'+wm,
             'buttons':[
                 {'buttonId':'.menu',
                 'buttonText':{
                     'displayText':'Menu'},
+                    'type':1},
+                {'buttonId':'...',
+                'buttonText':{
+                    'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
                     'type':1}
                        ],
                 'headerType':'Yusuf'};
