@@ -438,7 +438,7 @@ const listMessage = {
             'body':wm,
             'thumbnail':fs.readFileSync("./banner.png"),
             'sourceUrl':sgc}},
-            'caption':'*OWNER*\n',
+            'caption':'*MENU*',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
             'buttons':[
                 {'buttonId':'.oct2',
