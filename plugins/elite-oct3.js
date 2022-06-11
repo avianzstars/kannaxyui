@@ -15,12 +15,41 @@ let inputPath = './banner.png'
 let pdftes = './Project Pemuda.pdf'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-conn.sendButton(m.chat, text, wm, pdftes, 
-      [['Menu', '.menu'], ['Owner', '.oct2']], 
-      null, { asLocation: true }
-)}
+const yusufMsg={
+    'document':pdftes,
+    'mimetype':'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'fileName':'Yusuf Expert',
+    'fileLength':fsizedoc,
+    'pageCount':fpagedoc,
+    'contextInfo':{
+        'forwardingScore':100,
+        'isForwarded':true,
+        'externalAdReply':{
+            'mediaUrl':sig,
+            'mediaType':2,
+            'previewType':'Yusuf',
+            'title':wm,
+            'body':wm,
+            'thumbnail':fs.readFileSync("./banner.png"),
+            'sourceUrl':sgc}},
+            'caption':'*OWNER*',
+            'footer':text+'\n\n'+botdate+'\n\n'+wm,
+            'buttons':[
+                {'buttonId':'.menu',
+                'buttonText':{
+                    'displayText':'Menu'},
+                    'type':1},
+                {'buttonId':'...',
+                'buttonText':{
+                    'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
+                    'type':1}
+                       ],
+                'headerType':'Yusuf'};
+                
+await conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
+}
 
-handler.help = ['oct3']
+handler.help = ['oct2']
 handler.tags = ['elite']
-handler.command = ['oct3']
+handler.command = ['oct2']
 export default handler
