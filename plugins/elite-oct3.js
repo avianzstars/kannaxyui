@@ -17,7 +17,7 @@ const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
     'document':pdftes,
-    'mimetype':'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'mimetype':'application/pdf',
     'fileName':'Yusuf Expert',
     'fileLength':fsizedoc,
     'pageCount':fpagedoc,
@@ -49,7 +49,7 @@ const yusufMsg={
 await conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
 }
 
-handler.help = ['oct2']
+handler.help = ['oct3']
 handler.tags = ['elite']
-handler.command = ['oct2']
+handler.command = ['oct3']
 export default handler
