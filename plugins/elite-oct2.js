@@ -34,9 +34,42 @@ const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
     
 
 
-await conn.Sendbutdocument(m.chat, text, botdate + '\n\n' + wm, fs.readFileSync('./Project Pemuda.pdf'), {mimetype:d4, thumbnail:fs.readFileSync('./oct.jpg'), filename:`Project Pemuda.pdf`, pageCount: 9999999 }, [{buttonId:`!000`,buttonText:{displayText:'Hai‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎\n\nSemuanya aku mau Jujur Kalau aku itu Gay dan Lagi Pengen Sama Cowok berotot untuk jadi Pacarku, yang Berminat Bisa Chat aku yahh 😋'},type:1}], {quoted:fvid, contextInfo: { mentionedJid: [dtod,otod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:"Halo",mediaType:"2",thumbnail:fs.readFileSync('./oct.jpg'),mediaUrl:`https://youtu.be/x-O0WHkv3uc`}}})
-}
-
+let buttonMessage={
+    'document':{'url':sgc},
+    'mimetype':d4,
+    'fileName':global['wm'],
+    'fileLength':fsizedoc,
+    'pageCount':fpagedoc,
+    'contextInfo':{'forwardingScore':100,'isForwarded':true,
+    'externalAdReply':{
+        'mediaUrl':global['sig'],
+        'mediaType':pdf,
+        'previewType':"tes",
+        'title':global['titlebot'],
+        'body':global['titlebot'],
+        'thumbnail':fs.readFileSync("./banner.png"),
+        'sourceUrl':sgc}},
+        'caption':'Yusuf Expert',
+        'footer':text + '\n\n' +botdate + '\n\n' + wm,
+        'buttons':[
+            {
+            'buttonId':'.owner',
+            'buttonText':{
+            'displayText':'Owner'},
+            'type':1},
+            {
+            'buttonId':'.ping',
+            'buttonText':{
+            'displayText':'Ping'},
+            'type':2},
+            {
+            'buttonId':'.donasi',
+            'buttonText':{
+            'displayText':'Donasi'},
+            'type':3}],
+            'headerType':4};
+                
+await conn.sendMessage(m.chat,buttonMessage,{'quoted':m,'mentionedJid':[m.sender]});
 
 
 /*await conn.sendMessage(m.chat, { "contentText": '──────────[ *DASHBOARD* ]──────────', "footerText": text,
