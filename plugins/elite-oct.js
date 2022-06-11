@@ -22,7 +22,7 @@ contextInfo: { externalAdReply :{
                         thumbnail: fs.readFileSync("./oct.jpg"),
                         sourceUrl: sig }}}) }*/
 
-const buttonMessage={
+const buttonMessage = {
     'document':{'url':sgc},
     'mimetype':"application/pdf",
     'fileName':global['wm'],
