@@ -14,15 +14,15 @@ let text = `╭─● *Owner*
 
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
-/*await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [['Menu', '.menu']/*, ['Biodata','.oct2']*/], m, {
-/*contextInfo: { externalAdReply :{
+await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [['Menu', '.menu']/*, ['Biodata','.oct2']*/], m, {
+contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: author,
                         body: 'Jangan lupa Follow',
                         thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig }}}) }*/
+                        sourceUrl: sig }}}) }
 
-const buttonMessage = {
+/*const buttonMessage = {
     'document':{'url':sgc},
     'mimetype':d4,
     'fileName':global['wm'],
@@ -60,7 +60,7 @@ const buttonMessage = {
             'headerType':"Tes"};
                 
 await conn.sendMessage(m.chat,buttonMessage,{'quoted':m,'mentionedJid':[m.sender]});
-}
+}*/
 
 let m1 = global.dmenut
 let m2 = global.dmenub
