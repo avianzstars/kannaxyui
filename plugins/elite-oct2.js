@@ -54,7 +54,7 @@ const buttonMessage = {
 await conn.sendMessage(m.chat,buttonMessage,{'quoted':m,'mentionedJid':[m.sender]});
 }
 
-handler.help = ['oct']
+handler.help = ['oct2']
 handler.tags = ['elite']
-handler.command = ['oct']
+handler.command = ['oct2']
 export default handler
