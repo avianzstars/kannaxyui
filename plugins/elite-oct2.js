@@ -35,11 +35,10 @@ const yusufMsg = {
         'footer':text + '\n\n' + wm,
         'buttons':[
             {
-            'buttonId':'.menu',
-            'buttonText':{
-            'displayText':'Menu'},
-            'type':1
-            }
+                    urlButton: {
+                        displayText: '📷 FOLLOW ME',
+                        url: sig
+                    }
                   ],
             'headerType':"Tes"};
                 
