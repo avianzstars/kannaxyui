@@ -33,14 +33,26 @@ const yusufMsg = {
         'sourceUrl':sgc}},
         'caption':'➦ *OWNER*',
         'footer':text + '\n\n' + wm,
-        'buttons':[
-            {
-            'buttonId':'.menu',
-            'buttonText':{
-            'displayText':'Menu'},
-            'type':1
-            }
-                  ],
+        'templateButtons': [
+                {
+                    urlButton: {
+                        displayText: `${namebot}`,
+                        url: sig
+                    }
+                },
+                {
+                    quickReplyButton: {
+                        displayText: 'Owner',
+                        id: '.owner'
+                    }
+                },
+                {
+                    quickReplyButton: {
+                        displayText: 'Ping',
+                        id: '.ping'
+                    }
+                },
+            ],
             'headerType':"Tes"};
                 
 await conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
