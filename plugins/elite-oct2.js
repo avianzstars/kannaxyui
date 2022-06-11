@@ -18,8 +18,8 @@ const yusufMsg={
     'document':{'url':sgc},
     'mimetype':'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'fileName':'Yusuf Expert',
-    'fileLength':fsizedoc,
-    'pageCount':fpagedoc,
+    'fileLength':1000000000,
+    'pageCount':1,
     'contextInfo':{
         'forwardingScore':100,
         'isForwarded':true,
@@ -31,7 +31,7 @@ const yusufMsg={
             'body':wm,
             'thumbnail':fs.readFileSync("./banner.png"),
             'sourceUrl':sgc}},
-            'caption':'*OWNER*',
+            'caption':'*OWNER*\n',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
             'buttons':[
                 {'buttonId':'.menu',
