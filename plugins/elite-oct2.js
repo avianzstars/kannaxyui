@@ -17,7 +17,7 @@ const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 const buttonMessage = {
     'document':{'url':sgc},
     'mimetype':'application/pdf',
-    'fileName':global['wm'],
+    'fileName':'Yusuf Expert',
     'fileLength':fsizedoc,
     'pageCount':fpagedoc,
     'contextInfo':{
@@ -26,28 +26,18 @@ const buttonMessage = {
     'externalAdReply':{
         'mediaUrl':global['sig'],
         'mediaType':2,
-        'previewType':"tes",
+        'previewType':"Tes",
         'title':global['titlebot'],
         'body':global['titlebot'],
         'thumbnail':fs.readFileSync("./banner.png"),
         'sourceUrl':sgc}},
-        'caption':'Yusuf Expert',
+        'caption':null,
         'footer':text + '\n\n' +botdate + '\n\n' + wm,
         'buttons':[
             {
-            'buttonId':'.owner',
+            'buttonId':'.menu',
             'buttonText':{
-            'displayText':'Owner'},
-            'type':1},
-            {
-            'buttonId':'.ping',
-            'buttonText':{
-            'displayText':'Ping'},
-            'type':1},
-            {
-            'buttonId':'.donasi',
-            'buttonText':{
-            'displayText':'Donasi'},
+            'displayText':'Menu'},
             'type':1}],
             'headerType':"Tes"};
                 
