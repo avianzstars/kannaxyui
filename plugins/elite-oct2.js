@@ -16,7 +16,7 @@ const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const buttonMessage = {
     'document':{'url':sgc},
-    'mimetype':"application/pdf",
+    'mimetype':'application/pdf',
     'fileName':global['wm'],
     'fileLength':fsizedoc,
     'pageCount':fpagedoc,
