@@ -15,14 +15,14 @@ let text = `╭─● *Owner*
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 /*await conn.sendButton(m.chat, text, botdate + '\n\n' + wm, inputPath, [['Menu', '.menu']/*, ['Biodata','.oct2']*/], m, {
-contextInfo: { externalAdReply :{
+/*contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: author,
                         body: 'Jangan lupa Follow',
                         thumbnail: fs.readFileSync("./oct.jpg"),
                         sourceUrl: sig }}}) }*/
 
-let buttonMessage = {
+const buttonMessage = {
     'document':{'url':sgc},
     'mimetype':"application/pdf",
     'fileName':global['wm'],
