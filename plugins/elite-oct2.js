@@ -31,7 +31,7 @@ const yusufMsg={
             'body':wm,
             'thumbnail':fs.readFileSync("./banner.png"),
             'sourceUrl':sgc}},
-            'caption':'*OWNER*\n',
+            'caption':'*OWNER*',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
             'buttons':[
                 {'buttonId':'.menu',
