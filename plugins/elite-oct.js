@@ -57,7 +57,7 @@ const buttonMessage = {
             'type':1}],
             'headerType':"Document"};
                 
-await conn.sendMessage(m.chat,buttonMessage,{'quoted':m,'mentionedJid':[m.sender]});}
+await conn.sendMessage(m.chat,buttonMessage,{'quoted':m,'mentionedJid':[m.sender]});
 
 let m1 = global.dmenut
 let m2 = global.dmenub
