@@ -12,9 +12,10 @@ let text = `╭─● *Owner*
 *Catatan*: _Jika ada yg error, gw males benerin_.`
 
 let inputPath = './banner.png'
+let pdftes = './Project Pemuda.pdf'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-conn.sendButton(m.chat, text, wm, inputPath, 
+conn.sendButton(m.chat, text, wm, pdftes, 
       [['Menu', '.menu'], ['Owner', '.oct2']], 
       null, { asLocation: true }
 )}
