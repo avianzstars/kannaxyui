@@ -16,7 +16,7 @@ const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg = {
     'document':{'url':sgc},
-    'mimetype':fs.readFileSync("./Project Pemuda.pdf"),
+    'mimetype':'application/pdf',
     'fileName':'Yusuf Expert',
     'fileLength':fsizedoc,
     'pageCount':fpagedoc,
