@@ -221,7 +221,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	title: `${htki} MAIN ${htka}`,
 	rows: [
 	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "Kecepatan Respon BOT"},
-	    {title: `${pmenus} Owner BOT`, rowId: ".oct", description: "Owner BOT"},
+	    {title: `${pmenus} Owner BOT`, rowId: ".oct2", description: "Owner BOT"},
 	    {title: `${pmenus} Script BOT`, rowId: ".sc", description: `Source Code ${namebot}`}
 	]
     },
