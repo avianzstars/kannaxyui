@@ -33,25 +33,13 @@ const yusufMsg = {
         'sourceUrl':sgc}},
         'caption':'➦ *OWNER*',
         'footer':text + '\n\n' + wm,
-        'templateButtons': [
-                {
-                    urlButton: {
-                        displayText: `${namebot}`,
-                        url: sig
-                    }
-                },
-                {
-                    quickReplyButton: {
-                        displayText: 'Owner',
-                        id: '.owner'
-                    }
-                },
-                {
-                    quickReplyButton: {
-                        displayText: 'Ping',
-                        id: '.ping'
-                    }
-                },
+        'buttons': [
+            {
+            'buttonId':'.owner',
+            'buttonText':{
+            'displayText':'Owner'},
+            'type':1
+            }
             ],
             'headerType':"Tes"};
                 
