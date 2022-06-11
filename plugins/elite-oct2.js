@@ -31,8 +31,8 @@ const buttonMessage = {
         'body':global['titlebot'],
         'thumbnail':fs.readFileSync("./banner.png"),
         'sourceUrl':sgc}},
-        'caption':null,
-        'footer':text + '\n\n' +botdate + '\n\n' + wm,
+        'caption':text,
+        'footer':botdate + '\n\n' + wm,
         'buttons':[
             {
             'buttonId':'.menu',
