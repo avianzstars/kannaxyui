@@ -14,9 +14,10 @@ let text = `╭─● *Owner*
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-
-await conn.sendButton(m.chat, text, "© Project Pemuda", fs.readFileSync('./Project Pemuda.pdf'), {mimetype:'application/vnd.openxmlformats-officedocument.wordprocessingml.document', thumbnail:fs.readFileSync('./banner.png'), filename:`Project Pemuda.pdf`, pageCount: 9999999 }, [{buttonId:`!000`,buttonText:{displayText:'Hai‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎\n\nSemuanya aku mau Jujur Kalau aku itu Gay dan Lagi Pengen Sama Cowok berotot untuk jadi Pacarku, yang Berminat Bisa Chat aku yahh 😋'},type:1}], {quoted:m, contextInfo: { mentionedJid: [m.sender], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`Download Script`,mediaType:"2",thumbnail:fs.readFileSync("./banner.png"),mediaUrl:`https://youtu.be/x-O0WHkv3uc`}}})
-}
+conn.sendButton(m.chat, text, wm, inputPath, 
+      [['Menu', '.menu'], ['Owner', '.oct2']], 
+      null, { asLocation: true }
+)}
 
 handler.help = ['oct3']
 handler.tags = ['elite']
