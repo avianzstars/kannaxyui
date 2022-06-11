@@ -17,7 +17,7 @@ const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 const yusufMsg={
     'document':{'url':sgc},
     'mimetype':'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    'fileName':global['wm'],
+    'fileName':'Yusuf Expert',
     'fileLength':fsizedoc,
     'pageCount':fpagedoc,
     'contextInfo':{
