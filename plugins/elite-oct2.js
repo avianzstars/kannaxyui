@@ -25,7 +25,7 @@ const buttonMessage = {
     'isForwarded':true,
     'externalAdReply':{
         'mediaUrl':global['sig'],
-        'mediaType':pdf,
+        'mediaType':2,
         'previewType':"tes",
         'title':global['titlebot'],
         'body':global['titlebot'],
