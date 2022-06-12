@@ -16,7 +16,7 @@ contextInfo: { externalAdReply :{
                         body: stickauth,
                         thumbnail: fs.readFileSync("./oct.jpg"),
                         sourceUrl: 'https://wa.me/6283873115706' }}})
-
+}
 handler.help = ['sosmed']
 handler.tags = ['elite']
 handler.command = ['sosmed']
