@@ -22,8 +22,8 @@ const yusufMsg={
     'fileLength':1000000000,
     'pageCount':1,
     'contextInfo':{
-        'forwardingScore':100,
-        'isForwarded':true,
+        'forwardingScore':0,
+        'isForwarded':false,
         'externalAdReply':{
             'mediaUrl':sig,
             'mediaType':2,
