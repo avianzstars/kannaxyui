@@ -46,7 +46,7 @@ const yusufMsg={
                        ],
                 'headerType':'Yusuf'};
                 
-await conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
+await conn.sendMessage(m.chat,yusufMsg, null, fs.readFileSync("./banner.png"), {'quoted':m,'mentionedJid':[m.sender]});
 }
 
 handler.help = ['oct3']
