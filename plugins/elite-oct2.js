@@ -5,8 +5,9 @@ let oct = Object.values(global.plugins).filter(
   ).length;
     
 let text = `╭─● *Owner*
-┃● *Yusuf Oct*
+┃● *Yusuf Expert*
 ┃➥ wa.me/6283873115706
+┃➥ facebook.com/yusuf.oct
 ┃➥ instagram.com/yusuf.expert
 ╰─●
 *Catatan*: _Jika ada yg error, gw males benerin_.`
