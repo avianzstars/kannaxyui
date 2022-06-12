@@ -5,22 +5,22 @@ let oct = Object.values(global.plugins).filter(
   ).length;
     
 let text = `╭─● *Owner*
-┃● *Yusuf Oct*
+┃● *Yusuf Expert*
 ┃➥ wa.me/6283873115706
+┃➥ facebook.com/yusuf.oct
 ┃➥ instagram.com/yusuf.expert
 ╰─●
 *Catatan*: _Jika ada yg error, gw males benerin_.`
 
 let inputPath = './banner.png'
-let pdftes = './Project Pemuda.pdf'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
-    'document':pdftes,
-    'mimetype':'application/pdf',
+    'document':{'url':'https://youtu.be/GP4pPpeor5E'},
+    'mimetype':'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'fileName':'Yusuf Expert',
-    'fileLength':fsizedoc,
-    'pageCount':fpagedoc,
+    'fileLength':1000000000,
+    'pageCount':1,
     'contextInfo':{
         'forwardingScore':100,
         'isForwarded':true,
@@ -31,7 +31,7 @@ const yusufMsg={
             'title':wm,
             'body':wm,
             'thumbnail':fs.readFileSync("./banner.png"),
-            'sourceUrl':sgc}},
+            'sourceUrl':'https://youtu.be/GP4pPpeor5E'}},
             'caption':'*OWNER*',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
             'buttons':[
