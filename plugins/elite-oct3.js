@@ -17,7 +17,7 @@ const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
     'document':{'url':'https://wa.me/6283873115706'},
-    'mimetype':'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'mimetype':'application/pdf',
     'fileName':'Yusuf Expert',
     'fileLength':1000000000,
     'pageCount':1,
