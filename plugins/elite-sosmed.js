@@ -1,4 +1,8 @@
 import fs from 'fs'
+let handler = async (m, { conn, args, command }) => {
+let oct = Object.values(global.plugins).filter(
+    (v) => v.help && v.tags
+  ).length;
 
 let text = `╭─● *Owner*
 ┃● *Yusuf Expert*
