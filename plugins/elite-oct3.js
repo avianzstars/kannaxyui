@@ -30,7 +30,7 @@ const yusufMsg={
             'previewType':'Yusuf',
             'title':wm,
             'body':wm,
-            'thumbnail':fs.readFileSync("./banner.png"),
+            'thumbnail':'https://api.waifu.pics/sfw/waifu',
             'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*OWNER*',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
@@ -46,7 +46,7 @@ const yusufMsg={
                        ],
                 'headerType':'Yusuf'};
                 
-await conn.sendMessage(m.chat,yusufMsg, null, fs.readFileSync("./Project Pemuda.pdf"), {'quoted':m,'mentionedJid':[m.sender]});
+await conn.sendMessage(m.chat,yusufMsg, {'quoted':m,'mentionedJid':[m.sender]});
 }
 
 handler.help = ['oct3']
