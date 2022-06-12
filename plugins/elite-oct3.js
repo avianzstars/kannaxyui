@@ -26,7 +26,7 @@ const yusufMsg={
         'isForwarded':true,
         'externalAdReply':{
             'mediaUrl':sig,
-            'mediaType':3,
+            'mediaType':4,
             'previewType':'Yusuf',
             'title':wm,
             'body':wm,
