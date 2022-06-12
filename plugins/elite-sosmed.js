@@ -11,14 +11,17 @@ let text = `╭─● *Owner*
 ╰─●`
 
 let img = './banner.png'
+let img2 = './oct.jpg'
 
 conn.sendButton(m.chat, '*SOSMED*', text+'\n\n'+botdate+'\n\n'+wm, img, 
-      [['Hello', 'hello'], ['Bye', 'bye']], m, {
+      [['Menu', '.menu'],
+       ['Owner', '.oct2'],
+       ['\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*', '...']], m, {
 contextInfo: { externalAdReply :{
-                        description: stickauth,
-                        title: namebot,
-                        body: stickauth,
-                        thumbnail: fs.readFileSync("./oct.jpg"),
+                        description: wm,
+                        title: 'Yusuf Expert',
+                        body: wm,
+                        thumbnail: img2,
                         sourceUrl: 'https://wa.me/6283873115706' }}})
 }
 handler.help = ['sosmed']
