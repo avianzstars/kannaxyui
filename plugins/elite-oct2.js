@@ -16,7 +16,7 @@ let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
-    'document':{'url':sgc},
+    'document':{'url':'https://wa.me/6283873115706'},
     'mimetype':'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'fileName':'Yusuf Expert',
     'fileLength':1000000000,
@@ -29,9 +29,9 @@ const yusufMsg={
             'mediaType':2,
             'previewType':'Yusuf',
             'title':wm,
-            'body':wm,
+            'body':'Created By Yusuf,
             'thumbnail':fs.readFileSync("./banner.png"),
-            'sourceUrl':sgc}},
+            'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*OWNER*',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
             'buttons':[
