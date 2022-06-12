@@ -8,7 +8,7 @@ let text = `╭─● *Owner*
 
 let img = './banner.png'
 
-conn.sendButton(m.chat, '*SOSMED*, text+'\n\n'+botdate+'\n\n'+wm, img, 
+conn.sendButton(m.chat, '*SOSMED*', text+'\n\n'+botdate+'\n\n'+wm, img, 
       [['Hello', 'hello'], ['Bye', 'bye']], m, {
 contextInfo: { externalAdReply :{
                         description: stickauth,
