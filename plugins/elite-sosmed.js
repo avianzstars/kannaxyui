@@ -21,7 +21,7 @@ contextInfo: { externalAdReply :{
                         description: wm,
                         title: 'Yusuf Expert',
                         body: wm,
-                        thumbnail: img2,
+                        thumbnail: fs.readFileSync("./oct.jpg"),
                         sourceUrl: 'https://wa.me/6283873115706' }}})
 }
 handler.help = ['sosmed']
