@@ -1,4 +1,5 @@
 import fs from 'fs'
+import fetch from 'node-fetch'
 let handler = async (m, { conn, args, command }) => {
 let oct = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
@@ -12,6 +13,7 @@ let text = `╭─● *Owner*
 ╰─●
 *Catatan*: _Jika ada yg error, gw males benerin_.`
 
+let res = await fetch('https://api.waifu.pics/sfw/waifu')
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
@@ -23,14 +25,14 @@ const yusufMsg={
     'pageCount':1,
     'contextInfo':{
         'forwardingScore':100,
-        'isForwarded':true,
+        'isForwarded':false,
         'externalAdReply':{
             'mediaUrl':sig,
             'mediaType':2,
             'previewType':'Yusuf',
             'title':wm,
             'body':wm,
-            'thumbnail':'https://api.waifu.pics/sfw/waifu',
+            'thumbnail':res,
             'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*OWNER*',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
