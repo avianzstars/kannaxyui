@@ -29,7 +29,7 @@ const yusufMsg={
             'mediaType':2,
             'previewType':'Yusuf',
             'title':wm,
-            'body':'Created By Yusuf,
+            'body':'Created By Yusuf',
             'thumbnail':fs.readFileSync("./banner.png"),
             'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*OWNER*',
