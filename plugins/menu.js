@@ -422,7 +422,7 @@ const listMessage = {
     
     
     const yusufMsg={
-    'document':{'url':sgc},
+    'document':{'url':'https://wa.me/6283873115706'},
     'mimetype':'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'fileName':'Yusuf Expert',
     'fileLength':1000000000,
@@ -435,9 +435,9 @@ const listMessage = {
             'mediaType':2,
             'previewType':'Yusuf',
             'title':wm,
-            'body':wm,
+            'body':'Created By Yusuf',
             'thumbnail':fs.readFileSync("./banner.png"),
-            'sourceUrl':sgc}},
+            'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*MENU*',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
             'buttons':[
