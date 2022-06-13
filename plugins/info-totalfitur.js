@@ -5,7 +5,7 @@ let totalf = Object.values(global.plugins).filter(
   ).length;
  await conn.sendButton(m.chat, `Total Fitur Bot Saat ini: ${totalf}\n`,wm + '\n\n' + botdate, fs.readFileSync("./Project Pemuda.pdf"), [['MENU','.menu']], m, {
 contextInfo: { externalAdReply :{
-                        mediaUrl: 'sig',
+                        mediaUrl: sig,
                         mediaType: 2,
                         description: 'anu',
                         title: bottime,
