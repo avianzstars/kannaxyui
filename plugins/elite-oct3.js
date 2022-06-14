@@ -14,14 +14,14 @@ let text = `╭─● *Owner*
 *Catatan*: _Jika ada yg error, gw males benerin_.`
 
 let res = await fetch('https://api.waifu.pics/sfw/waifu')
-let inputPath = './banner.png'
+let img = './banner.png'
 let pdf = './Project Pemuda.pdf'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
     document:{'url':pdf},
     mimetype:'application/pdf',
-    fileName:'Yusuf Expert',
+    fileName:'Klik ini!',
     fileLength:1000000000,
     pageCount:1,
     contextInfo:{
@@ -30,10 +30,10 @@ const yusufMsg={
         externalAdReply:{
             mediaUrl:sig,
             mediaType:2,
-            previewType:2,
-            title:wm,
-            body:wm,
-            thumbnail:res,
+            previewType:1,
+            title:'Yusuf Expert',
+            body:'Created By Yusuf',
+            thumbnail:img,
             sourceUrl:'https://wa.me/6283873115706'}},
             caption:'*OWNER*',
             footer:text+'\n\n'+botdate+'\n\n'+wm,
@@ -47,7 +47,7 @@ const yusufMsg={
                     'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
                     'type':1}
                        ],
-                headerType:'Yusuf'};
+                headerType:1};
                 
 await conn.sendMessage(m.chat,yusufMsg, {'quoted':m,'mentionedJid':[m.sender]});
 }
