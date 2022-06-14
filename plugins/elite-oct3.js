@@ -1,5 +1,4 @@
 import fs from 'fs'
-import fetch from 'node-fetch'
 let handler = async (m, { conn, args, command }) => {
 let oct = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
@@ -13,12 +12,10 @@ let text = `╭─● *Owner*
 ╰─●
 *Catatan*: _Jika ada yg error, gw males benerin_.`
 
-let res = await fetch('https://api.waifu.pics/sfw/waifu')
-let img = './banner.png'
-let pdf = './Project Pemuda.pdf'
-//const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
-let pp = await conn.profilePictureUrl(who, 'image').catch(_ => './src/avatar_contact.png')
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let pdf = './wa.pdf'
+let wa = './wa.jpg'
+let inputPath = './banner.png'
+const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
     'document':{'url':pdf},
@@ -36,20 +33,42 @@ const yusufMsg={
             'previewType':'Yusuf',
             'title':wm,
             'body':'Created By Yusuf',
-            'thumbnail':pp,
+            'thumbnail':fs.readFileSync("./banner.png"),
             'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*OWNER*',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
-            'buttons':[
-                {'buttonId':'.menu',
-                'buttonText':{
-                    'displayText':'Menu'},
-                    'type':1},
-                {'buttonId':'...',
-                'buttonText':{
-                    'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
-                    'type':1}
-                       ],
+            'templateButtons': [
+                {
+                    'urlButton': {
+                        'displayText': `${namebot}`,
+                        'url': 'https://kannxapi.herokuapp.com/'
+                    }
+                },
+                {
+                    'urlButton': {
+                        'displayText': 'Group Official',
+                        'url': sgc
+                    }
+                },
+                {
+                    'quickReplyButton': {
+                        'displayText': 'Owner',
+                        'id': '.owner'
+                    }
+                },
+                {
+                    'quickReplyButton': {
+                        'displayText': 'Speed',
+                        'id': '.ping'
+                    }
+                },
+                {
+                    'quickReplyButton': {
+                        'displayText': 'Donasi',
+                        'id': '.donasi'
+                    }
+                },
+            ],
                 'headerType':'Yusuf'};
                 
 await conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
