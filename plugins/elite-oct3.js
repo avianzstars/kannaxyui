@@ -30,7 +30,7 @@ const yusufMsg={
         externalAdReply:{
             mediaUrl:sig,
             mediaType:2,
-            previewType:1,
+            previewType:'Yusuf',
             title:'Yusuf Expert',
             body:'Created By Yusuf',
             thumbnail:img,
