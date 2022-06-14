@@ -10,6 +10,7 @@ let text = `╭─● *Owner*
 ┃➥ facebook.com/yusuf.oct
 ┃➥ instagram.com/yusuf.expert
 ╰─●
+
 *Catatan*: _Jika ada yg error, gw males benerin_.`
 
 let pdf = './wa.pdf'
