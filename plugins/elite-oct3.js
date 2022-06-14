@@ -19,25 +19,26 @@ let pdf = './Project Pemuda.pdf'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
-    document:{'url':pdf},
-    mimetype:'application/pdf',
-    fileName:'Klik ini!',
-    fileLength:1000000000,
-    pageCount:1,
-    contextInfo:{
-        forwardingScore:100,
-        isForwarded:false,
-        externalAdReply:{
-            mediaUrl:sig,
-            mediaType:2,
-            previewType:'Yusuf',
-            title:'Yusuf Expert',
-            body:'Created By Yusuf',
-            thumbnail:img,
-            sourceUrl:'https://wa.me/6283873115706'}},
-            caption:'*OWNER*',
-            footer:text+'\n\n'+botdate+'\n\n'+wm,
-            buttons:[
+    'document':{'url':pdf},
+    'mimetype':'application/pdf',
+    'fileName':'Yusuf Expert',
+    'fileLength':1000000000,
+    'pageCount':1,
+    'mediaType':2,
+    'contextInfo':{
+        'forwardingScore':0,
+        'isForwarded':false,
+        'externalAdReply':{
+            'mediaUrl':sig,
+            'mediaType':2,
+            'previewType':'Yusuf',
+            'title':wm,
+            'body':'Created By Yusuf',
+            'thumbnail':fs.readFileSync("./src/avatar_contact.png"),
+            'sourceUrl':'https://wa.me/6283873115706'}},
+            'caption':'*OWNER*',
+            'footer':text+'\n\n'+botdate+'\n\n'+wm,
+            'buttons':[
                 {'buttonId':'.menu',
                 'buttonText':{
                     'displayText':'Menu'},
@@ -47,9 +48,9 @@ const yusufMsg={
                     'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
                     'type':1}
                        ],
-                headerType:'Yusuf'};
+                'headerType':'Yusuf'};
                 
-await conn.sendMessage(m.chat,yusufMsg, {'quoted':m,'mentionedJid':[m.sender]});
+await conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
 }
 
 handler.help = ['oct3']
