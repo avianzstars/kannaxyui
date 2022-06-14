@@ -15,10 +15,11 @@ let text = `╭─● *Owner*
 
 let res = await fetch('https://api.waifu.pics/sfw/waifu')
 let inputPath = './banner.png'
+let pdf = './Project Pemuda.pdf'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
-    document:{'url':'https://wa.me/6283873115706'},
+    document:{'url':pdf},
     mimetype:'application/pdf',
     fileName:'Yusuf Expert',
     fileLength:1000000000,
@@ -29,7 +30,7 @@ const yusufMsg={
         externalAdReply:{
             mediaUrl:sig,
             mediaType:2,
-            previewType:'Yusuf',
+            previewType:2,
             title:wm,
             body:wm,
             thumbnail:res,
