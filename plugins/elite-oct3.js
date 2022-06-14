@@ -47,7 +47,7 @@ const yusufMsg={
                     'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
                     'type':1}
                        ],
-                headerType:1};
+                headerType:'Yusuf'};
                 
 await conn.sendMessage(m.chat,yusufMsg, {'quoted':m,'mentionedJid':[m.sender]});
 }
