@@ -16,7 +16,8 @@ let text = `╭─● *Owner*
 let res = await fetch('https://api.waifu.pics/sfw/waifu')
 let img = './banner.png'
 let pdf = './Project Pemuda.pdf'
-const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
+//const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
+let pp = await conn.profilePictureUrl(who, 'image').catch(_ => './src/avatar_contact.png')
 
 const yusufMsg={
     'document':{'url':pdf},
@@ -34,7 +35,7 @@ const yusufMsg={
             'previewType':'Yusuf',
             'title':wm,
             'body':'Created By Yusuf',
-            'thumbnail':fs.readFileSync("./src/avatar_contact.png"),
+            'thumbnail':pp,
             'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*OWNER*',
             'footer':text+'\n\n'+botdate+'\n\n'+wm,
