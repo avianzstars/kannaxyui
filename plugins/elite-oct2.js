@@ -13,11 +13,12 @@ let text = `╭─● *Owner*
 *Catatan*: _Jika ada yg error, gw males benerin_.`
 
 let pdf = './Project Pemuda.pdf'
+let wa = './wa.jpg'
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
-    'document':{'url':pdf},
+    'document':{'url':wa},
     'mimetype':'application/pdf',
     'fileName':'Klik ini!',
     'fileLength':1000000000,
