@@ -18,6 +18,7 @@ let img = './banner.png'
 let pdf = './Project Pemuda.pdf'
 //const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => './src/avatar_contact.png')
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 
 const yusufMsg={
     'document':{'url':pdf},
