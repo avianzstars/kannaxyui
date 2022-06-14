@@ -23,6 +23,7 @@ const yusufMsg={
     'fileName':'Yusuf Expert',
     'fileLength':1000000000,
     'pageCount':1,
+    'mediaType':2,
     'contextInfo':{
         'forwardingScore':0,
         'isForwarded':false,
