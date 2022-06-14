@@ -12,8 +12,9 @@ let text = `╭─● *Owner*
 
 let img = './banner.png'
 let img2 = './oct.jpg'
+let pdf = './Project Pemuda.pdf'
 
-conn.sendButton(m.chat, '*SOSMED*', text+'\n\n'+botdate+'\n\n'+wm, img, 
+conn.sendButton(m.chat, '*SOSMED*', text+'\n\n'+botdate+'\n\n'+wm, pdf, 
       [['Menu', '.menu'],
        ['Owner', '.oct2'],
        ['\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*', '...']], m, {
