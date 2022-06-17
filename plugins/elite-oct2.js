@@ -16,6 +16,7 @@ let text = `╭─● *Owner*
 let pdf = './wa.pdf'
 let wa = './wa.jpg'
 let inputPath = './banner.png'
+let rndm = `${pickRandom(['Antum Wibu yaah?','Afakah antum Wibu?','Beliau ini Wibu gayming'])}`
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
@@ -34,7 +35,7 @@ const yusufMsg={
             'mediaType':2,
             'previewType':'Yusuf',
             'title':wm,
-            'body':'Created By Yusuf',
+            'body':rndm,
             'thumbnail':fs.readFileSync("./banner.png"),
             'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*OWNER*',
