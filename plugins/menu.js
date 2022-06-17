@@ -422,7 +422,7 @@ const listMessage = {
     
     
     const yusufMsg={
-    'document':{'url':pdf},
+    'document':{'url':d4},
     'mimetype':'application/pdf',
     'fileName':'Yusuf Expert',
     'fileLength':1000000000,
@@ -457,7 +457,7 @@ const listMessage = {
 conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
 
 const yusufMsg2={
-    'document':{'url':pdf},
+    'document':{'url':d4},
     'mimetype':'application/pdf',
     'fileName':'Owner Ganteng',
     'fileLength':1000000000,
