@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     if (!res.ok) throw await res.text()
     let json = await res.json()
     if (!json.url) throw 'Error!'
-
+let pdf = './wa.pdf'
 const yusufMsg={
     'document':{'url':pdf},
     'mimetype':'application/pdf',
