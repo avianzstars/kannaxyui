@@ -6,42 +6,17 @@ let handler = async (m, { conn, usedPrefix }) => {
     if (!res.ok) throw await res.text()
     let json = await res.json()
     if (!json.url) throw 'Error!'
-let pdf = './wa.pdf'
-const yusufMsg={
-    'document':{'url':pdf},
-    'mimetype':'application/pdf',
-    'fileName':'Yusuf Expert',
-    'fileLength':1000000000,
-    'pageCount':1,
-    'mediaType':2,
-    'contextInfo':{
-        'forwardingScore':0,
-        'isForwarded':false,
-        'externalAdReply':{
+    //conn.sendButton(m.chat, 'Istri kok kartun', author, json.url, [['Ganti Istri', `${usedPrefix}waifu`]], m)
+    conn.sendButton(m.chat, 'Istri kok kartun', botdate + '\n\n' + wm, json.url, [['Ganti Istri', `${usedPrefix}waifu`]], m, {
+contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
             'mediaType':2,
             'previewType':'Yusuf',
             'title':wm,
             'body':'Created By Yusuf',
-            'thumbnail':json.url,
-            'sourceUrl':'https://wa.me/6283873115706'}},
-            'caption':'*OWNER*',
-            'footer':botdate+'\n\n'+wm,
-            'buttons':[
-                {'buttonId':'.menu',
-                'buttonText':{
-                    'displayText':'Menu'},
-                    'type':1},
-                {'buttonId':'...',
-                'buttonText':{
-                    'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
-                    'type':1}
-                       ],
-                'headerType':'Yusuf'};
-                
-await conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
-
+            'thumbnail':fs.readFileSync("./banner.png"),
+            'sourceUrl':'https://wa.me/6283873115706' }}})
 }
 handler.help = ['waifu2']
 handler.tags = ['anime']
