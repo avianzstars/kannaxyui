@@ -53,7 +53,7 @@ const yusufMsg={
                 
 conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
 
-await conn.sendButton(m.chat, '*Hello👋*', 'Apakah antum Wibu?\n\n'+botdate+'\n\n'+wm, null, [['Waifu', '.waifu'],['Loli','.loli'],['Neko','.neko']], m, {
+await conn.sendButton(m.chat, '*Hello👋*', 'Apakah antum Wibu?\n\n'+wm, pdf, [['Waifu', '.waifu'],['Loli','.loli'],['Neko','.neko']], m, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':'https://wa.me/6283873115706',
