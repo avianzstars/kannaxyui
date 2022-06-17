@@ -9,6 +9,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     //conn.sendButton(m.chat, 'Istri kok kartun', author, json.url, [['Ganti Istri', `${usedPrefix}waifu`]], m)
     conn.sendButton(m.chat, 'Istri kok kartun', botdate + '\n\n' + wm, json.url, [['Ganti Istri', `${usedPrefix}waifu`]], m, {
 contextInfo: { externalAdReply :{
+                        mediaType:2,
                         description: stickauth,
                         title: author,
                         body: 'Jangan lupa Follow',
