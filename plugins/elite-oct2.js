@@ -57,7 +57,7 @@ conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
 const yusufMsg2={
     'document':{'url':pdf},
     'mimetype':'application/pdf',
-    'fileName':'Klik ini',
+    'fileName':'Owner Ganteng',
     'fileLength':1000000000,
     'pageCount':1,
     'mediaType':2,
