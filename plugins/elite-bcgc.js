@@ -6,7 +6,7 @@ let handler = async (m, { conn, text }) => {
 	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
 	for (let id of groups) 
 	//await conn.sendButton(id,'*—「 Broadcast 」—*\n' + teks, wm, [['⋮☰ Menu', '.menu'], ['Owner', '.owner']], m)
-        await conn.sendButton(id, '*» Broadcast «*\n\n'+teks, botdate+'\n\n'+wm, [['Menu', '.menu'], ['Owner', '.oct2']], m, {
+        await conn.sendButton(id, '*» Broadcast «*\n\n'+teks, '\n\n'+botdate+'\n\n'+wm, [['Menu', '.menu'], ['Owner', '.oct2']], m, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
