@@ -6,13 +6,16 @@ let handler = async (m, { conn }) => {
     let nek = ne.split('\n')
     let neko = pickRandom(nek)
 	//conn.sendButton(m.chat, 'Neko + poi = ?', wm, neko, [['Lagi kak','.neko']],m)
-    conn.sendButton(m.chat, 'Neko + poi = ?', botdate + '\n\n' + wm, neko, [['Mau lagi', `.neko`]], m, {
+    conn.sendButton(m.chat, 'Neko + poi = ?', botdate + '\n\n' + wm, neko, [['Mau lagi', '.neko']], m, {
 contextInfo: { externalAdReply :{
-                        description: stickauth,
-                        title: author,
-                        body: 'Jangan lupa Follow',
-                        thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig }}})
+            'showAdAttribution': true,
+            'mediaUrl':sig,
+            'mediaType':2,
+            'previewType':'Yusuf',
+            'title':wm,
+            'body':'Created By Yusuf',
+            'thumbnail':fs.readFileSync("./banner.png"),
+            'sourceUrl':'https://wa.me/6283873115706' }}})
 }
 handler.command = /^(neko)$/i
 handler.tags = ['anime']
