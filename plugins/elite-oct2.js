@@ -73,7 +73,7 @@ const yusufMsg2={
             'body':'Afakah antum Wibu?',
             'thumbnail':fs.readFileSync("./oct.jpg"),
             'sourceUrl':'https://wa.me/6283873115706'}},
-            'caption':null,
+            'caption':'*OWNER*',
             'footer':wm,
             'buttons':[
                 {'buttonId':'.waifu',
