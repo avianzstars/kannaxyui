@@ -29,6 +29,7 @@ const yusufMsg={
         'forwardingScore':0,
         'isForwarded':false,
         'externalAdReply':{
+            'showAdAttribution': true,
             'mediaUrl':sig,
             'mediaType':2,
             'previewType':'Yusuf',
