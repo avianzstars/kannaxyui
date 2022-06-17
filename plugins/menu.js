@@ -419,10 +419,11 @@ const listMessage = {
     let d4 = 'application/pdf'
     let d5 = 'text/rtf'
     let td = `${pickRandom([d1,d2,d3,d4,d5])}`
+    let pdf = './wa.pdf'
     
     
     const yusufMsg={
-    'document':{'url':d4},
+    'document':{'url':pdf},
     'mimetype':'application/pdf',
     'fileName':'Yusuf Expert',
     'fileLength':1000000000,
@@ -441,11 +442,11 @@ const listMessage = {
             'thumbnail':fs.readFileSync("./banner.png"),
             'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*MENU*',
-            'footer':text+'\n\n'+botdate+'\n\n'+wm,
+            'footer':text+'\n\n'+wm,
             'buttons':[
-                {'buttonId':'.menu',
+                {'buttonId':'.oct2',
                 'buttonText':{
-                    'displayText':'Menu'},
+                    'displayText':'Owner'},
                     'type':1},
                 {'buttonId':'...',
                 'buttonText':{
@@ -455,6 +456,49 @@ const listMessage = {
                 'headerType':'Yusuf'};
                 
 conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
+
+const yusufMsg2={
+    'document':{'url':pdf},
+    'mimetype':'application/pdf',
+    'fileName':'Owner Ganteng',
+    'fileLength':1000000000,
+    'pageCount':1,
+    'mediaType':2,
+    'contextInfo':{
+        'forwardingScore':0,
+        'isForwarded':false,
+        'externalAdReply':{
+            'showAdAttribution': true,
+            'mediaUrl':'https://wa.me/6283873115706',
+            'mediaType':1,
+            'previewType':'Yusuf',
+            'title':'Halo kak👋',
+            'body':'Afakah antum Wibu?',
+            'thumbnail':fs.readFileSync("./oct.jpg"),
+            'sourceUrl':'https://wa.me/6283873115706'}},
+            'caption':'*[ ! ] Klik File PDF*',
+            'footer':wm,
+            'buttons':[
+                {'buttonId':'.waifu',
+                'buttonText':{
+                    'displayText':'Waifu'},
+                    'type':1},
+                {'buttonId':'.loli',
+                'buttonText':{
+                    'displayText':'Loli'},
+                    'type':2},
+                {'buttonId':'.neko',
+                'buttonText':{
+                    'displayText':'Neko'},
+                    'type':3},
+                {'buttonId':'...',
+                'buttonText':{
+                    'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
+                    'type':4}
+                       ],
+                'headerType':'Yusuf'};
+                
+conn.sendMessage(m.chat,yusufMsg2,{'quoted':m,'mentionedJid':[m.sender]});
 
     //-------DOC TEMPLATE
     /*const message = {
