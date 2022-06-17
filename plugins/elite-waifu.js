@@ -27,7 +27,7 @@ const yusufMsg={
             'thumbnail':json.url,
             'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*OWNER*',
-            'footer':text+'\n\n'+botdate+'\n\n'+wm,
+            'footer':botdate+'\n\n'+wm,
             'buttons':[
                 {'buttonId':'.menu',
                 'buttonText':{
