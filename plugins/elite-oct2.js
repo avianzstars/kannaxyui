@@ -35,7 +35,7 @@ const yusufMsg={
             'mediaType':2,
             'previewType':'Yusuf',
             'title':wm,
-            'body':rndm,
+            'body':'Created By Yusuf',
             'thumbnail':fs.readFileSync("./banner.png"),
             'sourceUrl':'https://wa.me/6283873115706'}},
             'caption':'*OWNER*',
@@ -54,7 +54,7 @@ const yusufMsg={
                 
 conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
 
-await conn.sendButton(m.chat, '*Hello👋*', 'Apakah antum Wibu?\n\n'+wm, pdf, [['Waifu', '.waifu'],['Loli','.loli'],['Neko','.neko']], m, {
+await conn.sendButton(m.chat, '*Hello👋*', 'Apakah antum Wibu?\n\n'+wm, fs.readFileSync("./banner.png"), [['Waifu', '.waifu'],['Loli','.loli'],['Neko','.neko']], m, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':'https://wa.me/6283873115706',
