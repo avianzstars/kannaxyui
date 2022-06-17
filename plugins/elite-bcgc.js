@@ -1,3 +1,4 @@
+import fs from 'fs'
 let handler = async (m, { conn, text }) => {
 	let wm = global.wm
 	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
