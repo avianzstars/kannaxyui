@@ -191,7 +191,7 @@ global.htjava = '⫹⫺' //hiasan Doang :v
 
 /*============== STICKER WM ==============*/
 global.stickpack = 'Yusuf'
-global.stickauth = `By Yusuf`
+global.stickauth = `By Yusuf [BOT]`
 
 global.multiplier = 38 // The higher, The harder levelup
 
