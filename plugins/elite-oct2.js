@@ -73,7 +73,7 @@ const yusufMsg2={
             'body':'Afakah antum Wibu?',
             'thumbnail':fs.readFileSync("./oct.jpg"),
             'sourceUrl':'https://wa.me/6283873115706'}},
-            'caption':'*OWNER*',
+            'caption':'*[ ! ] Klik File PDF*',
             'footer':wm,
             'buttons':[
                 {'buttonId':'.waifu',
@@ -83,15 +83,15 @@ const yusufMsg2={
                 {'buttonId':'.loli',
                 'buttonText':{
                     'displayText':'Loli'},
-                    'type':1},
+                    'type':2},
                 {'buttonId':'.neko',
                 'buttonText':{
                     'displayText':'Neko'},
-                    'type':1},
+                    'type':3},
                 {'buttonId':'...',
                 'buttonText':{
                     'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
-                    'type':1}
+                    'type':4}
                        ],
                 'headerType':'Yusuf'};
                 
