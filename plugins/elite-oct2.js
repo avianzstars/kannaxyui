@@ -16,7 +16,7 @@ let text = `╭─● *Owner*
 let pdf = './wa.pdf'
 let wa = './wa.jpg'
 let inputPath = './banner.png'
-let rndm = `${pickRandom(['Antum Wibu yaah?','Afakah antum Wibu?','Beliau ini Wibu gayming'])}`
+//let rndm = `${pickRandom(['Antum Wibu yaah?','Afakah antum Wibu?','Beliau ini Wibu gayming'])}`
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
 const yusufMsg={
