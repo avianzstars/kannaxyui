@@ -4,13 +4,16 @@ import fs from 'fs'
 let handler = async (m, { conn }) => {
 	let url = loli[Math.floor(Math.random() * loli.length)]
 	//conn.sendButton(m.chat, 'DASAR PEDOFIL', wm, url, [['Lagi kak','.loli']],m)
-	conn.sendButton(m.chat, 'Dasar Pedofil', botdate + '\n\n' + wm, url, [['Mau lagi', `.loli`]], m, {
+	conn.sendButton(m.chat, 'Tch, dasar Pedofil', wm, url, [['Mau lagi', '.loli']], m, {
 contextInfo: { externalAdReply :{
-                        description: stickauth,
-                        title: author,
-                        body: 'Jangan lupa Follow',
-                        thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig }}})
+            'showAdAttribution': true,
+            'mediaUrl':sig,
+            'mediaType':2,
+            'previewType':'Yusuf',
+            'title':wm,
+            'body':'Created By Yusuf',
+            'thumbnail':fs.readFileSync("./banner.png"),
+            'sourceUrl':'https://wa.me/6283873115706' }}})
 }
 handler.command = /^(loli)$/i
 handler.tags = ['anime']
