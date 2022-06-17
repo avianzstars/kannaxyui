@@ -9,12 +9,14 @@ let handler = async (m, { conn, usedPrefix }) => {
     //conn.sendButton(m.chat, 'Istri kok kartun', author, json.url, [['Ganti Istri', `${usedPrefix}waifu`]], m)
     conn.sendButton(m.chat, 'Istri kok kartun', botdate + '\n\n' + wm, json.url, [['Ganti Istri', `${usedPrefix}waifu`]], m, {
 contextInfo: { externalAdReply :{
-                        mediaType:2,
-                        description: stickauth,
-                        title: author,
-                        body: 'Jangan lupa Follow',
-                        thumbnail: fs.readFileSync("./oct.jpg"),
-                        sourceUrl: sig }}})
+            'showAdAttribution': true,
+            'mediaUrl':sig,
+            'mediaType':2,
+            'previewType':'Yusuf',
+            'title':wm,
+            'body':'Created By Yusuf',
+            'thumbnail':fs.readFileSync("./banner.png"),
+            'sourceUrl':'https://wa.me/6283873115706' }}})
 }
 handler.help = ['waifu']
 handler.tags = ['anime']
