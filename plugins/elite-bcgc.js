@@ -49,7 +49,7 @@ const yusufMsg2={
                        ],
                 'headerType':'Yusuf'};
                 
-await conn.sendMessage(m.chat,yusufMsg2);
+await conn.sendMessage(id,yusufMsg2);
 
 	//await conn.sendButton(id,'*—「 Broadcast 」—*\n' + teks, wm, [['⋮☰ Menu', '.menu'], ['Owner', '.owner']], m)
 	m.reply('Selesai Broadcast All Group')
