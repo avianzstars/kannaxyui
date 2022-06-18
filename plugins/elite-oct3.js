@@ -1,4 +1,10 @@
+import { promises } from 'fs'
+import { join } from 'path'
+import { xpRange } from '../lib/levelling.js'
+import moment from 'moment-timezone'
+import os from 'os'
 import fs from 'fs'
+import fetch from 'node-fetch
 let handler = async (m, { conn, args, command }) => {
 let oct = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
