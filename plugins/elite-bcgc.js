@@ -52,7 +52,7 @@ const yusufMsg2={
                        ],
                 'headerType':'Yusuf'};
                 
-conn.sendMessage(id,yusufMsg2);
+await conn.sendMessage(id,yusufMsg2);
 
   m.reply('Selesai Broadcast All Group :)')
 }
