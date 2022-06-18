@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let json = await res.json()
     if (!json.url) throw 'Error!'
     //conn.sendButton(m.chat, 'Suami kok kartun', botdate + '\n\n' + wm, json.url, [['Ganti Suami', `${usedPrefix}husbu`]], m)
-    conn.sendButton(m.chat, 'Suami kok kartun', wm, json.url, [['Ganti Suami', '.husbu']], m, {
+    conn.sendButton(m.chat, 'Suami kok kartun', wm, json.url, [['Ganti Suami', '.husbu'],['Delete','.delete']], m, { asLocation: false, 
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
