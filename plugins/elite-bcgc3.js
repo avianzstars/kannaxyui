@@ -48,9 +48,9 @@ const yusufMsg2={
 	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
 	for (let id of groups) 
 
-await conn.sendMessage(m.chat,yusufMsg2)
+//await conn.sendMessage(m.chat,yusufMsg2)
 
-/*await conn.sendButton(m.chat, teks, wm, cc, [['⋮☰ Menu', '.menu'], ['Owner', '.oct2']], false, {
+await conn.sendButton(m.chat, teks, wm, await m.getQuotedObj(), [['⋮☰ Menu', '.menu'], ['Owner', '.oct2']], false, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             //'mediaUrl':sig,
@@ -59,7 +59,7 @@ contextInfo: { externalAdReply :{
             'title':wm,
             'body':'Created By Yusuf',
             'thumbnail':fs.readFileSync("./oct.jpg"),
-            'sourceUrl':'' }}})*/
+            'sourceUrl':'' }}})
 
 	//await conn.sendButton(id,'*—「 Broadcast 」—*\n' + teks, wm, [['⋮☰ Menu', '.menu'], ['Owner', '.owner']], m)
 	m.reply('Selesai Broadcast All Group')
