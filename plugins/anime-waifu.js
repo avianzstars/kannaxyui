@@ -11,11 +11,11 @@ let handler = async (m, { conn, usedPrefix }) => {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
-            'mediaType':2,
+            'mediaType':1,
             'previewType':'Yusuf',
             'title':wm,
             'body':'Created By Yusuf',
-            'thumbnail':fs.readFileSync("./banner.png"),
+            'thumbnail':fs.readFileSync("./oct.jpg"),
             'sourceUrl':'https://wa.me/6283873115706' }}})
 }
 handler.help = ['waifu']
