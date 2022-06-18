@@ -8,15 +8,15 @@ let handler = async (m, { conn, text }) => {
 	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
 	for (let id of groups) 
 
-await conn.sendButton(id, teks, wm, pdf, [['Menu', '.menu']], m, {
+await conn.sendButton(id, teks, wm, pdf, [['Waifu', '.waifu'], ['Loli', '.loli'], ['Neko','.neko']], false, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
-            'mediaType':2,
+            'mediaType':1,
             'previewType':'Yusuf',
             'title':wm,
             'body':'Created By Yusuf',
-            'thumbnail':fs.readFileSync("./banner.png"),
+            'thumbnail':fs.readFileSync("./oct.jpg"),
             'sourceUrl':'https://wa.me/6283873115706' }}})
 
 	//await conn.sendButton(id,'*—「 Broadcast 」—*\n' + teks, wm, [['⋮☰ Menu', '.menu'], ['Owner', '.owner']], m)
