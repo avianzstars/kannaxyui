@@ -3,7 +3,7 @@ let handler = async (m, { conn, text }) => {
 	let wm = global.wm
         let pdf = './wa.pdf'
 	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
-		cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m,
+		cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
 		teks = text ? text : cc.text
 const yusufMsg2={
     'document':{'url':pdf},
