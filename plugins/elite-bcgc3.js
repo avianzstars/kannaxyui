@@ -5,7 +5,7 @@ let handler = async (m, { conn, text }) => {
 	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
 		cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m,
 		teks = text ? text : cc.text
-                cc2 = await m.getQuotedObj()
+                cc2 = await m.getQuotedObj() : false || m,
 const yusufMsg2={
     'document':{'url':cc},
     'mimetype':'IMAGE',
