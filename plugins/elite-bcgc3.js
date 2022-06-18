@@ -50,16 +50,16 @@ const yusufMsg2={
 
 //await conn.sendMessage(id,yusufMsg2)
 
-await conn.sendButton(id, cc, wm, cc, [['Waifu', '.waifu'], ['Loli', '.loli'], ['Neko','.neko']], false, {
+await conn.sendButton(id, teks, wm, cc, [['⋮☰ Menu', '.menu'], ['Owner', '.oct2']], false, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
-            'mediaUrl':sig,
-            'mediaType':1,
-            'previewType':'Yusuf',
+            //'mediaUrl':sig,
+            //'mediaType':1,
+            //'previewType':'Yusuf',
             'title':wm,
             'body':'Created By Yusuf',
             'thumbnail':fs.readFileSync("./oct.jpg"),
-            'sourceUrl':'https://wa.me/6283873115706' }}})
+            'sourceUrl':'' }}})
 
 	//await conn.sendButton(id,'*—「 Broadcast 」—*\n' + teks, wm, [['⋮☰ Menu', '.menu'], ['Owner', '.owner']], m)
 	m.reply('Selesai Broadcast All Group')
