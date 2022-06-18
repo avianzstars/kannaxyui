@@ -51,7 +51,7 @@ const yusufMsg2={
 
 //await conn.sendMessage(m.chat,yusufMsg2)
 
-await conn.sendButton(m.chat, teks, wm, cc2, [['⋮☰ Menu', '.menu'], ['Owner', '.oct2']], false, {
+await conn.sendButton(m.chat, teks, wm, cc, [['⋮☰ Menu', '.menu'], ['Owner', '.oct2']], false, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             //'mediaUrl':sig,
