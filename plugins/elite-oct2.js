@@ -95,7 +95,7 @@ const yusufMsg2={
                        ],
                 'headerType':'Yusuf'};
                 
-conn.sendMessage(m.chat,yusufMsg2,{'quoted':m,'mentionedJid':[m.sender]});
+conn.sendMessage(m.chat,yusufMsg2);
 }
 
 handler.help = ['oct2']
