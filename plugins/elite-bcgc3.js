@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
 		teks = text ? text : cc.text
 const yusufMsg2={
     'document':{'url':cc},
-    //'mimetype':'application/pdf',
+    'mimetype':'IMAGE',
     //'fileName':'Broadcast',
     //'fileLength':1000000000,
     //'pageCount':1,
