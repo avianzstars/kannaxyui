@@ -5,10 +5,11 @@ let handler = async (m, { conn, text }) => {
   let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
   let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
   let teks = text ? text : cc.text
+  let cc2 = cc
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
   for (let id of groups)
 
-await conn.sendButton(m.chat, teks, wm, cc, [['Waifu', '.waifu'], ['Loli', '.loli'], ['Neko','.neko']], false, {
+await conn.sendButton(m.chat, teks, wm, cc2, [['Waifu', '.waifu'], ['Loli', '.loli'], ['Neko','.neko']], false, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
