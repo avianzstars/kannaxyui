@@ -17,7 +17,10 @@ let wa = './wa.jpg'
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-conn.sendButton(m.chat, '*OWNER*', text+'\n\n'+botdate+'\n\n'+wm, pdf, [['Menu', '.menu']], false, {
+let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+  
+
+conn.sendButton(m.chat, '*OWNER*', text+'\n\n'+botdate+'\n\n'+wm, pdf, [['Menu', '.menu']], false, { quoted: fkon,
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
