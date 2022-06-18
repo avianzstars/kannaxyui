@@ -5,6 +5,7 @@ let handler = async (m, { conn, text }) => {
 	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
 		cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m,
 		teks = text ? text : cc.text
+                cc2 = await m.getQuotedObj()
 const yusufMsg2={
     'document':{'url':cc},
     'mimetype':'IMAGE',
@@ -50,7 +51,7 @@ const yusufMsg2={
 
 //await conn.sendMessage(m.chat,yusufMsg2)
 
-await conn.sendButton(m.chat, teks, wm, await m.getQuotedObj(), [['⋮☰ Menu', '.menu'], ['Owner', '.oct2']], false, {
+await conn.sendButton(m.chat, teks, wm, cc2, [['⋮☰ Menu', '.menu'], ['Owner', '.oct2']], false, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             //'mediaUrl':sig,
