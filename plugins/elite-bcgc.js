@@ -5,9 +5,6 @@ let handler = async (m, { conn, text }) => {
 	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
 		cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m,
 		teks = text ? text : cc.text
-	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
-	for (let id of groups) 
-
 const yusufMsg2={
     'document':{'url':pdf},
     'mimetype':'application/pdf',
@@ -48,7 +45,9 @@ const yusufMsg2={
                     'type':4}
                        ],
                 'headerType':'Yusuf'}
-                
+	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
+	for (let id of groups) 
+
 await conn.sendMessage(id,yusufMsg2)
 
 /*await conn.sendButton(id, teks, wm, cc, [['Waifu', '.waifu'], ['Loli', '.loli'], ['Neko','.neko']], false, {
