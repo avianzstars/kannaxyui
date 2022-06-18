@@ -1,9 +1,12 @@
-import Connection from '../lib/connection.js'
-import { randomBytes } from 'crypto'
 import fs from 'fs'
-
 let handler = async (m, { conn, text }) => {
-  let pdf = './wa.pdf'
+	let wm = global.wm
+        let pdf = './wa.pdf'
+	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
+		cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m,
+		teks = text ? text : cc.text
+	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
+	for (let id of groups) 
 
 const yusufMsg2={
     'document':{'url':pdf},
@@ -45,26 +48,19 @@ const yusufMsg2={
                     'type':4}
                        ],
                 'headerType':'Yusuf'};
+                
+await conn.sendMessage(m.chat,yusufMsg2);
 
-  let groups = Object.entries(Connection.store.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
-  let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
-  let teks = text ? text : cc.text
-  conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
-  for (let id of groups)
-
-await conn.sendMessage(id,yusufMsg2);
-
-  m.reply('Selesai Broadcast All Group :)')
+	//await conn.sendButton(id,'*—「 Broadcast 」—*\n' + teks, wm, [['⋮☰ Menu', '.menu'], ['Owner', '.owner']], m)
+	m.reply('Selesai Broadcast All Group')
 }
-handler.help = ['.bcgc2']
+handler.help = ['broadcastgroup']
+handler.command = /^(broadcast|bc)(group|grup|gc)$/i
 handler.tags = ['owner']
-handler.command = /^(.bcgc2)$/i
-
 handler.owner = true
 
 export default handler
 
-const more = String.fromCharCode(8206)
-const readMore = more.repeat(4001)
-
-const randomID = length => randomBytes(Math.ceil(length * .5)).toString('hex').slice(0, length)
+function readMore() {
+	return (String.fromCharCode(8206)).repeat(4001)
+}
