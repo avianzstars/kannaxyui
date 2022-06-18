@@ -8,7 +8,7 @@ let handler = async (m, { conn, text }) => {
 	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
 	for (let id of groups) 
 
-await conn.sendButton(id, teks, wm, pdf, [['Waifu', '.waifu'], ['Loli', '.loli'], ['Neko','.neko']], false, {
+await conn.sendButton(id, teks, wm, cc, [['Waifu', '.waifu'], ['Loli', '.loli'], ['Neko','.neko']], false, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
