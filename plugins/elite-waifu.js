@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let json = await res.json()
     if (!json.url) throw 'Error!'
     //conn.sendButton(m.chat, 'Istri kok kartun', author, json.url, [['Ganti Istri', `${usedPrefix}waifu`]], m)
-    conn.sendButton(m.chat, 'Istri kok kartun', botdate + '\n\n' + wm, json.url, [['Ganti Istri', '.waifu'],['Delete','.delete']], m, {
+    conn.sendButton(m.chat, 'Istri kok kartun', botdate + '\n\n' + wm, json.url, [['Ganti Istri', '.waifu'],['Delete','.delete'],['Owner','.oct2']], m, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
@@ -16,7 +16,7 @@ contextInfo: { externalAdReply :{
             'title':wm,
             'body':'Created By Yusuf',
             'thumbnail':fs.readFileSync("./oct.jpg"),
-            'sourceUrl':'https://wa.me/6283873115706' }}})
+            'sourceUrl':'' }}})
 }
 handler.help = ['waifu2']
 handler.tags = ['anime']
