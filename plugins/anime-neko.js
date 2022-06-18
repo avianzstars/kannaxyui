@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
     let nek = ne.split('\n')
     let neko = pickRandom(nek)
 	//conn.sendButton(m.chat, 'Neko + poi = ?', wm, neko, [['Lagi kak','.neko']],m)
-    conn.sendButton(m.chat, 'Neko + poi = ?', wm, neko, [['Mau lagi', '.neko']], m, {
+    conn.sendButton(m.chat, 'Neko + poi = ?', wm, neko, [['Mau lagi', '.neko'],['Delete','.delete']], m, { asLocation: false, 
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
