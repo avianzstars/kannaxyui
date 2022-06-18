@@ -3,13 +3,7 @@ import { randomBytes } from 'crypto'
 import fs from 'fs'
 
 let handler = async (m, { conn, text }) => {
-  let groups = Object.entries(Connection.store.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
-  let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
-  let teks = text ? text : cc.text
-  conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
-  for (let id of groups)
-
-let pdf = './wa.pdf'
+  let pdf = './wa.pdf'
 
 const yusufMsg2={
     'document':{'url':pdf},
@@ -51,7 +45,13 @@ const yusufMsg2={
                     'type':4}
                        ],
                 'headerType':'Yusuf'};
-                
+
+  let groups = Object.entries(Connection.store.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
+  let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
+  let teks = text ? text : cc.text
+  conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
+  for (let id of groups)
+
 await conn.sendMessage(id,yusufMsg2);
 
   m.reply('Selesai Broadcast All Group :)')
