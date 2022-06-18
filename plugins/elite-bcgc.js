@@ -54,8 +54,8 @@ await conn.sendMessage(id,yusufMsg2);
 	//await conn.sendButton(id,'*—「 Broadcast 」—*\n' + teks, wm, [['⋮☰ Menu', '.menu'], ['Owner', '.owner']], m)
 	m.reply('Selesai Broadcast All Group')
 }
-handler.help = ['broadcastgroup']
-handler.command = /^(broadcast|bc)(group|grup|gc)$/i
+handler.help = ['bcgc2']
+handler.command = /^(bcgc2)$/i
 handler.tags = ['owner']
 handler.owner = true
 
