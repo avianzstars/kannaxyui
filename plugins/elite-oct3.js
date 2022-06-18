@@ -17,7 +17,7 @@ let wa = './wa.jpg'
 let inputPath = './banner.png'
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './oct.jpg')
 
-conn.sendButton(m.chat, '*OWNER*', text+'\n\n'+botdate+'\n\n'+wm, pdf, [['Menu', '.menu']], m, {
+conn.sendButton(m.chat, '*OWNER*', text+'\n\n'+botdate+'\n\n'+wm, pdf, [['Menu', '.menu']], false, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
