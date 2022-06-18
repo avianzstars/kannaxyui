@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     conn.sendButton(m.chat, 'Istri kok kartun', botdate + '\n\n' + wm, json.url, [['Ganti Istri', '.waifu'],['Delete','.delete'],['Owner','.oct2']], m, {
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
-            'mediaUrl':sig,
+            'mediaUrl':'',
             'mediaType':1,
             'previewType':'Yusuf',
             'title':wm,
