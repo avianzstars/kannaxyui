@@ -4,7 +4,7 @@ import fs from 'fs'
 let handler = async (m, { conn }) => {
 	let url = loli[Math.floor(Math.random() * loli.length)]
 	//conn.sendButton(m.chat, 'DASAR PEDOFIL', wm, url, [['Lagi kak','.loli']],m)
-	conn.sendButton(m.chat, 'Tch, dasar Pedofil', wm, url, [['Mau lagi', '.loli']], m, {
+	conn.sendButton(m.chat, 'Tch, dasar Pedofil', wm, url, [['Mau lagi', '.loli'],['Delete','.delete']], m, { asLocation: false, 
 contextInfo: { externalAdReply :{
             'showAdAttribution': true,
             'mediaUrl':sig,
