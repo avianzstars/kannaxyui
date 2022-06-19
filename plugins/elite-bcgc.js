@@ -24,7 +24,7 @@ const sendMsg = await sock.sendMessage(m.chat, buttonMessage)
 }
 handler.help = ['broadcastgroup', 'bcgc'].map(v => v + ' <teks>')
 handler.tags = ['owner']
-handler.command = /^(broadcast|bc)(group|grup|gc)$/i
+handler.command = /^(bcgc2)$/i
 
 handler.owner = true
 
