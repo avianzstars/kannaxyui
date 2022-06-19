@@ -3,8 +3,9 @@ let handler = async (m, { conn, text }) => {
 	let wm = global.wm
         let pdf = './wa.pdf'
 	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
-		let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
-		let teks = text ? text : cc.text
+	let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
+	let teks = text ? text : cc.text
+
 const yusufMsg2={
     'image':{'url':cc},
     /*'mimetype':'application/pdf',
@@ -45,6 +46,7 @@ const yusufMsg2={
                     'type':4}
                        ],
                 'headerType':'Yusuf'}
+
 	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
 	for (let id of groups) 
 
