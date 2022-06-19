@@ -421,7 +421,7 @@ const listMessage = {
     let td = `${pickRandom([d1,d2,d3,d4,d5])}`
     let pdf = './wa.pdf'
     
-const yusufMsg2={
+/*const yusufMsg2={
     'document':{'url':''},
     'mimetype':'application/pdf',
     'fileName':'Loading…',
@@ -439,7 +439,7 @@ const yusufMsg2={
             'footer':wm,
                 'headerType':4};
                 
-conn.sendMessage(m.chat,yusufMsg2);
+conn.sendMessage(m.chat,yusufMsg2);*/
     
     const yusufMsg={
     'document':{'url':pdf},
