@@ -1,10 +1,8 @@
 import fs from 'fs'
 let handler = async (m, { conn, text }) => {
-	let wm = global.wm
-        let pdf = './wa.pdf'
-	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
-	let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
-	let teks = text ? text : cc.text
+  let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
+  let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
+  let teks = text ? text : cc.text
 
 const yusufMsg2={
     'image':{'url':cc},
