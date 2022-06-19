@@ -3,15 +3,15 @@ let handler = async (m, { conn, text }) => {
 	let wm = global.wm
         let pdf = './wa.pdf'
 	let groups = Object.entries(await conn.groupFetchAllParticipating()).filter(([jid, chat]) => !chat?.announce).map(v => v[0]),
-		cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
-		teks = text ? text : cc.text
+		let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
+		let teks = text ? text : cc.text
 const yusufMsg2={
-    'document':{'url':pdf},
-    'mimetype':'application/pdf',
+    'image':{'url':cc},
+    /*'mimetype':'application/pdf',
     'fileName':'Broadcast',
     'fileLength':1000000000,
     'pageCount':1,
-    'mediaType':2,
+    'mediaType':2,*/
     'contextInfo':{
         'forwardingScore':0,
         'isForwarded':false,
@@ -27,28 +27,20 @@ const yusufMsg2={
             'caption':teks,
             'footer':wm,
             'buttons':[
-                {'buttonId':'.waifu',
+                {'buttonId':'.menu',
                 'buttonText':{
-                    'displayText':'Waifu'},
+                    'displayText':'Menu'},
                     'type':1},
-                {'buttonId':'.loli',
+                {'buttonId':'.oct2',
                 'buttonText':{
-                    'displayText':'Loli'},
-                    'type':2},
-                {'buttonId':'.neko',
-                'buttonText':{
-                    'displayText':'Neko'},
-                    'type':3},
-                {'buttonId':'...',
-                'buttonText':{
-                    'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
-                    'type':4}
+                    'displayText':'Owner'},
+                    'type':1}
                        ],
-                'headerType':'Yusuf'}
+                'headerType':4}
 	await m.reply(`_Mengirim pesan broadcast ke ${groups.length} group_`)
 	for (let id of groups) 
 
-await conn.sendMessage(id,yusufMsg2)
+await conn.sendMessage(m.chat,yusufMsg2)
 
 /*await conn.sendButton(id, teks, wm, cc, [['Waifu', '.waifu'], ['Loli', '.loli'], ['Neko','.neko']], false, {
 contextInfo: { externalAdReply :{
