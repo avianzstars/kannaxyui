@@ -10,7 +10,7 @@ const buttons = [
 {buttonId: '.oct2', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
-image: {url: cc},
+image: {url: await m.getQuotedObj()},
 caption: teks,
 footer: wm,
 buttons: buttons,
