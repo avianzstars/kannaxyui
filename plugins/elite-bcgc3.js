@@ -1,4 +1,5 @@
 import fs from 'fs'
+import { randomBytes } from 'crypto'
 let handler = async (m, { conn, text }) => {
   let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
   let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
