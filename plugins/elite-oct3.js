@@ -59,7 +59,7 @@ const yusufMsg2={
     'fileName':'Owner Ganteng',
     'fileLength':1000000000,
     'pageCount':1,
-    'mediaType':2,
+    'jpegThumbnail':fs.readFileSync("./banner.png"),
     'contextInfo':{
         'forwardingScore':0,
         'isForwarded':false,
@@ -94,10 +94,10 @@ const yusufMsg2={
                        ],
                 'headerType':'Yusuf'};
                 
-//conn.sendMessage(m.chat,yusufMsg2);
+conn.sendMessage(m.chat,yusufMsg2);
 }
 
-handler.help = ['oct2']
+handler.help = ['oct3']
 handler.tags = ['elite']
-handler.command = ['oct2']
+handler.command = ['oct3']
 export default handler
