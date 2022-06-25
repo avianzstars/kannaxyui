@@ -32,14 +32,6 @@ let ydoc = {
     'pageCount':1
 }}}
 
-const react = {
-    react: {
-        text: "❤",
-        key: m.key
-    }
-}
-conn.sendMessage(m.chat, react)
-
 const ybut = [
   {buttonId: '.owner', buttonText: {displayText: '👑 OWNER'}, type: 1},
   {buttonId: '.menu', buttonText: {displayText: '⋮☰ MENU'}, type: 1}
