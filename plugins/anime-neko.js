@@ -14,7 +14,7 @@ contextInfo: { externalAdReply :{
             'previewType':'Yusuf',
             'title':wm,
             'body':'Created By Yusuf',
-            'thumbnail':fs.readFileSync("./oct.jpg"),
+            'thumbnail':fs.readFileSync("./media/logo.jpg"),
             'sourceUrl':'https://wa.me/6283873115706' }}})
 }
 handler.command = /^(neko)$/i
