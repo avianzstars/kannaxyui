@@ -45,7 +45,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.exp))
                     user.exp = 0
                 if (!isNumber(user.limit))
-                    user.limit = 10
+                    user.limit = 12
                 if (!isNumber(user.lastclaim))
                     user.lastclaim = 0
                 if (!('registered' in user))
@@ -84,7 +84,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.health))
                     user.health = 100
                 if (!isNumber(user.limit))
-                    user.limit = 0
+                    user.limit = 12
                 if (!isNumber(user.potion))
                     user.potion = 0
                 if (!isNumber(user.trash))
@@ -199,7 +199,7 @@ export async function handler(chatUpdate) {
             } else
                 global.db.data.users[m.sender] = {
                     exp: 0,
-                    limit: 10,
+                    limit: 12,
                     lastclaim: 0,
                     registered: false,
                     name: m.name,
@@ -218,7 +218,7 @@ export async function handler(chatUpdate) {
                     atm: 0,
                     fullatm: 0,
                     health: 100,
-                    limit: 24,
+                    limit: 12,
                     potion: 10,
                     trash: 0,
                     wood: 0,
@@ -311,8 +311,8 @@ export async function handler(chatUpdate) {
                     isBanned: false,
                     welcome: true,
                     detect: true,
-                    sWelcome: 'true',
-                    sBye: 'true',
+                    sWelcome: true,
+                    sBye: true,
                     sPromote: '',
                     sDemote: '',
                     delete: false,
@@ -525,11 +525,11 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    this.reply(m.chat, `[!] Limit anda habis, silahkan beli melalui *${usedPrefix}buy limit*`, m)
+                    this.reply(m.chat, `[ ! ] Limit anda habis, silahkan beli melalui *${usedPrefix}buy limit*`, m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
-                    this.reply(m.chat, `[!] Diperlukan level ${plugin.level} untuk menggunakan perintah ini\n*Level mu:* ${_user.level} 📊`, m)
+                    this.reply(m.chat, `[ ! ] Diperlukan level ${plugin.level} untuk menggunakan perintah ini\n*Level mu:* ${_user.level} 📊`, m)
                     continue // If the level has not been reached
                 }
                 let extra = {
@@ -649,6 +649,8 @@ export async function handler(chatUpdate) {
  * Handle groups participants update
  * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['group-participants.update']} groupsUpdate 
  */
+
+
 export async function participantsUpdate({ id, participants, action }) {
     if (opts['self'])
         return
@@ -673,11 +675,38 @@ export async function participantsUpdate({ id, participants, action }) {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'unknow') :
                             (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', await this.getName(user))
                         //this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
-    this.sendHydrated(id, text, wm + '\n\n' + botdate, pp, sgc, (action == 'add' ? '💌 WELCOME' : '🐾 BYE'), user.split`@`[0], '🌹 USER', [
+    /*this.sendHydrated(id, text, wm + '\n\n' + botdate, pp, sgc, (action == 'add' ? '💌 WELCOME' : '🐾 BYE'), user.split`@`[0], '🌹 USER', [
       ['MENU 🎀', '/menu'],
       ['\n\n*SAYA PEDO DAN SAYA BANGGA (≧▽≦)*', '...'],
       [null, null]
-    ], null, false, { mentions: [user] })
+    ], null, false, { mentions: [user] })*/
+
+
+this.sendMessage(id,{caption:(action == 'add' ? `*Welcome +${user.split`@`[0]}👋*` : `*Sayonara +${user.split`@`[0]}👋*`),
+                         footer:wm,
+                         image:{url:pp},
+                         contextInfo:{externalAdReply:{showAdAttribution:true,
+                                                       headerType:4,
+                                                       mediaUrl:'https://instagram.com',
+                                                       mediaType:1,
+                                                       title:wm,
+                                                       body:'Created by Yusuf',
+                                                       thumbnail:fs.readFileSync('./media/logo.jpg'),
+                                                       sourceUrl:'https://wa.me/6283873115706'}},
+                                                       buttons:[{buttonId:'...',buttonText:{displayText:(action == 'add' ? `Welcome👋` : `Sayonara👋`)},type:1},
+                                                                {buttonId:'.menu',buttonText:{displayText:'⋮☰ MENU'},type:1},
+                                                                {buttonId:'...',buttonText:{displayText:'\n\n*SAYA PEDO DAN SAYA BANGGA☝*\n\n'},type:1}]},
+                         {quoted:{key:{fromMe:false,
+                                       remoteJid:'status@broadcast',
+                                       participant:'0@s.whatsapp.net'},
+                                       message:{documentMessage:{document:{url:'./media/wa.pdf'},
+                                                                 mimetype:'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                                                                 fileName:wm,
+                                                                 fileLength:1000000000,
+                                                                 pageCount:1}}},
+                          mentionedJid:[id]})
+
+
                     }
                 }
             }
@@ -693,6 +722,15 @@ export async function participantsUpdate({ id, participants, action }) {
             break
     }
 }
+
+
+
+
+
+
+
+
+
 
 /**
  * Handle groups update
@@ -760,7 +798,7 @@ contextInfo: { externalAdReply :{
                         description: stickauth,
                         title: namebot,
                         body: stickauth,
-                        thumbnail: fs.readFileSync("./oct.jpg"),
+                        thumbnail: fs.readFileSync("./media/logo.jpg"),
                         sourceUrl: 'https://wa.me/6283873115706' }}})}
 
 let file = global.__filename(import.meta.url, true)

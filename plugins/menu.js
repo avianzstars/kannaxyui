@@ -7,11 +7,8 @@ import fs from 'fs'
 import fetch from 'node-fetch'
 
 const defaultMenu = {
-  before: `
-%dash
-%m1 *U S E R*
+  before: `%m1 *U S E R*
 %m2 *Name:* %name
-%m2 *Tag:* %tag
 %m2 *Status:* %prems
 %m2 *Limit:* %limit
 %m3
@@ -176,7 +173,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
       // LOGO L P
       let lprem = global.lopr
       let llim = global.lolm
-      let tag = `@${m.sender.split('@')[0]}`
+      //let tag = `@${m.sender.split('@')[0]}`
     
       const sections = [
      /*{
@@ -187,66 +184,86 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
     },*/{
 	title: `${htki} MENU ${htka}`,
 	rows: [
-	{title: `${pmenus} All`, rowId: ".? all", description: "Semua Command BOT"},
-	{title: `${pmenus} Rpg`, rowId: ".? rpg", description: "Game RPG"},
-	{title: `${pmenus} Exp`, rowId: ".? xp", description: "Tingkatkan Pangkat"},
-	{title: `${pmenus} Game`, rowId: ".? game", description: "Menu Games BOT"},
-	{title: `${pmenus} Fun`, rowId: ".? fun", description: "Untuk Bersenang-Senang"},
-	{title: `${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tersesat"},
-	{title: `${pmenus} Quotes`, rowId: ".? quotes", description: "Cari Inspirasi"},
-	{title: `${pmenus} Anime`, rowId: ".? anime", description: "Dasar Wibu Broken Home"},
-	{title: `${pmenus} Nsfw`, rowId: ".? nsfw", description: "Saya S*nge"},
-	{title: `${pmenus} Premium`, rowId: ".? premium", description: "Khusus Pengguna Premium"},
-	{title: `${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Orang Misterius"},
-	{title: `${pmenus} Al-Quran`, rowId: ".? nocategory", description: "Bertobatlah Sebelum Terlambat"},
-	{title: `${pmenus} Internet`, rowId: ".? internet", description: "Cari Sesuatu"},
-	{title: `${pmenus} Downloaders`, rowId: ".? downloader", description: "Download Sesuatu"},
-	{title: `${pmenus} Stikers`, rowId: ".? stiker", description: "Buat Sticker"},
-	{title: `${pmenus} Nulis`, rowId: ".? nulis", description: "Tch, Dasar Pemalas"},
-	{title: `${pmenus} Audio`, rowId: ".? audio", description: "Ubah Audio Dengan Filter"},
-	{title: `${pmenus} Group`, rowId: ".? admin", description: "Khusus Grup"},
-	{title: `${pmenus} Database`, rowId: ".? database", description: "Simpan Sesuatu Di BOT"},
-	{title: `${pmenus} Tools`, rowId: ".? tools", description: "Peralatan BOT"},
-	{title: `${pmenus} Info`, rowId: ".? info", description: "Info Info BOT"},
-	{title: `${pmenus} Owner`, rowId: ".? owner", description: "Khusus Owner BOT"},
+	{title: `${pmenus} All`, rowId: ".? all", description: "➥ Semua Command BOT"},
+	{title: `${pmenus} Rpg`, rowId: ".? rpg", description: "➥ Game RPG"},
+	{title: `${pmenus} Exp`, rowId: ".? xp", description: "➥ Tingkatkan Pangkat"},
+	{title: `${pmenus} Game`, rowId: ".? game", description: "➥ Menu Games BOT"},
+	{title: `${pmenus} Fun`, rowId: ".? fun", description: "➥ Untuk Bersenang-Senang"},
+	{title: `${pmenus} Kerang`, rowId: ".? kerangajaib", description: "➥ Tersesat"},
+	{title: `${pmenus} Quotes`, rowId: ".? quotes", description: "➥ Cari Inspirasi"},
+	{title: `${pmenus} Anime`, rowId: ".? anime", description: "➥ Dasar Wibu Broken Home"},
+	{title: `${pmenus} Nsfw`, rowId: ".? nsfw", description: "➥ Saya S*nge"},
+	{title: `${pmenus} Premium`, rowId: ".? premium", description: "➥ Khusus Pengguna Premium"},
+	{title: `${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "➥ Orang Misterius"},
+	{title: `${pmenus} Al-Quran`, rowId: ".? nocategory", description: "➥ Bertobatlah Sebelum Terlambat"},
+	{title: `${pmenus} Internet`, rowId: ".? internet", description: "➥ Cari Sesuatu"},
+	{title: `${pmenus} Downloaders`, rowId: ".? downloader", description: "➥ Download Sesuatu"},
+	{title: `${pmenus} Stikers`, rowId: ".? stiker", description: "➥ Buat Sticker"},
+	{title: `${pmenus} Nulis`, rowId: ".? nulis", description: "➥ Tch, Dasar Pemalas"},
+	{title: `${pmenus} Audio`, rowId: ".? audio", description: "➥ Ubah Audio Dengan Filter"},
+	{title: `${pmenus} Group`, rowId: ".? admin", description: "➥ Khusus Grup"},
+	{title: `${pmenus} Database`, rowId: ".? database", description: "➥ Simpan Sesuatu Di BOT"},
+	{title: `${pmenus} Tools`, rowId: ".? tools", description: "➥ Peralatan BOT"},
+	{title: `${pmenus} Info`, rowId: ".? info", description: "➥ Info Info BOT"},
+	{title: `${pmenus} Owner`, rowId: ".? owner", description: "➥ Khusus Owner BOT"},
 	]
   },{
 	title: `${htki} SUPPORT ${htka}`,
 	rows: [
-	{title: `${pmenus} Sewa BOT`, rowId: ".sewa", description: "Menu Harga Sewa BOT"},
-	{title: `${pmenus} Beli Premium`, rowId: ".premium", description: "Jadilah Elite"},
-	{title: `${pmenus} Donasi`, rowId: ".donasi", description: 'Bersedekahlah Jika Mampu'},
+	{title: `${pmenus} Sewa BOT`, rowId: ".sewa", description: "➥ Menu Harga Sewa BOT"},
+	{title: `${pmenus} Beli Premium`, rowId: ".premium", description: "➥ Jadilah Elite"},
+	{title: `${pmenus} Donasi`, rowId: ".donasi", description: '➥ Bersedekahlah Jika Mampu'},
 	]
    },{
 	title: `${htki} MAIN ${htka}`,
 	rows: [
-	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "Kecepatan Respon BOT"},
-	    {title: `${pmenus} Owner BOT`, rowId: ".oct2", description: "Owner BOT"},
-	    {title: `${pmenus} Script BOT`, rowId: ".sc", description: `Source Code ${namebot}`}
+	    {title: `${pmenus} Ping BOT`, rowId: ".ping", description: "➥ Kecepatan Respon BOT"},
+	    {title: `${pmenus} Owner BOT`, rowId: ".owner", description: "➥ Owner BOT"},
+	    {title: `${pmenus} Script BOT`, rowId: ".sc", description: `➥ Source Code ${namebot}`}
 	]
     },
 ]
 
+let name = m.pushName || conn.getName(m.sender)
+let tag = `${m.sender.split('@')[0]}`
+let ykon = {
+    key: {
+    fromMe: false,
+    remoteJid: 'status@broadcast',
+    participant : '0@s.whatsapp.net'},
+    message: { contactMessage: {
+        displayName: `${name}`,
+        vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${name}\nORG:User;\nTEL;type=CELL;type=VOICE;waid=${tag}:+${tag}\nEND:VCARD`}}}
+
 let usrs = db.data.users[m.sender]
-let tek = `
-╭─● *${ucapan()}*
-┃● *Name:* ${conn.getName(m.sender)}
-┃● *Limit:* ${usrs.limit}
-┃● *Status:* ${usrs.premiumTime > 1 ? 'Premium': 'Free'} ${usrs.premiumTime > 1 ? `
-┃● *Expired:*
+let tek = `╭─● *${ucapan()}*
+┃➥ *Name:* ${name}
+┃➥ *Limit:* ${usrs.limit}
+┃➥ *Status:* ${usrs.premiumTime > 1 ? 'Premium': 'Free'} ${usrs.premiumTime > 1 ? `
+┃➥ *Expired:*
 ${clockStringP(usrs.premiumTime - new Date())}` : ''}
-╰─●
-`
+╰─●`
 const listMessage = {
-  text: tek,
+  text: `Hai ${name}👋`,
   //footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
-  footer: botdate + '\n\n' + wm,
-  title: `${htki} *LIST MENU* ${htka}`,
-  buttonText: `KLIK INI`,
+  footer: `${tek}\n\n${wm}`,
+  title: `➦ LIST MENU`,
+  buttonText: `PILIH MENU`,
   sections
 }
+
+const react = {
+    react: {
+        text: "🏆",
+        key: m.key
+    }
+}
+
+conn.sendMessage(m.chat, react)
+
   if (teks == '404') {
-  	return conn.sendMessage(m.chat, listMessage)
+  	return conn.sendMessage(m.chat, listMessage,{'quoted':ykon,'mentionedJid':[m.sender]})
+
     }
   	
  /**************************** TIME *********************/
@@ -262,7 +279,7 @@ const listMessage = {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { age, exp, limit, level, role, registered, money} = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
-    let name = await conn.getName(m.sender)
+    //let name = await conn.getName(m.sender)
     let premium = global.db.data.users[m.sender].premiumTime
     let prems = `${premium > 0 ? 'Premium': 'Free'}`
     let platform = os.platform()
@@ -419,8 +436,8 @@ const listMessage = {
     let d4 = 'application/pdf'
     let d5 = 'text/rtf'
     let td = `${pickRandom([d1,d2,d3,d4,d5])}`
-    let pdf = './wa.pdf'
-    
+    let docx = './media/CBY.docx'
+
 /*const yusufMsg2={
     'document':{'url':''},
     'mimetype':'application/pdf',
@@ -440,14 +457,28 @@ const listMessage = {
                 'headerType':4};
                 
 conn.sendMessage(m.chat,yusufMsg2);*/
-    
+
+
+let ydoc = {
+    key: {
+    remoteJid: 'status@broadcast',
+    participant : '0@s.whatsapp.net'},
+    message: { 
+    "documentMessage": {
+    'document':{'url':docx},
+    'mimetype':d2,
+    'fileName':'Menu',
+    'fileLength':1000000000,
+    'pageCount':1
+}}}
+
+
     const yusufMsg={
-    'document':{'url':pdf},
-    'mimetype':'application/pdf',
-    'fileName':'Yusuf Expert',
+    'document':{'url':docx},
+    'mimetype':d2,
+    'fileName':'『 Yusuf Expert 』',
     'fileLength':1000000000,
     'pageCount':1,
-    'mediaType':2,
     'contextInfo':{
         'forwardingScore':0,
         'isForwarded':false,
@@ -458,23 +489,23 @@ conn.sendMessage(m.chat,yusufMsg2);*/
             'previewType':'Yusuf',
             'title':wm,
             'body':'Created By Yusuf',
-            'thumbnail':fs.readFileSync("./banner.png"),
+            'thumbnail':fs.readFileSync("./media/banner.png"),
             'sourceUrl':'https://wa.me/6283873115706'}},
-            'caption':'*MENU*',
+            'caption':`${dash}`,
             'footer':text+'\n\n'+wm,
             'buttons':[
-                {'buttonId':'.oct2',
+                {'buttonId':'.donasi',
                 'buttonText':{
-                    'displayText':'Owner'},
+                    'displayText':'💰 DONASI'},
                     'type':1},
-                {'buttonId':'...',
+                {'buttonId':'.yowner',
                 'buttonText':{
-                    'displayText':'\n\n*Owner Ganteng Banget( ꈍᴗꈍ)*'},
+                    'displayText':'👑 OWNER'},
                     'type':1}
                        ],
                 'headerType':4};
                 
-conn.sendMessage(m.chat,yusufMsg,{'quoted':m,'mentionedJid':[m.sender]});
+conn.sendMessage(m.chat,yusufMsg,{'quoted':ydoc,'mentionedJid':[m.sender]});
 
     //-------DOC TEMPLATE
     /*const message = {

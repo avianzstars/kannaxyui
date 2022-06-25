@@ -1,4 +1,4 @@
-let handler = async (m, { conn, usedPrefix: _p, args, text, usedPrefix}) => {
+let handler = async (m, { conn, usedPrefix: _p, args, text}) => {
 	
 	if (!m.quoted) throw 'Balas Chatnya !'
 	if (text.length > 2) throw 'Cuma Untuk 1 Emoji!'

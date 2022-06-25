@@ -125,6 +125,9 @@ global.bottime = `Waktu: ${wktuwib}`
 global.titlebot = `2022 © Yusuf`
 global.author = 'Yusuf'
 
+global.namey = '『 Yusuf Expert 』'
+global.ywm = '2022 © Yusuf'
+global.ywm2 = 'Created by Yusuf'
 
 /*============== LOGO ==============*/
 global.thumb = 'https://i.ibb.co/nsTYRF6/Chitanda.jpg' //Main Thumbnail

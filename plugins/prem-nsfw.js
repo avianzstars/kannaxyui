@@ -170,10 +170,10 @@ const listMessage = {
     m.reply("Error\n\n\n" + err.stack)
   }
 }
-
+/*
 handler.help = ['nsfw <type>', 'hentai <type>']
 handler.tags = ['nsfw', 'premium']
 handler.command = /^(nsfw|hentai)/i
 handler.premium = global.premnsfw
-
+*/
 export default handler
