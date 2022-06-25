@@ -26,8 +26,6 @@ const yCard='BEGIN:VCARD\n'
            +'TEL;type=CELL;type=VOICE;waid=6283873115706:+62 838 7311 5706\n'
            +'END:VCARD'
 
-conn.sendMessage(m.chat,{react:{text:'💎',key:m.key}})
-
 if(text=='k')
 return conn.sendMessage(m.chat,{contacts:{displayName:'Yusuf',contacts:[{vcard:yCard}]}},
   {quoted:{key:{fromMe:false,
