@@ -252,15 +252,6 @@ const listMessage = {
   sections
 }
 
-const react = {
-    react: {
-        text: "🏆",
-        key: m.key
-    }
-}
-
-conn.sendMessage(m.chat, react)
-
   if (teks == '404') {
   	return conn.sendMessage(m.chat, listMessage,{'quoted':ykon,'mentionedJid':[m.sender]})
 
